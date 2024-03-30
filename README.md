@@ -1,1 +1,1 @@
-Cyberpunk Theme GUI for Maya's User Environment.
+Custom Cyberpunk themed GUI for Maya's User Environment.
