@@ -10,35 +10,48 @@ def apply_stylesheet_recursive(widget, selected_object):
         if selected_object == "2077":
             widget.setStyleSheet("""
                 QWidget {
-                    background-color: rgb(6,31,43);
-                    color: rgb(241,181,55);
-                    font-family: play;
+                    background-color: rgb(30,30,50);
+                    selection-color: rgb(94,246,255); 
+                    selection-background-color: rgb(247,80,70);
+                    color: rgb(94,246,255);
+                    font-family: rajdhani;
+                    font-weight: bold;
+                    font-size: 13px;
+                }
+                QAbstractSpinBox {
+                    color: rgb(0,0,0);
                 }
                 QComboBox:hover,QPushButton:hover {
-                    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
+                    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #f75049, stop: 1 #f75049);
                 }  
                 QTabWidget {
-                    color: rgb(255, 0, 0);
                     border-style: solid;
-                    padding: 20px;
+                    padding: 30px;
                     background-color: rgb(0,0,0);
                     margin: 10px;
-                }
-                QCheckBox:disabled {
-                    color: rgb(214, 208, 208);
                 }
                 QMainWindow::separator:hover {
                     background: red;
                 }
                 QTabBar::tab:selected {
-                    font-family: play;
-                    border-style: solid;
-                    color: rgb(29, 237, 131);
+                    border-style: outset;
+                    border-width: 2px;
+                    border-color: rgb(241, 181, 55);
+                    color: rgb(241, 181, 55);
                     background-color: rgb(0,0,0);                
                 }
                 QScrollBar {
-                    color: rgb(251,147,48); 
-                    background-color: rgb(247,80,73);             
+                    color: rgb(255,255,255); 
+                    background-color: rgb(247,80,73);        
+                }
+                QSlider {
+                    background-color: rgb(247,80,73);        
+                }
+                QSlider::handle {
+                    background-color: rgb(94,246,255);        
+                }
+                QCheckBox::indicator:unchecked {
+                    color: rgb(27,80,73);        
                 }
                 QComboBox {
                     color: rgb(29, 237, 131);
@@ -75,7 +88,7 @@ def on_theme_change(*args):
     selected_object = cmds.optionMenuGrp(UI_DropDown, q=True, v=True)
     change_interface_color(selected_object)
 
-winName = "Script UI Changer"
+winName = "Cyberpunk UI "
 if cmds.window(winName, q=True, ex=True):
     cmds.deleteUI(winName)
 cmds.window(winName)
@@ -89,7 +102,7 @@ cmds.separator(height=10)
 UI_DropDown = cmds.optionMenuGrp(l="Select Theme", cc=on_theme_change, en=True)
 cmds.menuItem(l="Please make your selection from the list below")
 cmds.menuItem(l="2077")
-cmds.menuItem(l="2023")
+cmds.menuItem(l="Edgerunners")
 
 cyberSplash = cmds.image(image='C:/Users/chine/Downloads/Cyberpunk+logo+Resource/Cyberpunk logo Resource rez.png', vis=True)
 
