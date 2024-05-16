@@ -65,12 +65,95 @@ def apply_stylesheet_recursive(widget, selected_object):
                     background-color: rgb(0,0,0);
                 }
             """)
-        elif selected_object == "2023":
+        elif selected_object == "Blender Dark":
             widget.setStyleSheet("""
                 QWidget {
-                    background-color: rgb(6,31,43);
-                    color: rgb(0, 255, 0);
-                    font-family: play;
+                    background-color: rgb(61,61,61);
+                    selection-color: rgb(254,254,254); 
+                    selection-background-color: rgb(71,114,179);
+                    color: rgb(254,254,254);
+                    font-family: rajdhani;
+                    font-weight: bold;
+                    font-size: 12px;
+                }
+                    QComboBox {
+                    border: 0.5px;
+                    border-color: rgb(61,61,61);
+                    background-color: rgb(40,40,40);
+                    border-style:outset;
+                    border-radius: 0.2em;
+                    padding-left: 10px;           
+                    min-width: 6em;
+                }
+                    QTabWidget::pane {
+                    top: 1px;
+                    background-color: rgb(29,29,29);
+                }
+                    QMenuBar {
+                    background-color: rgb(24,24,24);
+                }
+                    QMenuBar::item:selected {
+                    background-color: rgb(48,48,48); 
+                }
+                    QTabBar::tab:selected {
+                    background-color: rgb(48,48,48);              
+                }
+                    QTabBar::tab:!selected {
+                    background-color: rgb(29,29,29);            
+                }
+                    QTextEdit {
+                    color: rgb(255, 255, 255);
+                    background-color: rgb(0,0,0);
+                }
+                    QScrollBar {
+                    color: rgb(36,36,36); 
+                    background-color: rgb(84,84,84);        
+                }
+                    QSlider {
+                    background-color: rgb(84,84,84);        
+                }
+                    QSlider::handle {
+                    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                    stop:0 #fff, stop:1 #ddd);
+                    border: 1px solid #444;
+                    border-radius: 4px; 
+                }
+                    QSlider::sub-page:horizontal {
+                    background: rgb(71,114,179);
+                }
+                    QSlider::handle:horizontal:hover {
+                    background: rgb(71,114,179);
+                    border-radius: 0px;
+                }
+                    QSlider::add-page:horizontal:disabled {
+                    background: rgb(40,40,40);
+                    border-color: #999;
+                }
+                    QSlider::handle:horizontal:disabled {
+                    background: #eee;
+                    border: 1px solid #aaa;
+                    border-radius: 4px;
+                }
+                    QCheckBox::indicator:unchecked {
+                    background-color: rgb(84,84,84);
+                    border-radius: 0.2em;  
+                }    
+                    QCheckBox::indicator:checked {
+                    background-color: rgb(71,114,179);
+                    border-radius: 0.2em;  
+                }   
+                    QLineEdit {
+                    border: 0.5px;
+                    border-color: rgb(61,61,61);
+                    border-style:outset;
+                    border-radius: 0.2em;
+                    padding: 0 8px;
+                    background-color: rgb(40,40,40);
+                    selection-background-color: darkgray;
+                }
+                    QRangeSlider {
+                    border: 10px;
+                    padding: 10px;
                 }
             """)
 
@@ -102,7 +185,7 @@ cmds.separator(height=10)
 UI_DropDown = cmds.optionMenuGrp(l="Select Theme", cc=on_theme_change, en=True)
 cmds.menuItem(l="Please make your selection from the list below")
 cmds.menuItem(l="2077")
-cmds.menuItem(l="Edgerunners")
+cmds.menuItem(l="Blender Dark")
 
 cyberSplash = cmds.image(image='C:/Users/chine/Downloads/Cyberpunk+logo+Resource/Cyberpunk logo Resource rez.png', vis=True)
 
