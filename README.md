@@ -1,4 +1,4 @@
-# Cyberpunk-Maya-UI
+# Maya-UI-Changer
 
 GUI Customizer for Maya
 
