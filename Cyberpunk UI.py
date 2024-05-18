@@ -231,7 +231,7 @@ def apply_stylesheet_recursive(widget, selected_object):
                     border-color: rgb(61,61,61);
                     border-style:outset;
                     border-radius: 0.2em;
-                    padding: 3px;
+                    padding: 2px;
                     background-color: rgb(40,40,40);
                     selection-background-color: darkgray;
                 }
@@ -286,8 +286,11 @@ cmds.separator(height=10)
 
 UI_DropDown = cmds.optionMenuGrp(l="Select Theme", cc=on_theme_change, en=True)
 cmds.menuItem(l="Please make your selection from the list below")
-cmds.menuItem(l="2077")
 cmds.menuItem(l="Blender Dark")
+cmds.menuItem(l="2077")
+cmds.menuItem(l="Blender Light")
+cmds.menuItem(l="Deep grey")
+cmds.menuItem(l="Minimal Dark")
 
 Splash = cmds.image(image='D:\Maya\Scripts\Images\heroimage.png', vis=True)
 
