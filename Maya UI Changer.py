@@ -273,7 +273,7 @@ def on_theme_change(*args):
     selected_object = cmds.optionMenuGrp(UI_DropDown, q=True, v=True)
     change_interface_color(selected_object)
 
-winName = "Maya UI Changer"
+winName = "Blendify"
 if cmds.window(winName, q=True, ex=True):
     cmds.deleteUI(winName)
 cmds.window(winName)
