@@ -1,6 +1,6 @@
-# Cyberpunk-Maya-UI
+# Maya-UI-Changer
 
-Custom Cyberpunk themed GUI for Maya's User Environment.
+GUI Customizer for Maya
 
 *Work in Progress
 
