@@ -9,6 +9,7 @@ def apply_stylesheet_recursive(widget, selected_object):
     if isinstance(widget, QtWidgets.QWidget):
         if selected_object == "2077":
             widget.setStyleSheet("""
+            /*-----QWidget-----*/ 
                 QWidget {
                     background-color: rgb(30,30,50);
                     selection-color: rgb(94,246,255); 
@@ -17,9 +18,6 @@ def apply_stylesheet_recursive(widget, selected_object):
                     font-family: rajdhani;
                     font-weight: bold;
                     font-size: 13px;
-                }
-                QAbstractSpinBox {
-                    color: rgb(0,0,0);
                 }
                 QComboBox:hover,QPushButton:hover {
                     border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0W, y2: 1, stop: 0 #f75049, stop: 1 #f75049);
@@ -71,7 +69,7 @@ def apply_stylesheet_recursive(widget, selected_object):
                 QWidget 
                 {
                     background-color: rgb(48,48,48);
-                    selection-color: rgb(254,254,254); 
+                    selection-color: rgb(254,254,254);
                     selection-background-color: rgb(71,114,179);
                     color: rgb(215,215,215);
                     font-family: DejaVuSans;
@@ -86,40 +84,33 @@ def apply_stylesheet_recursive(widget, selected_object):
                     background-color: rgb(40,40,40);
                     border-style:outset;
                     border-radius: 0.2em;
-                    padding-left: 1px;           
+                    padding-left: 6px;           
                     min-width: 7em;
                 }
                 
                 QComboBox:on
                 {
-                    background-color: rgb(71,114,179);
+                    background-color: #696e76;
                 }
                 
+                QComboBox:disabled 
+                {
+                    background-color: #323232;
+                    color: #8a8a8a;
+                }
+
                 QComboBox::down-arrow
                 {
-                    image: url('D:/Maya/Scripts/Images/checkmark-16.ico');
+                    image: url('E:/Maya/Scripts/Images/Arrow-204-16.ico');
                     width: 8px;
                     height: 8px;
                 }
                                  
                 QComboBox::drop-down
                 {
-                    background-color: rgb(40,40,40);
                     border-radius: 0.2em;
                     width: 15px;
                     border-left-width: 0px;    
-                }
-                
-                QComboBox QAbstractItemView
-                {
-                    selection-background-color: rgb(63,63,63);
-                }
-                
-                /*-----QListView-----*/                        
-                QListView::item:selected 
-                {
-                    top: 1px;
-                    background-color: rgb(24,24,24);
                 }
                             
                 /*-----QTabWidget-----*/                        
@@ -178,18 +169,23 @@ def apply_stylesheet_recursive(widget, selected_object):
                                    
                 QTabBar::tab:selected 
                 {
-                    background-color: rgb(48,48,48);              
+                    background-color: #424242;
+                    border-style: solid;
+                    border-width: 1px;
+                    border-color: #373737;
+                    border-bottom-color: #424242;            
                 }
-                                 
+
                 QTabBar::tab:!selected 
                 {
-                    color: rgb(147,147,147); 
+                    color: #afafaf;
                     background-color: rgb(29,29,29);            
                 }
-                                 
-                QTabBar::tab:!selected:hover
+
+                QTabBar::tab:hover:!selected 
                 {
-	                border-top-color: rgb(155,155,155);
+                    background-color: #343434;
+                    color: #afafaf;
                 }
                                  
                 QTabBar::tab:last
@@ -208,6 +204,8 @@ def apply_stylesheet_recursive(widget, selected_object):
                 /*-----QScrollBar-----*/               
                 QScrollBar
                 {
+                    margin: 0px;
+                    padding: 0px;
                     color: rgb(36,36,36); 
                     background-color: rgb(84,84,84);        
                 }
@@ -255,46 +253,65 @@ def apply_stylesheet_recursive(widget, selected_object):
                 {
 	                background-color: transparent;
                 }
+
+                QCheckBox::indicator 
+                {
+                    width: 12px;
+                    height: 12px;
+                }
+                           
+                QCheckBox::indicator:checked
+                {
+                    image: url('E:/Maya/Scripts/Images/checkmark-16.ico');
+                    background-color: rgb(71,114,179);
+                    border-radius: 0.2em;  
+                }  
+
+                QCheckBox::indicator:checked:hover 
+                {
+                    image: url(images:QCheckBox_checked_hover.png);
+                } 
+
                 QCheckBox::indicator:unchecked 
                 {
                     background-color: rgb(84,84,84);
                     border-radius: 0.2em;  
-                }    
-                                 
-                QCheckBox::indicator:checked
+                }
+
+                QCheckBox::indicator:unchecked:hover 
                 {
-                    image: url('D:/Maya/Scripts/Images/checkmark-16.ico');
-                    width: 12px;
-                    height: 12px;
-                    background-color: rgb(71,114,179);
-                    border-radius: 0.2em;  
-                }   
+                    image: url(images:QCheckBox_checked_hover.png);
+                }    
 
                 /*-----QLineEdit-----*/                 
                 QLineEdit
                 {
-                    border: 0.5px;
+                    color: #dcdcdc;
+                    border: 1px solid #404040;
                     border-color: rgb(61,61,61);
                     border-style:outset;
                     border-radius: 0.2em;
                     padding: 2px;
-                    background-color: rgb(40,40,40);
+                    background-color: #2c2c2c;
                     selection-background-color: darkgray;
                 }
 
                 /*-----QLabel-----*/                  
                 QLabel 
                 {
+                    background-color: transparent;
+                    color:#e6e6e6
 	                background-color: solid;
                 }
                     
                 /*-----QGroupBox-----*/
                 QGroupBox 
                 {
-                    border: 1px solid;
+                    border: 0px solid #373737;
+                    background-color: #373737;
+                    padding-top: 12px;
                     border-color: #666666;
 	                border-radius: 5px;
-                    background-color: rgb(61,61,61);
                     margin-top: 20px;
                 }
                                  
@@ -302,8 +319,107 @@ def apply_stylesheet_recursive(widget, selected_object):
                 {
                     background-color: transparent;
                     subcontrol-origin: margin;
+                    margin-top: 4px;
+                    padding-left: 8px;
                 }
+
+                /*-----QHeaderView-----*/
+                QHeaderView
+                {
+                    background-color: #3b3b3b;
+                    border: 0px transparent transparent;
+                }
+
+                QHeaderView:section {
+                    background-color: #3b3b3b;
+                    border: 0px transparent transparent;
+                }
+
+                /*-----QProgressBar-----*/
+                QProgressBar 
+                {
+                    background-color: #424242;
+                    border: 1px solid #373737;
+                    padding: 0px;
+                    text-align: right;
+                }
+                QProgressBar::chunk {
+                    background-color: #5680c2;
+                    border: 1px solid #373737;
+                }
+
+                /*-----QMessageBar-----*/
+                QMessageBox 
+                {
+                    background-color: rgb(24, 24, 24);
+                }
+
+                QMessageBox QPushButton 
+                {
+                    min-width: 105px;
+                }
+
+                /*-----TableView-----*/
+                QTableView QTableCornerButton:section 
+                {
+                    background-color: #3b3b3b;
+                    border: 1px solid #3b3b3b;
+                }
+
+                /*-----TreeView-----*/
+                QTreeView 
+                {
+                    background-color: #232323;
+                    border: 0px transparent transparent;
+                }
+                QTreeView:disabled
+                {
+                    background-color: #19232D;
+                    color: #787878;
+                }
+                QTreeView:item
+                {
+                    background-color: #282828;
+                }
+                QTreeView:item:hover 
+                {
+                    background-color: #484848;
+                    border: 0px transparent transparent;
+                }
+                QTreeView:item:selected 
+                {
+                    background-color: #314e78;
+                    border: 0px transparent transparent;
+                    color: #c68652;
+                }
+
+                /*-----QPushButton-----*/
+                QPushButton 
+                {
+                    background-color: #585858;
+                    border: 1px solid #404040;
+                }
+                QPushButton:default 
+                {
+                    background-color: #5379b4;
+                }
+                QPushButton:disabled 
+                {
+                    background-color: #323232;
+                    color: #8a8a8a;
+                }
+                QPushButton:hover 
+                {
+                    background-color: #676767;
+                }
+                QPushButton:pressed 
+                {
+                    background-color: #5680c2;
+                    color:#fcfdfd;
+                }
+
             """)
+            
 
 def change_interface_color(selected_object):
 
@@ -333,12 +449,10 @@ cmds.separator(height=10)
 UI_DropDown = cmds.optionMenuGrp(l="Select Theme", cc=on_theme_change, en=True)
 cmds.menuItem(l="Please make your selection from the list below")
 cmds.menuItem(l="Blender Dark")
-cmds.menuItem(l="2077")
 cmds.menuItem(l="Blender Light")
-cmds.menuItem(l="Deep grey")
-cmds.menuItem(l="Minimal Dark")
+cmds.menuItem(l="2077")
 
-Splash = cmds.image(image='D:\Maya\Scripts\Images\heroimage.png', vis=True)
+Splash = cmds.image(image='E:\Maya\Scripts\Images\heroimage.png', vis=True)
 
 cmds.setParent('..')
 cmds.showWindow()
