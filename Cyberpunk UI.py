@@ -3,6 +3,21 @@ import shiboken2
 from maya import OpenMayaUI
 from PySide2 import QtWidgets
 
+#Start of Functions
+def on_theme_change(*args):
+    selected_object = cmds.optionMenuGrp(UI_DropDown, q=True, v=True)
+    change_interface_color(selected_object)
+
+def change_interface_color(selected_object):
+
+    # Get main Maya window
+    main_window_ptr = OpenMayaUI.MQtUtil.mainWindow()
+    if main_window_ptr is not None:
+        main_window = shiboken2.wrapInstance(int(main_window_ptr), QtWidgets.QWidget)
+        apply_stylesheet_recursive(main_window, selected_object)
+    else:
+        print("Failed to find main Maya window.")
+     
 def apply_stylesheet_recursive(widget, selected_object):
 
     # Apply stylesheet to current widget
@@ -693,43 +708,42 @@ def apply_stylesheet_recursive(widget, selected_object):
                 {
                     min-width: 10px;
                 }
+            """) 
+        elif selected_object == "Maya":
+            widget.setStyleSheet("""
+                /*-----QWidget------------------------------------------------------------------------------------------------------------------------------------*/ 
+                QWidget 
+                {
+                    font-family: DejaVuSans;
+                    font-size: 12px;
+                }    
+        """) 
 
-            """)
-            
-            
-
-def change_interface_color(selected_object):
-
-    # Get main Maya window
-    main_window_ptr = OpenMayaUI.MQtUtil.mainWindow()
-    if main_window_ptr is not None:
-        main_window = shiboken2.wrapInstance(int(main_window_ptr), QtWidgets.QWidget)
-        apply_stylesheet_recursive(main_window, selected_object)
-    else:
-        print("Failed to find main Maya window.")
-
-def on_theme_change(*args):
-    selected_object = cmds.optionMenuGrp(UI_DropDown, q=True, v=True)
-    change_interface_color(selected_object)
-
+#Start of UI
 winName = "Maya UI Changer"
 if cmds.window(winName, q=True, ex=True):
     cmds.deleteUI(winName)
 cmds.window(winName)
 
 column_layout = cmds.columnLayout(adjustableColumn=True, columnAttach=['both', 10], rowSpacing=10)
-
 cmds.separator(height=10)
-cmds.text(label="I can't believe its not Blender")
+cmds.text(label="Maya UI Changer")
 cmds.separator(height=10)
 
+#Drop Down to Select Theme
 UI_DropDown = cmds.optionMenuGrp(l="Select Theme", cc=on_theme_change, en=True)
 cmds.menuItem(l="Please make your selection from the list below")
+cmds.menuItem(l="Maya")
 cmds.menuItem(l="Blender Dark")
 cmds.menuItem(l="Blender Light")
 cmds.menuItem(l="2077")
 
-Splash = cmds.image(image='D:\Maya\Scripts\Images\heroimage.png', vis=True)
+# Main Widget UI
+QMainWidget=cmds.text(l="Main Widget",bgc=(.4,.4,.4),w=340,h=25)
+QWidgetC=cmds.colorIndexSliderGrp( label='Color: ', min=0, max=20, value=8)
+QWidgetBGC=cmds.colorIndexSliderGrp( label='Background Color: ', min=0, max=20, value=2)
+QWidgetSC=cmds.colorIndexSliderGrp( label='Selection Color: ', min=0, max=20, value=4)
+QWidgetSBGC=cmds.colorIndexSliderGrp( label='Selection BG Color: ', min=0, max=20, value=6)
 
 cmds.setParent('..')
 cmds.showWindow()
