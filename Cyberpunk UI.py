@@ -9,7 +9,6 @@ def on_theme_change(*args):
     change_interface_color(selected_object)
 
 def change_interface_color(selected_object):
-
     # Get main Maya window
     main_window_ptr = OpenMayaUI.MQtUtil.mainWindow()
     if main_window_ptr is not None:
@@ -17,6 +16,31 @@ def change_interface_color(selected_object):
         apply_stylesheet_recursive(main_window, selected_object)
     else:
         print("Failed to find main Maya window.")
+ 
+def cycle_background_color_to_black():
+    # Set the background color to black
+    cmds.displayRGBColor('background', 0, 0, 0)
+    cmds.displayRGBColor('backgroundTop', 0, 0, 0)
+    cmds.displayRGBColor('backgroundBottom', 0, 0, 0)
+
+    # Apply changes to all model panels
+    model_panels = cmds.getPanel(type="modelPanel")
+    for panel in model_panels:
+        if cmds.modelEditor(panel, query=True, exists=True):
+            cmds.modelEditor(panel, edit=True, displayAppearance='smoothShaded')
+
+def cycle_background_color_to_light_grey():
+    # Set the background color to light grey (RGB values: 0.75, 0.75, 0.75)
+    light_grey = 0.4
+    cmds.displayRGBColor('background', light_grey, light_grey, light_grey)
+    cmds.displayRGBColor('backgroundTop', light_grey, light_grey, light_grey)
+    cmds.displayRGBColor('backgroundBottom', light_grey, light_grey, light_grey)
+
+    # Apply changes to all model panels
+    model_panels = cmds.getPanel(type="modelPanel")
+    for panel in model_panels:
+        if cmds.modelEditor(panel, query=True, exists=True):
+            cmds.modelEditor(panel, edit=True, displayAppearance='smoothShaded')
      
 def apply_stylesheet_recursive(widget, selected_object):
 
@@ -24,7 +48,7 @@ def apply_stylesheet_recursive(widget, selected_object):
     if isinstance(widget, QtWidgets.QWidget):
         if selected_object == "2077":
             widget.setStyleSheet("""
-            /*-----QWidget-----*/ 
+                /*-----QWidget------------------------------------------------------------------------------------------------------------------------------------*/ 
                 QWidget {
                     background-color: rgb(30,30,50);
                     selection-color: rgb(94,246,255); 
@@ -34,50 +58,206 @@ def apply_stylesheet_recursive(widget, selected_object):
                     font-weight: bold;
                     font-size: 13px;
                 }
-                QComboBox:hover,QPushButton:hover {
-                    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0W, y2: 1, stop: 0 #f75049, stop: 1 #f75049);
-                }  
-                QTabWidget {
-                    border-style: solid;
-                    padding: 30px;
-                    background-color: rgb(0,0,0);
-                    margin: 10px;
-                }
-                QMainWindow::separator:hover {
-                    background: red;
-                }
-                QTabBar::tab:selected {
-                    border-style: outset;
-                    border-width: 2px;
-                    border-color: rgb(241, 181, 55);
-                    color: rgb(241, 181, 55);
-                    background-color: rgb(0,0,0);                
-                }
-                QScrollBar {
-                    color: rgb(255,255,255); 
-                    background-color: rgb(247,80,73);        
-                }
-                QSlider {
-                    background-color: rgb(247,80,73);        
-                }
-                QSlider::handle {
-                    background-color: rgb(94,246,255);        
-                }
-                QCheckBox::indicator:unchecked {
-                    color: rgb(27,80,73);        
-                }
+                                 
+                /*-----QComboBox------------------------------------------------------------------------------------------------------------------------------------*/
                 QComboBox {
                     color: rgb(29, 237, 131);
                     background-color: rgb(0,0,0);
+                    border-radius: 0.2em;
+                    padding-left: 6px;           
+                    min-width: 7em;
                 }
-                QTabWidget::pane {
-                    background-color: rgb(6,31,43);
+                                 
+                QComboBox:on
+                {
+                    color: rgb(94,246,255);
+                    background-color: rgb(123,39,39);
                 }
-                QTextEdit {
+                                 
+                QComboBox:hover,QPushButton:hover 
+                {
+                    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0W, y2: 1, stop: 0 #f75049, stop: 1 #f75049);
+                } 
+                
+                QComboBox:disabled 
+                {
+                    background-color: rgb(14,11,18);
+                    color: rgb(123,39,39);
+                }
+                                 
+                QComboBox::down-arrow
+                {
+                    image: url('D:/Maya/Scripts/Images/Arrow-204-16.ico');
+                    width: 8px;
+                    height: 8px;
+                }
+                
+                QComboBox::drop-down
+                {
+                    width: 15px;
+                    border-radius: 0.2em;
+                    border-left-width: 0px;    
+                }
+                
+                /*-----QMenu------------------------------------------------------------------------------------------------------------------------------------*/           
+                QMenuBar
+                {
+                    background-color: rgb(14,11,18);
+                    border: 1px;
+                }
+                        
+                QMenu::item
+                {
+                    border-radius: 0.5em;
+                    background-color: transparent;
+                    padding: 2px 20px 2px 20px; 
+                }
+                                 
+                QMenuBar::item 
+                {
+                    color: rgb(94,246,255);
+	                background-color: transparent;
+                }
+                                 
+                QMenuBar::item:selected 
+                {
+                    color: rgb(225,225,225);
+                    background-color: rgb(94,132,191);
+                    border-style: solid;
+                    border-radius: 0.2em; 
+                }
+                                 
+                /*-----QTabBar------------------------------------------------------------------------------------------------------------------------------------*/                       
+                QTabBar::tab
+                {
+	                border-width: 1px;
+	                padding: 2px;
+	                padding-left: 10px;
+	                padding-right: 10px;
+                    border-top-left-radius: 0.3em;
+                    border-top-right-radius: 0.3em;
+                    border-bottom-style: solid; 
+                }  
+                
+                QTabBar::tab:selected {
+                    border-style: solid;
+                    color: rgb(94,246,255);
+                    background-color: rgb(14,11,18);   
+                }
+                
+                QTabBar::tab:!selected 
+                {
+                    color: rgb(29, 237, 131);
+                    background-color: rgb(14,11,18);          
+                } 
+
+                QTabBar::tab:hover:!selected 
+                {
+                    color: rgb(94,246,255);
+                    background-color: rgb(123,39,39);
+                }  
+
+                QTabBar::tab:last
+                {
+                    border-top-right-radius: 0.3em;
+	                margin-right: 0; 
+                }   
+
+                QTabWidget::pane 
+                {
+                    background-color: rgb(14,11,18);
+                } 
+
+                /*-----QScrollBar-----------------------------------------------------------------------------------------------------------------------------------*/               
+                QScrollBar 
+                {
+                    color: rgb(255,255,255); 
+                    background-color: rgb(247,80,73);        
+                }
+                                 
+                /*-----QSlider-----------------------------------------------------------------------------------------------------------------------------------*/
+                QSlider 
+                {
+                    background-color: rgb(247,80,73);        
+                }
+                                 
+                QSlider::handle 
+                {
+                    background-color: rgb(94,246,255);        
+                }
+                                 
+                /*-----QCheckBox------------------------------------------------------------------------------------------------------------------------------------*/                
+                QCheckBox
+                {
+	                background-color: transparent;
+                }
+                                 
+                QCheckBox::indicator 
+                {
+                    width: 12px;
+                    height: 12px;
+                }
+
+                QCheckBox::indicator:checked
+                {
+                    image: url('D:/Maya/Scripts/Images/checkmark-16.ico');
+                    background-color: rgb(247,80,70);
+                    border-radius: 0.2em;  
+                } 
+                                             
+                QCheckBox::indicator:unchecked 
+                {
+                    background-color: rgb(14,11,18);
+                    border-radius: 0.2em;  
+                }             
+
+                QTextEdit 
+                {
                     color: rgb(255, 255, 255);
                     background-color: rgb(0,0,0);
                 }
+                
+                QLineEdit
+                {
+                    color: rgb(29, 237, 131);
+                    border-color: rgb(61,61,61);
+                    border-style:outset;
+                    border-radius: 0.3em;
+                    padding: 2px;
+                    background-color: rgb(14,11,18);
+                    selection-background-color: rgb(247,80,70);
+                }
+                                 
+                /*-----QLabel------------------------------------------------------------------------------------------------------------------------------------*/                
+                QLabel 
+                {
+                    background-color: transparent;
+                    color: rgb(94,246,255);
+                }
+                
+                /*-----QGroupBox------------------------------------------------------------------------------------------------------------------------------------*/ 
+                QGroupBox 
+                {
+                    background-color: #373737;
+                    padding-top: 12px;
+                    border-color: #666666;
+	                border-radius: 5px;
+                    margin-top: 20px;
+                }
+                                 
+                QGroupBox::title  
+                {
+                    background-color: transparent;
+                    subcontrol-origin: margin;
+                    margin-top: 4px;
+                    padding-left: 8px;
+                }
+                                 
             """)
+
+            # cycle the background color to black
+            cycle_background_color_to_black()
+
         elif selected_object == "Blender Dark":
             widget.setStyleSheet("""
                 /*-----QWidget------------------------------------------------------------------------------------------------------------------------------------*/ 
@@ -94,6 +274,7 @@ def apply_stylesheet_recursive(widget, selected_object):
                 /*-----QComboBox------------------------------------------------------------------------------------------------------------------------------------*/                          
                 QComboBox 
                 {
+                    color: rgb(216,216,216);
                     background-color: rgb(40,40,40);
                     border-radius: 0.2em;
                     padding-left: 6px;           
@@ -125,18 +306,11 @@ def apply_stylesheet_recursive(widget, selected_object):
                                  
                 QComboBox::drop-down
                 {
-                    border-radius: 0.2em;
                     width: 15px;
+                    border-radius: 0.2em;
                     border-left-width: 0px;    
                 }
                             
-                /*-----QTabWidget------------------------------------------------------------------------------------------------------------------------------------*/                        
-                QTabWidget::pane 
-                {
-                    top: 1px;
-                    background-color: rgb(24,24,24);
-                }
-
                 /*-----QMenu------------------------------------------------------------------------------------------------------------------------------------*/           
                 QMenuBar
                 {
@@ -205,6 +379,13 @@ def apply_stylesheet_recursive(widget, selected_object):
 	                margin-right: 0; 
                 }
                 
+                /*-----QTabWidget------------------------------------------------------------------------------------------------------------------------------------*/                        
+                QTabWidget::pane 
+                {
+                    top: 1px;
+                    background-color: rgb(24,24,24);
+                }
+
                 /*-----QTextEdit------------------------------------------------------------------------------------------------------------------------------------*/ 
                 QTextEdit 
                 {
@@ -385,13 +566,11 @@ def apply_stylesheet_recursive(widget, selected_object):
                     color: rgb(40,40,40)
                     background-color: rgb(192, 192, 192);
                 }
-
-                QMessageBox QPushButton 
-                {
-                    min-width: 10px;
-                }
-
             """)
+
+            # cycle the background color to black
+            cycle_background_color_to_black()
+
         elif selected_object == "Blender Light":
             widget.setStyleSheet("""
                 /*-----QWidget------------------------------------------------------------------------------------------------------------------------------------*/ 
@@ -440,16 +619,9 @@ def apply_stylesheet_recursive(widget, selected_object):
                                  
                 QComboBox::drop-down
                 {
-                    border-radius: 0.2em;
                     width: 15px;
+                    border-radius: 0.2em;
                     border-left-width: 0px;    
-                }
-                            
-                /*-----QTabWidget------------------------------------------------------------------------------------------------------------------------------------*/                        
-                QTabWidget::pane 
-                {
-                    top: 1px;
-                    background-color: rgb(179,179,179);
                 }
 
                 /*-----QMenu------------------------------------------------------------------------------------------------------------------------------------*/           
@@ -518,6 +690,13 @@ def apply_stylesheet_recursive(widget, selected_object):
                 {
                     border-top-right-radius: 0.3em;
 	                margin-right: 0; 
+                }
+                
+                /*-----QTabWidget------------------------------------------------------------------------------------------------------------------------------------*/                        
+                QTabWidget::pane 
+                {
+                    top: 1px;
+                    background-color: rgb(179,179,179);
                 }
                 
                 /*-----QTextEdit------------------------------------------------------------------------------------------------------------------------------------*/ 
@@ -671,7 +850,7 @@ def apply_stylesheet_recursive(widget, selected_object):
                     margin-top: 4px;
                     padding-left: 8px;
                 }
-
+                                 
                 /*-----QHeaderView------------------------------------------------------------------------------------------------------------------------------------*/ 
                 QHeaderView
                 {
@@ -703,12 +882,43 @@ def apply_stylesheet_recursive(widget, selected_object):
                     color: rgb(40,40,40)
                     background-color: rgb(192, 192, 192);
                 }
-
-                QMessageBox QPushButton 
+                
+                  QDockWidget 
                 {
-                    min-width: 10px;
+                    border: 1px solid lightgray;
+                    titlebar-close-icon: url(close.png);
+                    titlebar-normal-icon: url(undock.png);
                 }
+
+                QDockWidget::title 
+                {
+                    text-align: left; /* align the text to the left */
+                    background: lightgray;
+                    padding-left: 5px;
+                }
+
+                QDockWidget::close-button, QDockWidget::float-button 
+                {
+                    border: 1px solid transparent;
+                    background: darkgray;
+                    padding: 0px;
+                }
+
+                QDockWidget::close-button:hover, QDockWidget::float-button:hover 
+                {
+                    background: gray;
+                }
+
+                QDockWidget::close-button:pressed, QDockWidget::float-button:pressed 
+                {
+                    padding: 1px -1px -1px 1px;
+                }
+                          
             """) 
+
+            # cycle the background color to light grey
+            cycle_background_color_to_light_grey()
+
         elif selected_object == "Maya":
             widget.setStyleSheet("""
                 /*-----QWidget------------------------------------------------------------------------------------------------------------------------------------*/ 
@@ -739,11 +949,9 @@ cmds.menuItem(l="Blender Light")
 cmds.menuItem(l="2077")
 
 # Main Widget UI
-QMainWidget=cmds.text(l="Main Widget",bgc=(.4,.4,.4),w=340,h=25)
-QWidgetC=cmds.colorIndexSliderGrp( label='Color: ', min=0, max=20, value=8)
-QWidgetBGC=cmds.colorIndexSliderGrp( label='Background Color: ', min=0, max=20, value=2)
-QWidgetSC=cmds.colorIndexSliderGrp( label='Selection Color: ', min=0, max=20, value=4)
-QWidgetSBGC=cmds.colorIndexSliderGrp( label='Selection BG Color: ', min=0, max=20, value=6)
+cmds.text(label="Use the sliders below to adjust set custom colors")
+cmds.colorInputWidgetGrp( label='', rgb=(1, 1, 1) )
+cmds.button( label='Apply')
 
 cmds.setParent('..')
 cmds.showWindow()
