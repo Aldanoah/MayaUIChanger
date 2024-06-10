@@ -87,7 +87,7 @@ def apply_stylesheet_recursive(widget, selected_object):
                                  
                 QComboBox::down-arrow
                 {
-                    image: url('D:/Maya/Scripts/Images/Arrow-204-16.ico');
+                    image: url('Images\Arrow-204-16.ico');
                     width: 8px;
                     height: 8px;
                 }
@@ -200,7 +200,7 @@ def apply_stylesheet_recursive(widget, selected_object):
 
                 QCheckBox::indicator:checked
                 {
-                    image: url('D:/Maya/Scripts/Images/checkmark-16.ico');
+                    image: url('Images\checkmark-16.ico');
                     background-color: rgb(247,80,70);
                     border-radius: 0.2em;  
                 } 
@@ -299,7 +299,7 @@ def apply_stylesheet_recursive(widget, selected_object):
 
                 QComboBox::down-arrow
                 {
-                    image: url('D:/Maya/Scripts/Images/Arrow-204-16.ico');
+                    image: url('Images\Arrow-204-16.ico');
                     width: 8px;
                     height: 8px;
                 }
@@ -484,7 +484,7 @@ def apply_stylesheet_recursive(widget, selected_object):
                            
                 QCheckBox::indicator:checked
                 {
-                    image: url('D:/Maya/Scripts/Images/checkmark-16.ico');
+                    image: url('Images\checkmark-16.ico');
                     background-color: rgb(71,114,179);
                     border-radius: 0.2em;  
                 }  
@@ -612,7 +612,7 @@ def apply_stylesheet_recursive(widget, selected_object):
 
                 QComboBox::down-arrow
                 {
-                    image: url('D:/Maya/Scripts/Images/Arrow-204-16.ico');
+                    image: url('Images\Arrow-204-16.ico');
                     width: 8px;
                     height: 8px;
                 }
@@ -801,7 +801,7 @@ def apply_stylesheet_recursive(widget, selected_object):
                            
                 QCheckBox::indicator:checked
                 {
-                    image: url('D:/Maya/Scripts/Images/checkmark-16.ico');
+                    image: url('Images\Arrow-204-16.ico');
                     background-color: rgb(71,114,179);
                     border-radius: 0.2em;  
                 }  
