@@ -55,7 +55,6 @@ def apply_stylesheet_recursive(widget, selected_object):
                     selection-background-color: rgb(247,80,70);
                     color: rgb(94,246,255);
                     font-family: rajdhani;
-                    font-weight: bold;
                     font-size: 13px;
                 }
                                  
@@ -77,7 +76,7 @@ def apply_stylesheet_recursive(widget, selected_object):
                 QComboBox:hover,QPushButton:hover 
                 {
                     border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0W, y2: 1, stop: 0 #f75049, stop: 1 #f75049);
-                } 
+                }
                 
                 QComboBox:disabled 
                 {
@@ -87,7 +86,7 @@ def apply_stylesheet_recursive(widget, selected_object):
                                  
                 QComboBox::down-arrow
                 {
-                    image: url('D:/Maya/Scripts/Images/Arrow-204-16.ico');
+                    image: url('E:/Maya/Scripts/Images/Arrow-204-16.ico');
                     width: 8px;
                     height: 8px;
                 }
@@ -99,18 +98,26 @@ def apply_stylesheet_recursive(widget, selected_object):
                     border-left-width: 0px;    
                 }
                 
-                /*-----QMenu------------------------------------------------------------------------------------------------------------------------------------*/           
-                QMenuBar
-                {
-                    background-color: rgb(14,11,18);
-                    border: 1px;
-                }
-                        
+                /*-----QMenu------------------------------------------------------------------------------------------------------------------------------------*/            
                 QMenu::item
                 {
                     border-radius: 0.5em;
                     background-color: transparent;
-                    padding: 2px 20px 2px 20px; 
+                    padding: 4px 20px 4px 20px; 
+                }
+
+                QMenu::separator
+                {
+                    height:1px;
+                    margin-left:5px;
+                    margin-right:5px;
+                }
+
+                QMenuBar
+                {
+                    background-color: transparent;
+                    spacing:2px;
+                    border: 1px;
                 }
                                  
                 QMenuBar::item 
@@ -121,8 +128,8 @@ def apply_stylesheet_recursive(widget, selected_object):
                                  
                 QMenuBar::item:selected 
                 {
-                    color: rgb(225,225,225);
-                    background-color: rgb(94,132,191);
+                    color: rgb(94,246,255);
+                    background-color: rgb(123,39,39);
                     border-style: solid;
                     border-radius: 0.2em; 
                 }
@@ -131,7 +138,7 @@ def apply_stylesheet_recursive(widget, selected_object):
                 QTabBar::tab
                 {
 	                border-width: 1px;
-	                padding: 2px;
+	                padding: 5px;
 	                padding-left: 10px;
 	                padding-right: 10px;
                     border-top-left-radius: 0.3em;
@@ -159,7 +166,7 @@ def apply_stylesheet_recursive(widget, selected_object):
 
                 QTabBar::tab:last
                 {
-                    border-top-right-radius: 0.3em;
+                    border-top-right-radius: 0em;
 	                margin-right: 0; 
                 }   
 
@@ -200,7 +207,7 @@ def apply_stylesheet_recursive(widget, selected_object):
 
                 QCheckBox::indicator:checked
                 {
-                    image: url('D:/Maya/Scripts/Images/checkmark-16.ico');
+                    image: url('E:/Maya/Scripts/Images/checkmark-16.ico');
                     background-color: rgb(247,80,70);
                     border-radius: 0.2em;  
                 } 
@@ -223,7 +230,7 @@ def apply_stylesheet_recursive(widget, selected_object):
                     border-color: rgb(61,61,61);
                     border-style:outset;
                     border-radius: 0.3em;
-                    padding: 2px;
+                    padding: 0px;
                     background-color: rgb(14,11,18);
                     selection-background-color: rgb(247,80,70);
                 }
@@ -252,7 +259,20 @@ def apply_stylesheet_recursive(widget, selected_object):
                     margin-top: 4px;
                     padding-left: 8px;
                 }
-                                 
+
+                /*-----QSplitter------------------------------------------------------------------------------------------------------------------------------------*/
+                QSplitter::handle 
+                {
+                    border: 1px solid rgb(14,11,18);	
+                }
+
+                /*-----QSeparator------------------------------------------------------------------------------------------------------------------------------------*/
+                QDockWidget::title 
+                {
+                    text-align: left; /* align the text to the left */
+                    background: lightgray;
+                    padding-left: 5px;
+                }      
             """)
 
             # cycle the background color to black
@@ -299,7 +319,7 @@ def apply_stylesheet_recursive(widget, selected_object):
 
                 QComboBox::down-arrow
                 {
-                    image: url('D:/Maya/Scripts/Images/Arrow-204-16.ico');
+                    image: url('E:/Maya/Scripts/Images/Arrow-204-16.ico');
                     width: 8px;
                     height: 8px;
                 }
@@ -312,17 +332,25 @@ def apply_stylesheet_recursive(widget, selected_object):
                 }
                             
                 /*-----QMenu------------------------------------------------------------------------------------------------------------------------------------*/           
-                QMenuBar
-                {
-                    background-color: rgb(24,24,24);
-                    border: 1px;
-                }
-                        
                 QMenu::item
                 {
                     border-radius: 0.5em;
                     background-color: transparent;
-                    padding: 2px 20px 2px 20px; 
+                    padding: 4px 20px 4px 20px; 
+                }
+
+                QMenu::separator
+                {
+                    height:1px;
+                    margin-left:5px;
+                    margin-right:5px;
+                }
+
+                QMenuBar
+                {
+                    background-color: transparent;
+                    spacing:2px;
+                    border: 1px;
                 }
                                  
                 QMenuBar::item 
@@ -334,7 +362,7 @@ def apply_stylesheet_recursive(widget, selected_object):
                 QMenuBar::item:selected 
                 {
                     color: rgb(225,225,225);
-                    background-color: rgb(63,63,63);
+                    background-color: rgb(94,132,191);
                     border-style:outset;
                     border-radius: 0.2em; 
                 }
@@ -375,7 +403,7 @@ def apply_stylesheet_recursive(widget, selected_object):
                                  
                 QTabBar::tab:last
                 {
-                    border-top-right-radius: 0.3em;
+                    border-top-right-radius: 0em;
 	                margin-right: 0; 
                 }
                 
@@ -383,7 +411,7 @@ def apply_stylesheet_recursive(widget, selected_object):
                 QTabWidget::pane 
                 {
                     top: 1px;
-                    background-color: rgb(24,24,24);
+                    background-color: rgb(29,29,29); 
                 }
 
                 /*-----QTextEdit------------------------------------------------------------------------------------------------------------------------------------*/ 
@@ -484,7 +512,7 @@ def apply_stylesheet_recursive(widget, selected_object):
                            
                 QCheckBox::indicator:checked
                 {
-                    image: url('D:/Maya/Scripts/Images/checkmark-16.ico');
+                    image: url('E:/Maya/Scripts/Images/checkmark-16.ico');
                     background-color: rgb(71,114,179);
                     border-radius: 0.2em;  
                 }  
@@ -502,10 +530,8 @@ def apply_stylesheet_recursive(widget, selected_object):
                     background-color: rgb(24,24,24);
                     border: 1px solid #404040;
                     border-color: rgb(61,61,61);
-                    border-style:outset;
                     border-radius: 0.3em;
-                    padding: 2px;
-                    background-color: #2c2c2c;
+                    padding: 0px;
                     selection-background-color: darkgray;
                 }
 
@@ -566,6 +592,7 @@ def apply_stylesheet_recursive(widget, selected_object):
                     color: rgb(40,40,40)
                     background-color: rgb(192, 192, 192);
                 }
+
             """)
 
             # cycle the background color to black
@@ -612,7 +639,7 @@ def apply_stylesheet_recursive(widget, selected_object):
 
                 QComboBox::down-arrow
                 {
-                    image: url('D:/Maya/Scripts/Images/Arrow-204-16.ico');
+                    image: url('E:/Maya/Scripts/Images/Arrow-204-16.ico');
                     width: 8px;
                     height: 8px;
                 }
@@ -625,17 +652,25 @@ def apply_stylesheet_recursive(widget, selected_object):
                 }
 
                 /*-----QMenu------------------------------------------------------------------------------------------------------------------------------------*/           
-                QMenuBar
-                {
-                    background-color: rgb(179,179,179);
-                    border: 1px;
-                }
-                        
                 QMenu::item
                 {
                     border-radius: 0.5em;
                     background-color: transparent;
-                    padding: 2px 20px 2px 20px; 
+                    padding: 4px 20px 4px 20px;  
+                }
+
+                QMenu::separator
+                {
+                    height:1px;
+                    margin-left:5px;
+                    margin-right:5px;
+                }
+
+                QMenuBar
+                {
+                    background-color: transparent;
+                    spacing:2px;
+                    border: 1px;
                 }
                                  
                 QMenuBar::item 
@@ -801,7 +836,7 @@ def apply_stylesheet_recursive(widget, selected_object):
                            
                 QCheckBox::indicator:checked
                 {
-                    image: url('D:/Maya/Scripts/Images/checkmark-16.ico');
+                    image: url('E:/Maya/Scripts/Images/checkmark-16.ico');
                     background-color: rgb(71,114,179);
                     border-radius: 0.2em;  
                 }  
@@ -817,11 +852,10 @@ def apply_stylesheet_recursive(widget, selected_object):
                 {
                     color: rgb(195,195,195);
                     background-color: rgb(24,24,24);
+                    border: 1px solid #404040;
                     border-color: rgb(61,61,61);
-                    border-style:outset;
                     border-radius: 0.3em;
-                    padding: 2px;
-                    background-color: #2c2c2c;
+                    padding: 0px;
                     selection-background-color: darkgray;
                 }
 
@@ -881,38 +915,7 @@ def apply_stylesheet_recursive(widget, selected_object):
                 {
                     color: rgb(40,40,40)
                     background-color: rgb(192, 192, 192);
-                }
-                
-                  QDockWidget 
-                {
-                    border: 1px solid lightgray;
-                    titlebar-close-icon: url(close.png);
-                    titlebar-normal-icon: url(undock.png);
-                }
-
-                QDockWidget::title 
-                {
-                    text-align: left; /* align the text to the left */
-                    background: lightgray;
-                    padding-left: 5px;
-                }
-
-                QDockWidget::close-button, QDockWidget::float-button 
-                {
-                    border: 1px solid transparent;
-                    background: darkgray;
-                    padding: 0px;
-                }
-
-                QDockWidget::close-button:hover, QDockWidget::float-button:hover 
-                {
-                    background: gray;
-                }
-
-                QDockWidget::close-button:pressed, QDockWidget::float-button:pressed 
-                {
-                    padding: 1px -1px -1px 1px;
-                }
+                }         
                           
             """) 
 
@@ -926,7 +929,8 @@ def apply_stylesheet_recursive(widget, selected_object):
                 {
                     font-family: DejaVuSans;
                     font-size: 12px;
-                }    
+                } 
+  
         """) 
 
 #Start of UI
@@ -943,10 +947,10 @@ cmds.separator(height=10)
 #Drop Down to Select Theme
 UI_DropDown = cmds.optionMenuGrp(l="Select Theme", cc=on_theme_change, en=True)
 cmds.menuItem(l="Please make your selection from the list below")
-cmds.menuItem(l="Maya")
 cmds.menuItem(l="Blender Dark")
 cmds.menuItem(l="Blender Light")
 cmds.menuItem(l="2077")
+cmds.menuItem(l="Maya")
 
 # Main Widget UI
 cmds.text(label="Use the sliders below to adjust set custom colors")
