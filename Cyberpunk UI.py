@@ -4,9 +4,8 @@ from maya import OpenMayaUI
 from PySide2 import QtWidgets
 
 #Start of Functions
-def on_theme_change(*args):
-    selected_object = cmds.optionMenuGrp(UI_DropDown, q=True, v=True)
-    change_interface_color(selected_object)
+def on_theme_change(theme):
+    change_interface_color(theme)
 
 def change_interface_color(selected_object):
     # Get main Maya window
@@ -46,7 +45,7 @@ def apply_stylesheet_recursive(widget, selected_object):
 
     # Apply stylesheet to current widget
     if isinstance(widget, QtWidgets.QWidget):
-        if selected_object == "2077":
+        if selected_object == "Edgerunners":
             widget.setStyleSheet("""
                 /*-----QWidget------------------------------------------------------------------------------------------------------------------------------------*/ 
                 QWidget {
@@ -528,7 +527,7 @@ def apply_stylesheet_recursive(widget, selected_object):
                 QLineEdit
                 {
                     color: rgb(195,195,195);
-                    background-color: rgb(24,24,24);
+                    background-color: rgb(29,29,29);
                     border: 1px solid #404040;
                     border-color: rgb(61,61,61);
                     border-radius: 0.3em;
@@ -852,7 +851,7 @@ def apply_stylesheet_recursive(widget, selected_object):
                 QLineEdit
                 {
                     color: rgb(195,195,195);
-                    background-color: rgb(24,24,24);
+                    background-color: rgb(59,59,59);
                     border: 1px solid #404040;
                     border-color: rgb(61,61,61);
                     border-radius: 0.3em;
@@ -940,23 +939,42 @@ if cmds.window(winName, q=True, ex=True):
     cmds.deleteUI(winName)
 cmds.window(winName)
 
-column_layout = cmds.columnLayout(adjustableColumn=True, columnAttach=['both', 10], rowSpacing=10)
-cmds.separator(height=10)
-cmds.text(label="Maya UI Changer")
-cmds.separator(height=10)
+form = cmds.formLayout()
+title = cmds.text(label="Maya UI Changer", align="center", height=30)
 
-#Drop Down to Select Theme
-UI_DropDown = cmds.optionMenuGrp(l="Select Theme", cc=on_theme_change, en=True)
-cmds.menuItem(l="Please make your selection from the list below")
-cmds.menuItem(l="Blender Dark")
-cmds.menuItem(l="Blender Light")
-cmds.menuItem(l="2077")
-cmds.menuItem(l="Maya")
+themes = ["Blender Dark", "Blender Light", "Edgerunners", "Maya"]
+icon_paths = {
+    "Blender Dark": "D:/Maya/Scripts/Images/Blender_logo_1.png",
+    "Blender Light": "D:/Maya/Scripts/Images/Blender_logo_2.png",  
+    "Edgerunners": "D:/Maya/Scripts/Images/Edgerunners_logo_1.png",  
+    "Maya": "D:/Maya/Scripts/Images/Maya_logo_1.png"  
+}
 
-# Main Widget UI
-cmds.text(label="Use the sliders below to adjust set custom colors")
-cmds.colorInputWidgetGrp( label='', rgb=(1, 1, 1) )
-cmds.button( label='Apply')
+buttons = []
+for theme in themes:
+    icon_path = icon_paths.get(theme, "")
+    button = cmds.iconTextButton(
+        style='iconAndTextVertical',
+        image1=icon_path,
+        label=theme,
+        command=lambda t=theme: on_theme_change(t)
+    )
+    buttons.append(button)
+spacing = 10
+button_width = 50
+button_height = 50
+
+cmds.formLayout(form, edit=True, attachForm=[
+    (title, 'top', 10), (title, 'left', 10), (title, 'right', 10),
+    (buttons[0], 'top', 50), (buttons[0], 'left', 10)
+])
+
+for i in range(1, len(buttons)):
+    cmds.formLayout(form, edit=True, attachForm=[
+        (buttons[i], 'top', 50)
+    ], attachControl=[
+        (buttons[i], 'left', spacing, buttons[i-1])
+    ], width=button_width, height=button_height)
 
 cmds.setParent('..')
 cmds.showWindow()
