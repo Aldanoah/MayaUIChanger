@@ -1,7 +1,8 @@
 import maya.cmds as cmds
-import shiboken2
+import maya.OpenMayaUI as omui
+from shiboken2 import wrapInstance
 from maya import OpenMayaUI
-from PySide2 import QtWidgets
+from PySide2 import QtWidgets, QtCore
 
 #Start of Functions
 def on_theme_change(theme):
@@ -11,7 +12,7 @@ def change_interface_color(selected_object):
     # Get main Maya window
     main_window_ptr = OpenMayaUI.MQtUtil.mainWindow()
     if main_window_ptr is not None:
-        main_window = shiboken2.wrapInstance(int(main_window_ptr), QtWidgets.QWidget)
+        main_window = wrapInstance(int(main_window_ptr), QtWidgets.QWidget)
         apply_stylesheet_recursive(main_window, selected_object)
     else:
         print("Failed to find main Maya window.")
@@ -40,7 +41,7 @@ def cycle_background_color_to_light_grey():
     for panel in model_panels:
         if cmds.modelEditor(panel, query=True, exists=True):
             cmds.modelEditor(panel, edit=True, displayAppearance='smoothShaded')
-     
+        
 def apply_stylesheet_recursive(widget, selected_object):
 
     # Apply stylesheet to current widget
@@ -48,7 +49,8 @@ def apply_stylesheet_recursive(widget, selected_object):
         if selected_object == "Edgerunners":
             widget.setStyleSheet("""
                 /*-----QWidget------------------------------------------------------------------------------------------------------------------------------------*/ 
-                QWidget {
+                QWidget
+                {
                     background-color: rgb(30,30,50);
                     selection-color: rgb(94,246,255); 
                     selection-background-color: rgb(247,80,70);
@@ -57,6 +59,12 @@ def apply_stylesheet_recursive(widget, selected_object):
                     font-weight: bold;
                     font-size: 13px;
                 }
+                                 
+                /*-----QTableView------------------------------------------------------------------------------------------------------------------------------------*/ 
+                QTableView 
+                {
+                background-color: rgb(14,11,18);
+                }   
                                  
                 /*-----QComboBox------------------------------------------------------------------------------------------------------------------------------------*/
                 QComboBox {
@@ -83,7 +91,7 @@ def apply_stylesheet_recursive(widget, selected_object):
                     background-color: rgb(14,11,18);
                     color: rgb(123,39,39);
                 }
-                                 
+                                        
                 QComboBox::down-arrow
                 {
                     image: url('D:/Maya/Scripts/Images/Arrow-204-16.ico');
@@ -104,13 +112,6 @@ def apply_stylesheet_recursive(widget, selected_object):
                     border-radius: 0.5em;
                     background-color: transparent;
                     padding: 4px 20px 4px 20px; 
-                }
-
-                QMenu::separator
-                {
-                    height:1px;
-                    margin-left:5px;
-                    margin-right:5px;
                 }
 
                 QMenuBar
@@ -272,7 +273,8 @@ def apply_stylesheet_recursive(widget, selected_object):
                     text-align: left; /* align the text to the left */
                     background: lightgray;
                     padding-left: 5px;
-                }      
+                }    
+                                 
             """)
 
             # cycle the background color to black
@@ -290,12 +292,18 @@ def apply_stylesheet_recursive(widget, selected_object):
                     font-family: DejaVuSans;
                     font-size: 12px;
                 }
+                                 
+                /*-----QTableView------------------------------------------------------------------------------------------------------------------------------------*/ 
+                QTableView 
+                {
+                background-color: rgb(29,29,29); 
+                }   
 
                 /*-----QComboBox------------------------------------------------------------------------------------------------------------------------------------*/                          
                 QComboBox 
                 {
                     color: rgb(216,216,216);
-                    background-color: rgb(40,40,40);
+                    background-color: rgb(29,29,29); 
                     border-radius: 0.2em;
                     padding-left: 6px;           
                     min-width: 7em;
@@ -308,7 +316,8 @@ def apply_stylesheet_recursive(widget, selected_object):
                                  
                 QComboBox QAbstractItemView
                 {
-                selection-background-color: rgb(63,63,63);
+                    background-color: black;
+                    color:rgb(216,216,216);
                 }
                                  
                 QComboBox:disabled 
@@ -335,6 +344,7 @@ def apply_stylesheet_recursive(widget, selected_object):
                 QMenu::item
                 {
                     border-radius: 0.5em;
+                    color: rgb(216,216,216);
                     background-color: transparent;
                     padding: 4px 20px 4px 20px; 
                 }
@@ -344,6 +354,12 @@ def apply_stylesheet_recursive(widget, selected_object):
                     height:1px;
                     margin-left:5px;
                     margin-right:5px;
+                }
+                
+                QMenu::indicator
+                {
+                    background-color: #323232;
+                    color: #8a8a8a;
                 }
 
                 QMenuBar
@@ -601,15 +617,21 @@ def apply_stylesheet_recursive(widget, selected_object):
         elif selected_object == "Blender Light":
             widget.setStyleSheet("""
                 /*-----QWidget------------------------------------------------------------------------------------------------------------------------------------*/ 
-                QWidget 
+                QWidget
                 {
-                    background-color: rgb(179,179,179);
+                    background-color: rgb(192, 192, 192);
+                    color: rgb(216,216,216);
                     selection-color: rgb(254,254,254);
                     selection-background-color: rgb(86,128,194);
-                    color: rgb(40,40,40);
                     font-family: DejaVuSans;
                     font-size: 12px;
                 }
+                                 
+                /*-----QTableView------------------------------------------------------------------------------------------------------------------------------------*/ 
+                QTableView, QTreeView
+                {
+                background-color: rgb(59,59,59);
+                }   
 
                 /*-----QComboBox------------------------------------------------------------------------------------------------------------------------------------*/                          
                 QComboBox 
@@ -623,12 +645,7 @@ def apply_stylesheet_recursive(widget, selected_object):
                 
                 QComboBox:on
                 {
-                    background-color: rgb(118,118,118);
-                }
-                                 
-                QComboBox QAbstractItemView
-                {
-                selection-background-color: rgb(5,5,5);
+                    background-color: rgb(67,97,143);
                 }
                                  
                 QComboBox:disabled 
@@ -651,32 +668,38 @@ def apply_stylesheet_recursive(widget, selected_object):
                     border-left-width: 0px;    
                 }
 
-                /*-----QMenu------------------------------------------------------------------------------------------------------------------------------------*/           
+                /*-----QMenu------------------------------------------------------------------------------------------------------------------------------------*/                    
+                QMenu
+                {
+                    background-color: rgb(82,82,82);
+                }
+                                 
                 QMenu::item
                 {
-                    border-radius: 0.5em;
                     background-color: transparent;
-                    padding: 4px 20px 4px 20px;  
                 }
 
                 QMenu::separator
                 {
-                    height:1px;
+                    height:0px;
                     margin-left:5px;
                     margin-right:5px;
+                }
+                
+                QMenu::indicator {
+                    width: 40px;
+                    height: 13px;
                 }
 
                 QMenuBar
                 {
-                    background-color: transparent;
+                    background-color: rgb(192,192,192);
                     spacing:2px;
-                    border: 1px;
                 }
                                  
                 QMenuBar::item 
                 {
                     color: rgb(37,37,37);
-	                background-color: transparent;
                 }
                                  
                 QMenuBar::item:selected 
@@ -687,8 +710,8 @@ def apply_stylesheet_recursive(widget, selected_object):
                     border-radius: 0.2em; 
                 }
                           
-                /*-----QTabBar------------------------------------------------------------------------------------------------------------------------------------*/ 
-                QTabBar::tab
+                /*-----QTabBar------------------------------------------------------------------------------------------------------------------------------------*/                
+                QTabBar::tab 
                 {
 	                border-width: 1px;
 	                border-bottom: none;
@@ -698,10 +721,16 @@ def apply_stylesheet_recursive(widget, selected_object):
                     border-top-left-radius: 0.3em;
                     border-top-right-radius: 0.3em;
                     border-bottom-style: solid; 
-                }    
+                }   
+
+                QtabBar::Tab:Page 
+                {
+                    background-color: rgb(192, 192, 192);
+                }
                                    
                 QTabBar::tab:selected 
                 {
+                    color: rgb(40,40,40);
                     background-color: rgb(179,179,179);
                     border-style: solid;
                     border-width: 1px;
@@ -727,13 +756,13 @@ def apply_stylesheet_recursive(widget, selected_object):
 	                margin-right: 0; 
                 }
                 
-                /*-----QTabWidget------------------------------------------------------------------------------------------------------------------------------------*/                        
+                /*-----QTabWidget------------------------------------------------------------------------------------------------------------------------------------*/                                     
                 QTabWidget::pane 
                 {
                     top: 1px;
                     background-color: rgb(179,179,179);
                 }
-                
+                                 
                 /*-----QTextEdit------------------------------------------------------------------------------------------------------------------------------------*/ 
                 QTextEdit 
                 {
@@ -825,7 +854,7 @@ def apply_stylesheet_recursive(widget, selected_object):
                 /*-----QCheckBox------------------------------------------------------------------------------------------------------------------------------------*/ 
                 QCheckBox
                 {
-	                background-color: transparent;
+	                color: rgb(37,37,37);
                 }
 
                 QCheckBox::indicator 
@@ -846,6 +875,12 @@ def apply_stylesheet_recursive(widget, selected_object):
                     background-color: rgb(84,84,84);
                     border-radius: 0.2em;  
                 }
+                                 
+                /*-----QRadioButton------------------------------------------------------------------------------------------------------------------------------------*/ 
+                QRadioButton
+                {
+	                color: rgb(37,37,37);
+                }   
 
                 /*-----QLineEdit------------------------------------------------------------------------------------------------------------------------------------*/                 
                 QLineEdit
@@ -856,35 +891,15 @@ def apply_stylesheet_recursive(widget, selected_object):
                     border-color: rgb(61,61,61);
                     border-radius: 0.3em;
                     padding: 0px;
-                    selection-background-color: darkgray;
                 }
 
                 /*-----QLabel------------------------------------------------------------------------------------------------------------------------------------*/                
                 QLabel 
                 {
+                    color: rgb(37,37,37);
                     background-color: transparent;
-                    color: rgb(13,13,13);
                 }
-                    
-                /*-----QGroupBox------------------------------------------------------------------------------------------------------------------------------------*/ 
-                QGroupBox 
-                {
-                    border: 0px solid #373737;
-                    background-color: #373737;
-                    padding-top: 12px;
-                    border-color: #666666;
-	                border-radius: 5px;
-                    margin-top: 20px;
-                }
-                                 
-                QGroupBox::title  
-                {
-                    background-color: transparent;
-                    subcontrol-origin: margin;
-                    margin-top: 4px;
-                    padding-left: 8px;
-                }
-                                 
+                            
                 /*-----QHeaderView------------------------------------------------------------------------------------------------------------------------------------*/ 
                 QHeaderView
                 {
@@ -913,10 +928,17 @@ def apply_stylesheet_recursive(widget, selected_object):
                 /*-----QMessageBox------------------------------------------------------------------------------------------------------------------------------------*/ 
                 QMessageBox 
                 {
-                    color: rgb(40,40,40)
+                    color: rgb(179,179,179);
                     background-color: rgb(192, 192, 192);
-                }         
-                          
+                } 
+
+                /*-----QPushButton------------------------------------------------------------------------------------------------------------------------------------*/   
+                QPushButton 
+                {
+                    color: rgb(37,37,37);
+                    background-color: rgb(192, 192, 192);
+                } 
+               
             """) 
 
             # cycle the background color to light grey
@@ -929,8 +951,7 @@ def apply_stylesheet_recursive(widget, selected_object):
                 {
                     font-family: DejaVuSans;
                     font-size: 12px;
-                } 
-  
+                }                                          
         """) 
 
 #Start of UI
