@@ -61,7 +61,7 @@ def apply_stylesheet_recursive(widget, selected_object):
                     font-weight: bold;
                     font-size: 13px;
                 }
-                                 
+                          
                 /*-----QTableView------------------------------------------------------------------------------------------------------------------------------------*/ 
                 QTableView, QTreeView
                 {
@@ -142,7 +142,7 @@ def apply_stylesheet_recursive(widget, selected_object):
                 {
                     color: rgb(94,246,255);
                     background-color: rgb(123,39,39);
-                    border-style: solid;
+                    border-style: outset;
                     border-radius: 0.2em; 
                 }
                                  
@@ -166,7 +166,7 @@ def apply_stylesheet_recursive(widget, selected_object):
                 
                 QTabBar::tab:!selected 
                 {
-                    color: rgb(29, 237, 131);
+                    color: rgb(29,237,131);
                     background-color: rgb(14,11,18);          
                 } 
 
@@ -191,7 +191,7 @@ def apply_stylesheet_recursive(widget, selected_object):
                 /*-----QTextEdit------------------------------------------------------------------------------------------------------------------------------------*/
                 QTextEdit 
                 {
-                    color: rgb(255, 255, 255);
+                    color: rgb(255,255,255);
                     background-color: rgb(14,11,18);
                 }
                                  
@@ -212,7 +212,8 @@ def apply_stylesheet_recursive(widget, selected_object):
                     background-color: rgb(14,11,18);      
                 }
                 
-                QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+                QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal 
+                {
                     background-color: rgb(14,11,18); 
                 }
                                  
@@ -260,9 +261,9 @@ def apply_stylesheet_recursive(widget, selected_object):
                 {
                     background-color: rgb(14,11,18);
                     border-radius: 0.2em;  
-                }         
-                                     
-                *-----QLineEdit------------------------------------------------------------------------------------------------------------------------------------*/
+                }   
+                    
+                /*-----QLineEdit------------------------------------------------------------------------------------------------------------------------------------*/
                 QLineEdit
                 {
                     color: rgb(29, 237, 131);
