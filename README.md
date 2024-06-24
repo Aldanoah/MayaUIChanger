@@ -1,6 +1,6 @@
 # Maya-UI-Changer
 
-This tool allows users to apply various pre-made theme presets to enhance the styling of Maya’s user environment. This project is currently a work in progress so aspects of the themes may display correctly.
+This tool allows users to apply various pre-made theme presets to enhance the styling of Maya’s user environment. This project is currently a work in progress so aspects of the themes such as icons and menus currently do not display correctly.
 https://vimeo.com/929099569
 
 
