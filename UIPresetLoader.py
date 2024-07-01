@@ -94,14 +94,14 @@ def apply_stylesheet_recursive(widget, selected_object):
                 QMenuBar::item:selected { color: rgb(225,225,225); background-color: rgb(94,132,191); border-style: outset; border-radius: 0.2em; }
                 
                 /*-----QTabBar------------------------------------------------------------------------------------------------------------------------------------*/           
-                QTabBar::tab { background-color: #373737; border-style: solid; border-width: 1px; border-top-color: #373737; border-right-color: #373737; border-left-color: #373737; border-bottom-color: #373737; padding: 5px 10px 3px 10px; border-top-left-radius: 0.3em; border-top-right-radius: 0.3em; border-bottom-style: solid; }
+                QTabBar::tab {background-color: #373737; border-style: solid; border-width: 1px; border-top-color: #373737; border-right-color: #373737; border-left-color: #373737; border-bottom-color: #373737; padding: 5px 10px 3px 10px; border-top-left-radius: 0.3em; border-top-right-radius: 0.3em; border-bottom-style: solid; }
                 QTabBar::tab:selected { background-color: #424242; border-style: solid; border-width: 1px; border-color: #373737; border-bottom-color: #424242; }
                 QTabBar::tab:!selected { border-style: solid; border-width: 1px; background-color: #2c2c2c; color: #d8d8d8; }
                 QTabBar::tab:hover:!selected { background-color: #343434; color: #afafaf; }
                 QTabBar::tab:last { border-top-right-radius: 0.3em; margin-right: 0; }
                 
                 /*-----QTabWidget------------------------------------------------------------------------------------------------------------------------------------*/           
-                QTabWidget::pane { background-color: #404040; }
+                QTabWidget::pane { background-color: rgb(44,44,44); }
                 
                 /*-----QTextEdit------------------------------------------------------------------------------------------------------------------------------------*/           
                 QTextEdit { color: rgb(149, 214, 000); background-color: rgb(29,29,29); }
@@ -235,7 +235,7 @@ def apply_stylesheet_recursive(widget, selected_object):
                 QTabBar::tab:last { border-top-right-radius: 0.3em; margin-right: 0; }
                                                                   
                 /*-----QTabWidget------------------------------------------------------------------------------------------------------------------------------------*/           
-                QTabWidget::pane { background-color: rgb(166,166,166); }
+                QTabWidget::pane { background-color: rgb(139,139,139); }
                                  
                 /*-----QTextEdit------------------------------------------------------------------------------------------------------------------------------------*/           
                 QTextEdit { color: rgb(149, 214, 000); background-color: rgb(28,28,28); }
