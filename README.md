@@ -20,7 +20,7 @@ Installation:
 
 **Compatability** This script is confirmed to run on Maya versions 2019 - 2024. 
 
-**The currently available them presets are as follows;**
+**The currently available presets are as follows;**
 
 1) Blender Dark
 
