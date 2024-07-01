@@ -73,29 +73,4 @@ def apply_stylesheet_recursive(widget, selected_object):
         # Recursively apply to all child widgets
         for child in widget.children():
             apply_stylesheet_recursive(child, selected_object)
-            
-def cycle_background_color_to_black():
-    # Set the background color to black and apply the changes to all model panels.
-    cmds.displayRGBColor('background', 0, 0, 0)
-    cmds.displayRGBColor('backgroundTop', 0, 0, 0)
-    cmds.displayRGBColor('backgroundBottom', 0, 0, 0)
-
-    # Apply changes to all model panels
-    model_panels = cmds.getPanel(type="modelPanel")
-    for panel in model_panels:
-        if cmds.modelEditor(panel, query=True, exists=True):
-            cmds.modelEditor(panel, edit=True, displayAppearance='smoothShaded')
-
-def cycle_background_color_to_light_grey():
-    # Set the background color to light grey 
-    light_grey = 0.4
-    cmds.displayRGBColor('background', light_grey, light_grey, light_grey)
-    cmds.displayRGBColor('backgroundTop', light_grey, light_grey, light_grey)
-    cmds.displayRGBColor('backgroundBottom', light_grey, light_grey, light_grey)
-
-    # Apply changes to all model panels
-    model_panels = cmds.getPanel(type="modelPanel")
-    for panel in model_panels:
-        if cmds.modelEditor(panel, query=True, exists=True):
-            cmds.modelEditor(panel, edit=True, displayAppearance='smoothShaded')
 
