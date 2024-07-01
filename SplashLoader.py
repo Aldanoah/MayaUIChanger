@@ -13,7 +13,7 @@ def set_splash_screen(image_path, text_field):
     cmds.textFieldButtonGrp(text_field, e=True, text=os.path.basename(image_path))
     
     # Define the target path for the splash screen, Adjust Maya version as needed.
-    maya_install_path = r"C:\Program Files\Autodesk\Maya2019"  
+    maya_install_path = r"C:\Program Files\Autodesk\Maya2024"  
     splash_screen_dir = os.path.join(maya_install_path, "icons")
     splash_screen_path = os.path.join(splash_screen_dir, "MayaStartupImage.png")
     
