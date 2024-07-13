@@ -53,24 +53,3 @@ def apply_styles(selected_theme):
     else:
         cmds.warning("Style file not found: {}".format(qss_file))
 
-# Function to recursively apply the custom stylesheet presets.
-def apply_stylesheet_recursive(widget, selected_object):
-    if isinstance(widget, QtWidgets.QWidget):
-        # Define the path to the selected theme's CSS file
-        theme_dir = os.path.join(os.path.dirname(__file__), "MayaUIChanger")
-        css_file = os.path.join(theme_dir, f"{selected_object.lower().replace(' ', '')}_stylesheet.css")
-
-        if os.path.exists(css_file):
-            # Read the contents of the CSS file
-            with open(css_file, "r") as file:
-                style_sheet = file.read()
-            
-            # Apply the stylesheet
-            widget.setStyleSheet(style_sheet)
-        else:
-            cmds.warning(f"CSS file not found: {css_file}")
-
-        # Recursively apply to all child widgets
-        for child in widget.children():
-            apply_stylesheet_recursive(child, selected_object)
-
