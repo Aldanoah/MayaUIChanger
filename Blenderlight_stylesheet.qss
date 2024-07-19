@@ -28,9 +28,9 @@ QTabBar::tab:last { border-top-right-radius: 0.3em; margin-right: 0; }
 /*-----QTabWidget------------------------------------------------------------------------------------------------------------------------------------*/           
 QTabWidget::pane { background-color: rgb(139,139,139); }
                     
-/*-----QTextEdit------------------------------------------------------------------------------------------------------------------------------------*/           
-QTextEdit { color: rgb(149, 214, 000); background-color: rgb(28,28,28); }
-QTextEdit:!editable { background-color: rgb(28,28,28); }
+/*-----QPlainTextEdit------------------------------------------------------------------------------------------------------------------------------------*/           
+QPlainTextEdit { color: rgb(149, 214, 000); background-color: rgb(28,28,28); }
+QPlainTextEdit:!editable { background-color: rgb(28,28,28); }
                     
 /*-----QSlider------------------------------------------------------------------------------------------------------------------------------------*/           
 QSlider { background-color: rgb(151,151,151); border-style: solid; border: 1px solid; border-color: #373737; border-radius: 0.3em; }

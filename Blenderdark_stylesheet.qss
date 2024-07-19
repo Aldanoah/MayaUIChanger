@@ -28,9 +28,9 @@ QTabBar::tab:last { border-top-right-radius: 0.3em; margin-right: 0; }
 /*-----QTabWidget------------------------------------------------------------------------------------------------------------------------------------*/           
 QTabWidget::pane { background-color: rgb(44,44,44); }
 
-/*-----QTextEdit------------------------------------------------------------------------------------------------------------------------------------*/           
-QTextEdit { color: rgb(149, 214, 000); background-color: rgb(29,29,29); }
-QTextEdit:!editable { background-color: rgb(29,29,29); }
+/*-----QPlainTextEdit------------------------------------------------------------------------------------------------------------------------------------*/           
+QPlainTextEdit { color: rgb(149, 214, 000); background-color: rgb(29,29,29); }
+QPlainTextEdit:!editable { background-color: rgb(29,29,29); }
                     
 /*-----QSlider------------------------------------------------------------------------------------------------------------------------------------*/           
 QSlider { background-color: rgb(84,84,84); border: 1px solid; border-color: #373737; border-radius: 0.3em; }
@@ -38,6 +38,7 @@ QSlider:hover { background-color: rgb(101,101,101); }
 QSlider::handle { background: transparent; }
 QSlider::handle:horizontal:disabled { background: #eee; border: 1px solid #aaa; border-radius: 4px; }
 QSlider::sub-page:horizontal { background: rgb(71,114,179); }
+QSlider::add-page:horizontal:hover { background: rgb(71,114,179); color: rgb(101,101,101); }
 QSlider::add-page:horizontal:disabled { background: rgb(40,40,40); border-color: #999; }
 
 /*-----QCheckBox------------------------------------------------------------------------------------------------------------------------------------*/           
