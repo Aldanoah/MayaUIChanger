@@ -1,12 +1,12 @@
 # Maya-UI-Changer
 
-This is a suit of tools created in order to allow greater customization of Maya’s user environment. This project is currently a work in progress as such aspects of the tools may not function correctly
+This is a suit of tools created in order to allow greater customization of Maya’s user environment. This project is currently a work in progress as such aspects of the tools may not function correctly.
 
 Installation:
 <br>
 1) Download the latest "MayaUIChanger.zip"  version from the releases tab.
-2) Unzip the file into your Maya 2024 script directory e.g "..\Documents\maya\2024\scripts\MayaUIChanger"
-3) Copy the "userSetup.py" script to your maya script directory e.g "..\Documents\maya\2024\scripts
+2) Unzip the file into your Maya 2024 script directory e.g "..\Documents\maya\2024\scripts\MayaUIChanger".
+3) Copy the "userSetup.py" script to your maya script directory e.g "..\Documents\maya\2024\scripts.
 5) Launch Maya.
 6) if the "themes" menu item is the menu bar, you may alternatively run the "UIPresetLoader.py" script through Maya's script editor.
 
