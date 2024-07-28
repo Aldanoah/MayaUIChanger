@@ -1,6 +1,6 @@
 # Maya-UI-Changer
 
-This is a suit of tools created in order to allow greater customization of Maya’s user environment. This project is currently a work in progress as such aspects of the tools may not function correctly.
+This is a suite of tools created in order to allow greater customization of Maya’s user environment. This project is currently a work in progress as such aspects of the tools may not function correctly.
 
 Installation:
 <br>
