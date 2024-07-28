@@ -18,6 +18,7 @@ def apply_styles(selected_theme):
         # Apply the stylesheet
         app = QtWidgets.QApplication.instance()
         app.setStyleSheet(style_sheet)
+        
     else:
         cmds.warning("Style file not found: {}".format(qss_file))
 
@@ -45,4 +46,5 @@ def create_menu():
     else:
         cmds.warning("Failed to find main Maya window.")
 
-create_menu()
+def run():
+    create_menu()
