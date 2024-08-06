@@ -3,6 +3,22 @@ import maya.cmds as cmds
 import maya.OpenMayaUI as omui
 from shiboken2 import wrapInstance
 from PySide2 import QtWidgets
+import json
+
+# Save user preset session to JSON file
+settings_file_path = os.path.join(cmds.internalVar(userAppDir=True), "theme_settings.json")
+
+# Function to save user preset
+def save_settings(settings):
+    with open(settings_file_path, 'w') as f:
+        json.dump(settings, f)
+
+# Function to load user preset
+def load_settings():
+    if os.path.exists(settings_file_path):
+        with open(settings_file_path, 'r') as f:
+            return json.load(f)
+    return {}
 
 def apply_styles(selected_theme):
     # Get the default Maya script directory
@@ -18,6 +34,11 @@ def apply_styles(selected_theme):
         # Apply the stylesheet
         app = QtWidgets.QApplication.instance()
         app.setStyleSheet(style_sheet)
+        
+        # Save the settings
+        settings = load_settings()
+        settings['selected_theme'] = selected_theme
+        save_settings(settings)
         
     else:
         cmds.warning("Style file not found: {}".format(qss_file))
@@ -48,3 +69,8 @@ def create_menu():
 
 def run():
     create_menu()
+    # Load the last selected preset on startup
+    settings = load_settings()
+    if 'selected_theme' in settings:
+        apply_styles(settings['selected_theme'])
+run()
