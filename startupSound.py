@@ -7,5 +7,5 @@ def play_custom_sound(sound_file):
         print(f"Error playing sound: {e}")
 
 # Specify the path to your custom sound file
-sound_file_path = r'C:\Users\chine\Downloads\Voicy_Rickroll.wav'
+sound_file_path = r'C:\Users\chine\OneDrive\Documents\Splash\2099.wav'
 play_custom_sound(sound_file_path)
