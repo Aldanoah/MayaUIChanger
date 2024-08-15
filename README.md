@@ -35,12 +35,7 @@ You may need to set your maya script directory as a new system variable. You can
 
 ![Edgerunners](https://github.com/Aldanoah/Maya-UI-Changer/assets/84312447/3dda7720-369b-470b-9921-0776e55e6add)
 
-4) A Custom splash screen picker is bundled in this package. Run the "SplashLoader.py" to use, requires launching Maya as an Adminstrator.
-![Custom Splash Picker](https://github.com/Aldanoah/MayaUIChanger/assets/84312447/44bb8352-199c-4752-8388-eb465b46409f)
-
-5) Also bundled is a script that plays a set .wav file upon launching Maya. To use, you can set the path to your desired sound file through the "sound_file_path" variable in the included "startupSound.py" script. A user interface to simplify the process will be added at a later time. Unmute the video below to sample the script in question.
-
-
+4) A splash tool is also bundled with this project; it allows for splash image customization as well as enabling startup sounds that play upon launching Maya. Simply run the SplashLoader.py script to use. <br> Note: Launching Maya as an administrator is required.
 https://github.com/user-attachments/assets/b72cb5e5-51d9-4a84-8916-42b55102201a
 
 
