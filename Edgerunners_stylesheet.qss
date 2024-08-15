@@ -114,8 +114,8 @@ QTableView QTableCornerButton:section { background-color: rgb(30,30,50); border:
 /*-----QTreeView-----------------------------------------------------------------------------------------------------------------------------------*/           
 QTreeView { color: rgb(94,246,255); background-color: rgb(14,11,18); border: 0px transparent transparent; }
 QTreeView:disabled { background-color: #19232D;  color: #787878; }
-QTreeView:item:hover { background-color: rgb(176,176,176); border: 0px transparent transparent; }
-QTreeView:item:selected { color: rgb(94,246,255); background-color: rgb(14,11,18); border: 0px transparent transparent; color: #c68652; }
+QTreeView:item:hover { background-color: rgb(247,80,70); border: 0px transparent transparent; }
+QTreeView:item:selected { color: rgb(29,237,131); background-color: rgb(14,11,18); border: 0px transparent transparent; }
 
 /*-----QScrollBar-----------------------------------------------------------------------------------------------------------------------------------*/           
 QScrollBar:vertical { border: 0px; background-color: rgb(247,80,70); width:10px; margin: 0px 0px 0px 0px; }
