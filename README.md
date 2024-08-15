@@ -41,7 +41,9 @@ You may need to set your maya script directory as a new system variable. You can
 5) Also bundled is a script that plays a set .wav file upon launching Maya. To use, you can set the path to your desired sound file through the "sound_file_path" variable in the included "startupSound.py" script. A user interface to simplify the process will be added at a later time. Unmute the video below to sample the script in question.
 
 
-https://github.com/user-attachments/assets/0d36e7c8-1bd9-4a73-88bb-c8fde4248b45
+https://github.com/user-attachments/assets/b72cb5e5-51d9-4a84-8916-42b55102201a
+
+
 
 
 
