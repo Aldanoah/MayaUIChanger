@@ -77,17 +77,22 @@ settings = load_settings()
 if 'audio_file' in settings:
     play_custom_sound(settings['audio_file'])
 
-# Check if the window exists and delete it if it does
-if cmds.window("setSplashScreenWin", exists=True):
-    cmds.deleteUI("setSplashScreenWin", window=True)
-window = cmds.window("setSplashScreenWin", title="Splash Tool", sizeable=False)
-cmds.columnLayout(adjustableColumn=True, columnAttach=['both', 10], rowSpacing=10)
-cmds.separator(height=10)
-audio_checkbox = cmds.checkBox(label="Enable Startup Sound?", changeCommand=lambda *args: toggle_audio_file_field(audio_checkbox, audio_text_field))
-cmds.text(label="Please use the button below to select your desired file:")
-image_text_field = cmds.textFieldButtonGrp(bl="Select Image File", bc=lambda *args: select_image_and_set_splash_screen(image_text_field, *args), adjustableColumn=True)
-audio_text_field = cmds.textFieldButtonGrp(bl="Select Audio File", bc=lambda *args: select_audio(audio_text_field, *args), adjustableColumn=True, visible=False)
-cmds.button(label="Close", command=('cmds.deleteUI(\"' + window + '\", window=True)'))
-cmds.separator(height=10)
-cmds.setParent('..')
-cmds.showWindow(window)
+# This function encapsulates the UI code and is only called when needed
+def show_splash_tool_window():
+    if cmds.window("setSplashScreenWin", exists=True):
+        cmds.deleteUI("setSplashScreenWin", window=True)
+    window = cmds.window("setSplashScreenWin", title="Splash Tool", sizeable=False)
+    cmds.columnLayout(adjustableColumn=True, columnAttach=['both', 10], rowSpacing=10)
+    cmds.separator(height=10)
+    audio_checkbox = cmds.checkBox(label="Enable Startup Sound?", changeCommand=lambda *args: toggle_audio_file_field(audio_checkbox, audio_text_field))
+    cmds.text(label="Please use the button below to select your desired file:")
+    image_text_field = cmds.textFieldButtonGrp(bl="Select Image File", bc=lambda *args: select_image_and_set_splash_screen(image_text_field, *args), adjustableColumn=True)
+    audio_text_field = cmds.textFieldButtonGrp(bl="Select Audio File", bc=lambda *args: select_audio(audio_text_field, *args), adjustableColumn=True, visible=False)
+    cmds.button(label="Close", command=('cmds.deleteUI(\"' + window + '\", window=True)'))
+    cmds.separator(height=10)
+    cmds.setParent('..')
+    cmds.showWindow(window)
+
+# Ensuring that the window only opens when this script is run directly
+if __name__ == "__main__":
+    show_splash_tool_window()
