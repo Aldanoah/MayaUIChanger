@@ -7,15 +7,19 @@ def loadUIPresetLoader():
     import MayaUIChanger.UIPresetLoader as UIPresetLoader
     UIPresetLoader.run()  
 
-def loadstartupsound():
-    import MayaUIChanger.startupSound as startupSound
-
-    print("test")
+# Function to Load startup sound
+def playStartupSound():
     try:
-        # Play the custom sound file
-        startupSound.run()
+        import MayaUIChanger.SplashLoader as splashloader
+        settings = splashloader.load_settings()
+        
+        # Check if an audio file is set in the settings and play it
+        if 'audio_file' in settings:
+            splashloader.play_custom_sound(settings['audio_file'])
+        else:
+            print("No audio file found in settings.")
     except Exception as e:
-        print(f"Error playing sound: {e}")
+        print(f"Error playing startup sound: {e}")
 
 maya.utils.executeDeferred(loadUIPresetLoader)
-maya.utils.executeDeferred(loadstartupsound)
+maya.utils.executeDeferred(playStartupSound)
