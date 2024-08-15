@@ -35,8 +35,9 @@ You may need to set your maya script directory as a new system variable. You can
 
 ![Edgerunners](https://github.com/Aldanoah/Maya-UI-Changer/assets/84312447/3dda7720-369b-470b-9921-0776e55e6add)
 
-4) A splash tool is also bundled with this project; it allows for splash image customization as well as enabling startup sounds that play upon launching Maya. Simply run the SplashLoader.py script to use. <br> Note: Launching Maya as an administrator is required.
-https://github.com/user-attachments/assets/b72cb5e5-51d9-4a84-8916-42b55102201a
+4) A splash tool is also bundled with this project; it allows for splash image customization as well as enabling startup sounds that play upon launching Maya. Simply run the SplashLoader.py script to use. <br><br> Note: Requires Launching Maya as an administrator. Please unmute the preview video below.
+
+https://github.com/user-attachments/assets/3e238764-535d-4338-a2d6-3f1aee11ef0d
 
 
 
