@@ -24,16 +24,13 @@ You may need to set your maya script directory as a new system variable. You can
 **The currently available presets and tools are as follows;**
 
 1) Blender Dark Preset
-
-![Blender Dark](https://github.com/Aldanoah/Maya-UI-Changer/assets/84312447/9963682d-ed75-477b-a7ad-bb5f2a7daeab)
+![Blender Dark](https://github.com/user-attachments/assets/74c7df88-b5a2-415d-a8ac-0ff3b05c84fa)
 
 2) Blender Light Preset
-   
-![Blender Light](https://github.com/Aldanoah/Maya-UI-Changer/assets/84312447/7f2cd810-3259-4cfd-98e5-0e561c65cb0f)
+![Blender Light](https://github.com/user-attachments/assets/ddd28c16-443b-4da1-a694-0939c33ce883)
 
 3) Edgerunners Preset
-
-![Edgerunners](https://github.com/Aldanoah/Maya-UI-Changer/assets/84312447/3dda7720-369b-470b-9921-0776e55e6add)
+![Edgerunners](https://github.com/user-attachments/assets/bb8bb8cf-7292-48dd-8fc5-1271ed0279a3)
 
 4) A splash tool is also bundled with this project; it allows for splash image customization as well as enabling startup sounds that play upon launching Maya. Simply run the SplashLoader.py script to use. <br><br> Note: Requires Launching Maya as an administrator. Please unmute the preview video below.
 
