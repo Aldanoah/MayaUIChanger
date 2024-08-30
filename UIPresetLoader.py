@@ -63,6 +63,7 @@ def create_menu():
         cmds.menuItem(label='Blender Dark', command=make_theme_changer('Blender Dark'))
         cmds.menuItem(label='Blender Light', command=make_theme_changer('Blender Light'))
         cmds.menuItem(label='Edgerunners', command=make_theme_changer('Edgerunners'))
+        cmds.menuItem(label='Maya Light', command=make_theme_changer('Maya Light'))
         cmds.menuItem(label='Maya Default', command=make_theme_changer('Maya Default'))
     else:
         cmds.warning("Failed to find main Maya window.")
