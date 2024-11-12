@@ -79,7 +79,7 @@ QMessageBox QPushButton:hover { color: rgb(40,40,40); background-color: rgb(241,
 QMessageBox QPushButton:default:hover { color: rgb(234,240,248); background-color: rgb(121,158,215); } 
                     
 /*-----QPushButton------------------------------------------------------------------------------------------------------------------------------------*/           
-QPushButton { color: rgb(31,31,31); background-color: rgb(219,219,219); border: 1px solid #404040; border-radius: 0.3em; }
+QPushButton { color: rgb(31,31,31); border: 1px solid #404040; border-radius: 0.3em; }
 QPushButton:default { background-color: #5379b4; color: rgb(234,240,248); }    
 QPushButton:disabled { background-color: #323232; color: #8a8a8a; }     
 QPushButton:hover { background-color: rgb(241,241,241); }   
@@ -117,7 +117,7 @@ QTableView QTableCornerButton:section { background-color: #3b3b3b; border: 1px s
 QTreeView { color: rgb(28,28,28); background-color: rgb(153,153,153); border: 0px transparent transparent; }
 QTreeView:disabled { background-color: #19232D;  color: #787878; }
 QTreeView:item:hover { background-color: rgb(176,176,176); border: 0px transparent transparent; }
-QTreeView:item:selected { background-color: rgb(111,138,182); border: 0px transparent transparent; color: #c68652; }
+QTreeView:item:selected { background-color: rgb(111,138,182); border: 0px transparent transparent; color: #000000; }
 
 /*-----QScrollBar-----------------------------------------------------------------------------------------------------------------------------------*/           
 QScrollBar:vertical { border: 0px; background-color: rgb(228,228,228); width:10px; margin: 0px 0px 0px 0px; }
