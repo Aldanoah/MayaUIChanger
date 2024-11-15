@@ -67,8 +67,8 @@ QLineEdit { color: rgb(29,237,131); background-color: rgb(14,11,18); border-radi
 QLabel { color: #e4e4d4; background-color: transparent; }    
 
 /*-----QProgressBar------------------------------------------------------------------------------------------------------------------------------------*/           
-QProgressBar { background-color: #424242; border: 1px solid #373737; padding: 0px; text-align: right; } 
-QProgressBar::chunk { background-color: #5680c2; border: 1px solid #373737; } 
+QProgressBar { background-color: rgb(14,11,18); border: 1px solid #373737; padding: 0px; text-align: center; } 
+QProgressBar::chunk { background-color: rgb(247,80,70); border: 1px solid #373737; } 
 
 /*-----QMessageBox------------------------------------------------------------------------------------------------------------------------------------*/           
 QMessageBox { color: rgb(94,246,255); background-color: rgb(14,11,18); }
