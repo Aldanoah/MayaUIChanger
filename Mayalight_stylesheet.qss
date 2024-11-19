@@ -1,24 +1,38 @@
 /*-----QWidget------------------------------------------------------------------------------------------------------------------------------------*/ 
 QWidget { background-color: rgb(240,240,240); color: rgb(0,0,0); selection-color: rgb(254,254,254); selection-background-color: rgb(51,153,255); }
 
+
 /*-----QComboBox------------------------------------------------------------------------------------------------------------------------------------*/                          
 QComboBox { background-color: rgb(255,255,255); color: rgb(0,0,0); border-style: inset; border-width: 1.5px; border-bottom-width: 0px; border-color: rgb(160,160,160); }
+
 QComboBox:disabled { background-color: rgb(67,97,143); color: #f8f9f9;}
+
 QComboBox QAbstractItemView {border-style: solid; border-width: 1px;}
+
 
 /*-----QMenu------------------------------------------------------------------------------------------------------------------------------------*/           
 QMenu { background-color: rgb(240,240,240); }
+
 QMenu::tearoff { background-color: rgb(240,240,240); }
+
 QMenu::item { background-color: rgb(240,240,240); }
+
 
 /*-----QMenuBar------------------------------------------------------------------------------------------------------------------------------------*/           
 QMenuBar { background-color: rgb(255,255,255);}
+
 QMenuBar::item { color: rgb(0,0,0); }
+
 QMenuBar::item:selected { color: rgb(0,0,0); background-color: rgb(245,245,245); }
+
 
 /*-----QTabBar------------------------------------------------------------------------------------------------------------------------------------*/           
 QTabBar::tab {background-color: rgb(240,240,240); border-style: groove; border-width: 1px; padding: 3px 3px 3px 3px; border-bottom-style: hidden; }
+
 QTabBar::tab:selected {border-style: groove; border-width: 1px; padding: 4px 4px 4px 4px; border-bottom-style: hidden; }
+
 QTabBar::tab:!selected { background-color: rgb(240,240,240); color: rgb(0,0,0);}
+
 QTabBar::tab:hover:!selected { background-color: #343434; color: #afafaf; }
+
 QTabBar::tab:last { border-top-right-radius: 0.3em; margin-right: 0; }
