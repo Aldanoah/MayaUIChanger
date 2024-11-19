@@ -29,6 +29,8 @@ QMenu::item:selected { background-color: #4969ff; color: rgb(72,170,181);}
 
 QMenu::item:disabled { color: #262626; }
 
+QMenu::tearoff { border: 1px; }
+
 
 /*-----QToolTip-----*/
 QToolTip { border : 1px solid #000000; background-color: rgb(20,28,40); color: #ffffff; border-color: #051a39; }
@@ -49,13 +51,13 @@ QTextEdit::disabled { background-color: #404040; color: #656565; border-color: #
 
 
 /*-----QTabWidget-----*/
-QTabBar::tab { color: #ffffff; padding: 5px; }
+QTabBar::tab { color: #c8c8c8; padding: 5px; border-bottom-style: solid; border-width: 1px; border-top-left-radius: 0.3em; border-top-right-radius: 0.3em; }
 
 QTabBar::tab:disabled { background-color: #656565; color: #656565; }
 
 QTabWidget::pane {background-color: #0d0d0d; color: #ffffff; }
 
-QTabBar::tab:selected { background-color: rgb(20,28,40); padding: 5px; }
+QTabBar::tab:selected { background-color: rgb(20,28,40); padding: 5px; border-style: solid; border-width: 1px;  }
 
 QTabBar::tab:selected:disabled { background-color: #404040; color: #656565; }
 
@@ -112,12 +114,24 @@ QComboBox:on { background-color: rgb(20,28,40); }
 QComboBox QAbstractItemView { background-color: #383838; color: #ffffff; border: 1px solid black; selection-background-color: rgb(20,28,40); selection-color: #ffffff; outline: 0; }
 
 
+/*-----QCheckBox------------------------------------------------------------------------------------------------------------------------------------*/   
+QCheckBox::indicator::unchecked { border: 2px inset gray; background-color: #fff; width: 9px; height: 9px; }
+
+QCheckBox::indicator::unchecked:hover {  border: 2px solid #607cff; background-color: rgb(20,28,40); width: 9px; height: 9px;  }
+
+QCheckBox::indicator::checked {  border: 2px inset darkgray; border-radius: 0px; background-color: rgb(20,28,40); width: 9px;  height: 9px; }
+
+QCheckBox::disabled { color: #656565; }
+
+QCheckBox::indicator:disabled { background-color: #656565; color: #656565; border: 2px solid #656565; }
+
+
 /*-----QRadioButton-----*/
-QRadioButton::indicator::unchecked { border: 2px inset gray; border-radius: 5px;  background-color:  #fff; width: 9px;  height: 9px; }
+QRadioButton::indicator::unchecked { border: 2px inset gray; border-radius: 5px; background-color:  #fff; width: 9px; height: 9px; }
 
-QRadioButton::indicator::unchecked:hover {  border: 2px solid #607cff;  border-radius: 5px;  background-color:  rgb(20,28,40); width: 9px;  height: 9px;  }
+QRadioButton::indicator::unchecked:hover {  border: 2px solid #607cff; border-radius: 5px; background-color: rgb(20,28,40); width: 9px; height: 9px;  }
 
-QRadioButton::indicator::checked {  border: 2px inset darkgray;  border-radius: 5px; background-color: rgb(20,28,40); width: 9px;  height: 9px; }
+QRadioButton::indicator::checked {  border: 2px inset darkgray; border-radius: 5px; background-color: rgb(20,28,40); width: 9px;  height: 9px; }
 
 QRadioButton::disabled { color: #656565; }
 
@@ -150,20 +164,38 @@ QGroupBox::title { background-color: rgb(20,28,40); color: #ffffff; subcontrol-o
 QGroupBox::title::disabled { background-color: #404040; color: #656565; subcontrol-origin: margin; subcontrol-position: top left; padding: 5px; border-top-left-radius: 3px; border-top-right-radius: 3px; }
 
 
+/*-----QtCollapsibleSection-----*/ 
+QtCollapsibleSection { color: red; background-color: red; }
+
+
 /*-----QTableView------------------------------------------------------------------------------------------------------------------------------------*/           
-QTableView { color: rgb(153,153,153); background-color: rgb(40,40,40); border: 1px solid #3b3b3b; }
+QTableView { color: rgb(153,153,153); background-color: #0d0d0d; border: 1px solid #3b3b3b; }
 
 QTableView QTableCornerButton:section { background-color: #3b3b3b; border: 1px solid #3b3b3b; }
 
 
 /*-----QTreeView-----------------------------------------------------------------------------------------------------------------------------------*/           
-QTreeView { background-color: #232323; border: 0px transparent transparent; }
+QTreeView { background-color: rgb(20,28,40); border: 0px transparent transparent; }
 
 QTreeView:disabled { background-color: #19232D;  color: #787878; }
 
 QTreeView:item:hover { background-color: #484848; border: 0px transparent transparent; }
 
 QTreeView:item:selected { background-color: #314e78; border: 0px transparent transparent; }
+
+
+/*-----QListView------------------------------------------------------------------------------------------------------------------------------------*/           
+QListView { background-color: rgb(20,28,40); border: 0px transparent transparent; }
+
+QListView:disabled { background-color: #19232D; color: #787878; }
+
+QListView:item { background-color: transparent; }
+
+QListView:item:hover { background-color: rgb(63,63,63); border: 0px transparent transparent; }
+
+QListView:item:selected { background-color: rgb(61,89,132); border: 0px transparent transparent; }
+
+QListView:item:disabled { color: #0d0d0d; border: 0px transparent transparent; }
 
 
 /*-----QSpinBox------------------------------------------------------------------------------------------------------------------------------------*/           
@@ -178,20 +210,6 @@ QSpinBox::hover { background: #808080; }
 QSpinBox::up-button { border-width: 0px; padding-top: 3px; subcontrol-origin: control; subcontrol-position: top right; width: 13px; height: 20px; }    
 
 QSpinBox::up-button:hover { background:#6b6b6b; }
-
-
-/*-----QListView------------------------------------------------------------------------------------------------------------------------------------*/           
-QListView { background-color: rgb(40,40,40); border: 0px transparent transparent; }
-
-QListView:disabled { background-color: #19232D; color: #787878; }
-
-QListView:item { background-color: transparent; }
-
-QListView:item:hover { background-color: rgb(63,63,63); border: 0px transparent transparent; }
-
-QListView:item:selected { background-color: rgb(61,89,132); border: 0px transparent transparent; }
-
-QListView:item:disabled { color: rgb(135,135,135); border: 0px transparent transparent; }
 
 
 /*-----QHeaderView------------------------------------------------------------------------------------------------------------------------------------*/           
