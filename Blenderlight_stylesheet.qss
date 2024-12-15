@@ -83,7 +83,7 @@ QCheckBox::indicator:unchecked { inset gray; background-color: rgb(57,57,57);  w
 
 QCheckBox::indicator:unchecked:hover { background-color: rgb(64,64,64); width: 9px; height: 9px; }  
 
-QCheckBox::disabled { color: rgb(144,165,198); border: 1px solid grey; }
+QCheckBox::disabled { color: #323232; border: 0px solid grey; }
 
 
 /*-----QRadioButton------------------------------------------------------------------------------------------------------------------------------------*/           
@@ -187,13 +187,13 @@ QTableView QTableCornerButton:section { background-color: #3b3b3b; border: 1px s
                     
                     
 /*-----QTreeView-----------------------------------------------------------------------------------------------------------------------------------*/           
-QTreeView { color: rgb(28,28,28); background-color: rgb(153,153,153); border: 0px transparent transparent; }
+QTreeView { color: rgb(216,216,216); background-color: rgb(59,59,59); border: 0px transparent transparent; }
 
-QTreeView:disabled { background-color: #19232D;  color: #787878; }
+QTreeView:disabled { background-color: red;  color: #787878; }
 
-QTreeView:item:hover { background-color: rgb(176,176,176); border: 0px transparent transparent; }
+QTreeView:item:hover { background-color: rgb(176,176,176); border: 0px transparent transparent; color: #000000; }
 
-QTreeView:item:selected { background-color: rgb(111,138,182); border: 0px transparent transparent; color: #000000; }
+QTreeView:item:selected { background-color: rgb(111,138,182); border: 0px transparent transparent; color: rgb(228,228,228); }
 
 
 /*-----QScrollBar-----------------------------------------------------------------------------------------------------------------------------------*/           
