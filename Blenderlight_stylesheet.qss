@@ -79,27 +79,29 @@ QCheckBox { background-color: transparent; color: rgb(28,28,28); }
 
 QCheckBox::indicator { width: 13px; height: 13px; } 
 
-QCheckBox::indicator:checked { image: url(C:/Users/chine/OneDrive/Documents/maya/2024/scripts/MayaUIChanger/icons/QCheckBox_checked.png); } 
+QCheckBox::indicator:checked { border: 1px ridge black; background-color: rgb(85,127,193);  width: 9px; height: 9px; } 
 
-QCheckBox::indicator:checked:hover { image: url(C:/Users/chine/OneDrive/Documents/maya/2024/scripts/MayaUIChanger/icons/QCheckBox_checked_hover.png); }   
+QCheckBox::indicator:checked:hover { background-color: rgb(115,148,199);  width: 9px; height: 9px; }   
 
-QCheckBox::indicator:unchecked { image: url(C:/Users/chine/OneDrive/Documents/maya/2024/scripts/MayaUIChanger/icons/QCheckBox_unchecked.png); }
+QCheckBox::indicator:unchecked { inset gray; background-color: rgb(57,57,57);  width: 9px; height: 9px; }
 
-QCheckBox::indicator:unchecked:hover { image: url(C:/Users/chine/OneDrive/Documents/maya/2024/scripts/MayaUIChanger/icons/QCheckBox_unchecked_hover.png); }   
+QCheckBox::indicator:unchecked:hover { background-color: rgb(64,64,64); width: 9px; height: 9px; }  
+
+QCheckBox::disabled { color: rgb(144,165,198); border: 1px solid grey; }
 
 
 /*-----QRadioButton------------------------------------------------------------------------------------------------------------------------------------*/           
-QRadioButton { background: transparent; color: rgb(28,28,28); }
+QRadioButton { color: rgb(28,28,28); }
 
-QRadioButton::indicator { width: 10px; height: 10px; }
+QRadioButton::indicator { border-radius: 0.2px; }
 
-QRadioButton::indicator:checked { image: url(C:/Users/chine/OneDrive/Documents/maya/2024/scripts/MayaUIChanger/icons/QRadioButton_checked.png); }
+QRadioButton::indicator:checked {  border-radius: 5px; border: 1px inset grey; background-color: rgb(85,127,193);  width: 9px; height: 9px; }
 
-QRadioButton::indicator:checked:hover { image: url(C:/Users/chine/OneDrive/Documents/maya/2024/scripts/MayaUIChanger/icons/QRadioButton_checked_hover.png); }
+QRadioButton::indicator:checked:hover { border: 0.5px inset gray; border-radius: 5px; background-color: rgb(115,148,199);  width: 9px; height: 9px; }
 
-QRadioButton::indicator:unchecked { image: url(C:/Users/chine/OneDrive/Documents/maya/2024/scripts/MayaUIChanger/icons/QRadioButton_unchecked.png); }
+QRadioButton::indicator:unchecked { border: 0.5px inset gray; border-radius: 5px; background-color: rgb(57,57,57);  width: 9px; height: 9px; }
 
-QRadioButton::indicator:unchecked:hover { image: url(C:/Users/chine/OneDrive/Documents/maya/2024/scripts/MayaUIChanger/icons/QRadioButton_unchecked_hover.png); }
+QRadioButton::indicator:unchecked:hover { border: 0.5px inset gray; border-radius: 5px; background-color: rgb(64,64,64); width: 9px; height: 9px }
 
 
 /*-----QLineEdit------------------------------------------------------------------------------------------------------------------------------------*/           
@@ -131,7 +133,7 @@ QMessageBox QPushButton:default:hover { color: rgb(234,240,248); background-colo
 
 
 /*-----QPushButton------------------------------------------------------------------------------------------------------------------------------------*/           
-QPushButton { color: rgb(31,31,31); border: 1px solid #404040; border-radius: 0.3em; }
+QPushButton { color: rgb(31,31,31); background-color: rgb(192,192,192); border: 1px solid #404040; border-radius: 0.3em; }
 
 QPushButton:default { background-color: #5379b4; color: rgb(234,240,248); }    
 
@@ -186,6 +188,7 @@ QSpinBox::up-button:hover { background:#6b6b6b; }
 QTableView { color: rgb(153,153,153); background-color: rgb(153,153,153); border: 1px solid #3b3b3b; }
 
 QTableView QTableCornerButton:section { background-color: #3b3b3b; border: 1px solid #3b3b3b; }
+                    
                     
 /*-----QTreeView-----------------------------------------------------------------------------------------------------------------------------------*/           
 QTreeView { color: rgb(28,28,28); background-color: rgb(153,153,153); border: 0px transparent transparent; }

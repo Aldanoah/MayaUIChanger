@@ -75,31 +75,33 @@ QSlider::add-page:horizontal:disabled { background: rgb(72,72,72); border-color:
 
 
 /*-----QCheckBox------------------------------------------------------------------------------------------------------------------------------------*/           
-QCheckBox { background-color: transparent; color: #e4e4d4; } 
+QCheckBox { background-color: transparent; color: #e6e6e6; } 
 
-QCheckBox::indicator { width: 13px; height: 13px; }
+QCheckBox::indicator { width: 13px; height: 13px; } 
 
-QCheckBox::indicator:checked { image: url(C:/Users/chine/OneDrive/Documents/maya/2024/scripts/MayaUIChanger/icons/QCheckBox_checked.png); } 
+QCheckBox::indicator:checked { border: 1px ridge black; background-color: rgb(85,127,193);  width: 9px; height: 9px; } 
 
-QCheckBox::indicator:checked:hover { image: url(C:/Users/chine/OneDrive/Documents/maya/2024/scripts/MayaUIChanger/icons/QCheckBox_checked_hover.png); }   
+QCheckBox::indicator:checked:hover { background-color: rgb(115,148,199);  width: 9px; height: 9px; }   
 
-QCheckBox::indicator:unchecked { image: url(C:/Users/chine/OneDrive/Documents/maya/2024/scripts/MayaUIChanger/icons/QCheckBox_unchecked.png); }
+QCheckBox::indicator:unchecked { inset gray; background-color: rgb(84,84,84);  width: 9px; height: 9px; }
 
-QCheckBox::indicator:unchecked:hover { image: url(C:/Users/chine/OneDrive/Documents/maya/2024/scripts/MayaUIChanger/icons/QCheckBox_unchecked_hover.png); }   
+QCheckBox::indicator:unchecked:hover { background-color: rgb(101,101,101); width: 9px; height: 9px; }  
+
+QCheckBox::disabled { color: rgb(66,87,120); border: 1px solid grey; }
 
 
 /*-----QRadioButton------------------------------------------------------------------------------------------------------------------------------------*/           
-QRadioButton { background: transparent; color: #e4e4d4; }
+QRadioButton { color: #e6e6e6; }
 
-QRadioButton::indicator { width: 10px; height: 10px; }
+QRadioButton::indicator { border-radius: 0.2px; }
 
-QRadioButton::indicator:checked { image: url(C:/Users/chine/OneDrive/Documents/maya/2024/scripts/MayaUIChanger/icons/QRadioButton_checked.png); }
+QRadioButton::indicator:checked {  border-radius: 5px; border: 1px inset black; background-color: rgb(85,127,193);  width: 9px; height: 9px; }
 
-QRadioButton::indicator:checked:hover { image: url(C:/Users/chine/OneDrive/Documents/maya/2024/scripts/MayaUIChanger/icons/QRadioButton_checked_hover.png); }
+QRadioButton::indicator:checked:hover { border: 0.5px inset black; border-radius: 5px; background-color: rgb(115,148,199);  width: 9px; height: 9px; }
 
-QRadioButton::indicator:unchecked { image: url(C:/Users/chine/OneDrive/Documents/maya/2024/scripts/MayaUIChanger/icons/QRadioButton_unchecked.png); }
+QRadioButton::indicator:unchecked { border: 0.5px inset black; border-radius: 5px; background-color: rgb(84,84,84);  width: 9px; height: 9px; }
 
-QRadioButton::indicator:unchecked:hover { image: url(C:/Users/chine/OneDrive/Documents/maya/2024/scripts/MayaUIChanger/icons/QRadioButton_unchecked_hover.png); }
+QRadioButton::indicator:unchecked:hover { border: 0.5px inset black; border-radius: 5px; background-color: rgb(64,64,64); width: 9px; height: 9px }
 
 
 /*-----QLineEdit------------------------------------------------------------------------------------------------------------------------------------*/           

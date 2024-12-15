@@ -102,6 +102,10 @@ QProgressBar { border: 1px solid #222222; background-color: #3d3d3d; text-align:
 QProgressBar::chunk { background-color: rgb(20,28,40); }
 
 
+/*-----QMessageBox------------------------------------------------------------------------------------------------------------------------------------*/           
+QMessageBox QPushButton:default { background-color: rgb(20,28,40); } 
+
+
 /*-----QComboBox-----*/
 QComboBox { background-color: rgb(20,28,40); border: 1px solid; border-radius: 3px; padding-left: 6px; color: #ffffff; height: 20px; }
 
