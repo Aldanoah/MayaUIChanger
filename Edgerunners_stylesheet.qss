@@ -83,7 +83,11 @@ QCheckBox::indicator:unchecked { inset gray; background-color: rgb(14,11,18);  w
 
 QCheckBox::indicator:unchecked:hover { background-color: rgb(123,39,39); width: 9px; height: 9px; }  
 
-QCheckBox::disabled { border: 1px solid grey; }
+QCheckBox::indicator:unchecked:disabled { inset gray; background-color: rgb(14,11,18); width: 9px; height: 9px; }  
+
+QCheckBox::indicator:disabled { background-color: rgb(123,39,39);  width: 9px; height: 9px; } 
+
+QCheckBox::disabled { color: rgb(89,89,89); font-weight: normal; }
 
 
 /*-----QRadioButton------------------------------------------------------------------------------------------------------------------------------------*/           
