@@ -1,6 +1,6 @@
 # Maya-UI-Changer
 
-This is a suite of tools created in order to allow greater customization of Maya’s user environment. This project is currently a work in progress so some aspects may not function as intented.
+This is a suite of tools created in order to allow greater customization of Maya’s user environment. This project is currently a work in progress so some aspects may not function as intended.
 
 Adds a new “Themes” menu item to Maya’s menu bar. Navigate to it to cycle through the available theme presets. <br>
 ![image](https://github.com/user-attachments/assets/3a0a2094-21f6-4232-a241-7b652e7d61a0)
