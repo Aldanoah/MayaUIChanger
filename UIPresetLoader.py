@@ -66,6 +66,7 @@ def create_menu():
         cmds.menuItem(label='Maya Light', command=make_theme_changer('Maya Light'))
         cmds.menuItem(label='Maya Default', command=make_theme_changer('Maya Default'))
         cmds.menuItem(label='Umbra Dark', command=make_theme_changer('Umbra'))
+        cmds.menuItem(label='Zbrush Dark', command=make_theme_changer('Zbrush'))
     else:
         cmds.warning("Failed to find main Maya window.")
 
