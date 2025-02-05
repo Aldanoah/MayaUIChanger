@@ -94,7 +94,6 @@ QCheckBox::indicator:disabled { background-color: rgb(66,87,120);  width: 9px; h
 QCheckBox::disabled { color: rgb(89,89,89); }
 
 
-
 /*-----QRadioButton------------------------------------------------------------------------------------------------------------------------------------*/           
 QRadioButton { color: #e6e6e6; }
 
@@ -202,7 +201,7 @@ QTreeView:disabled { background-color: #19232D;  color: #787878; }
 
 QTreeView:item:hover { background-color: #484848; border: 0px transparent transparent; }
 
-QTreeView:item:selected { background-color: #314e78; border: 0px transparent transparent; color: #c68652; }
+QTreeView:item:selected { background-color: #314e78; border: 0px transparent transparent; }
 
 
 /*-----QScrollBar-----------------------------------------------------------------------------------------------------------------------------------*/           
