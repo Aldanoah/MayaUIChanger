@@ -36,6 +36,12 @@ QPushButton:flat:hover { border-color: rgb(181,181,181); }
 QTextEdit { background-color: rgb(109,109,109); color: rgb(255,255,255); border-color: rgb(9,8,7); }
 
 
+/*-----QPlainTextEdit------------------------------------------------------------------------------------------------------------------------------------*/           
+QPlainTextEdit { color: rgb(149, 214, 000); background-color: rgb(28,28,28); }
+
+QPlainTextEdit:!editable { background-color: rgb(28,28,28); }
+
+
 /*-----QTabBar------------------------------------------------------------------------------------------------------------------------------------*/  
 QTabBar::tab { background-color: rgb(41,41,41); border-style: solid; border-width: 1px; border-radius: 3px; border-color: rgb(30,30,30); padding: 4px 5px; }
 
@@ -69,9 +75,9 @@ QMessageBox QPushButton:default { border-width: 2px; }
 
 
 /*-----QComboBox------------------------------------------------------------------------------------------------------------------------------------*/                          
-QComboBox { background-color: #2c2c2c; border: 1px solid #404040; padding-left: 6px; border-radius: 0.2em; }
+QComboBox { background-color: #2c2c2c; border: 1px solid rgb(29,29,29); padding-left: 6px; border-radius: 0.2em; }
 
-QComboBox:on { background-color: rgb(255,144,38); color: rgb(8,8,8);}
+QComboBox:on { background-color: rgb(255,144,38); color: rgb(8,8,8); }
 
 QComboBox:disabled  { background-color: #323232; color: rgb(89,89,89); }
 
