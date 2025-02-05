@@ -120,10 +120,12 @@ QLabel { color:#e6e6e6; background-color: transparent; }
 
 QLabel:disabled {color: rgb(123,123,123);}
 
+
 /*-----QProgressBar------------------------------------------------------------------------------------------------------------------------------------*/           
 QProgressBar { background-color: #424242; border: 1px solid #373737; padding: 0px; text-align: center; } 
 
 QProgressBar::chunk { background-color: #5680c2; border: 1px solid #373737; }
+
 
 /*-----QMessageBox------------------------------------------------------------------------------------------------------------------------------------*/           
 QMessageBox { color: rgb(229,229,229); background-color: rgb(24,24,24); }
