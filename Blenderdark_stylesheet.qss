@@ -83,7 +83,7 @@ QCheckBox::indicator:checked { border: 1px ridge black; background-color: rgb(85
 
 QCheckBox::indicator:checked:hover { background-color: rgb(115,148,199);  width: 9px; height: 9px; }   
 
-QCheckBox::indicator:unchecked { inset gray; background-color: rgb(84,84,84);  width: 9px; height: 9px; }
+QCheckBox::indicator:unchecked { border: 0.5px inset black; background-color: rgb(84,84,84); width: 9px; height: 9px; }
 
 QCheckBox::indicator:unchecked:hover { background-color: rgb(101,101,101); width: 9px; height: 9px; }  
 
@@ -96,6 +96,8 @@ QCheckBox::disabled { color: rgb(89,89,89); }
 
 /*-----QRadioButton------------------------------------------------------------------------------------------------------------------------------------*/           
 QRadioButton { color: #e6e6e6; }
+
+QRadioButton::disabled { color: #656565; }
 
 QRadioButton::indicator { border-radius: 0.2px; }
 
@@ -146,6 +148,8 @@ QPushButton:disabled { background-color: #323232; color: #8a8a8a; }
 QPushButton:hover { background-color: rgb(101,101,101); }   
 
 QPushButton:pressed { background-color: #5680c2; color:#fcfdfd; }
+
+QPushButton:flat:checked {background-color: rgb(86,128,194);}
 
 
 /*-----QGroupBox------------------------------------------------------------------------------------------------------------------------------------*/           

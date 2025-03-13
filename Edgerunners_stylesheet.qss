@@ -95,6 +95,8 @@ QCheckBox::disabled { color: rgb(89,89,89); font-weight: normal; }
 /*-----QRadioButton------------------------------------------------------------------------------------------------------------------------------------*/           
 QRadioButton { color: #e6e6e6; }
 
+QRadioButton::disabled { color: rgb(138,138,138); }
+
 QRadioButton::indicator { border-radius: 0.2px; }
 
 QRadioButton::indicator:checked {  border-radius: 5px; border: 1px inset black; background-color: rgb(247,80,70);  width: 9px; height: 9px; }
@@ -141,6 +143,8 @@ QPushButton:hover { background-color: transparent; }
 
 QPushButton:pressed { background-color: rgb(123,39,39); } 
 
+QPushButton:flat:checked { border-color: rgb(29, 237, 131); }
+
 
 /*-----QGroupBox------------------------------------------------------------------------------------------------------------------------------------*/           
 QGroupBox { border: 0px solid #373737; background-color: rgb(14,11,18); padding-top: 12px; }
@@ -186,6 +190,7 @@ QSpinBox::up-button:hover { background:#6b6b6b; }
 QTableView { background-color: rgb(14,11,18); color: rgb(29,237,131); border: 1px solid #3b3b3b; }
 
 QTableView QTableCornerButton:section { background-color: rgb(30,30,50); border: 1px solid #3b3b3b; }
+
 
 /*-----QTreeView-----------------------------------------------------------------------------------------------------------------------------------*/           
 QTreeView { color: rgb(94,246,255); background-color: rgb(14,11,18); border: 0px transparent transparent; }
