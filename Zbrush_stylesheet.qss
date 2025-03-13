@@ -31,6 +31,8 @@ QPushButton:flat { background-color: rgb(56,56,55); border-style: solid; border-
 
 QPushButton:flat:hover { border-color: rgb(181,181,181); }
 
+QPushButton:flat:checked { border-color: rgb(255,144,38); }
+
 
 /*-----QTextEdit------------------------------------------------------------------------------------------------------------------------------------*/
 QTextEdit { background-color: rgb(109,109,109); color: rgb(255,255,255); border-color: rgb(9,8,7); }
