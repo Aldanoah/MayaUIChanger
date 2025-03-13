@@ -37,7 +37,7 @@ QToolTip { border : 1px solid #000000; background-color: rgb(20,28,40); color: #
 
 
 /*-----QPushButton------------------------------------------------------------------------------------------------------------------------------------*/ 
-QPushButton { background-color: rgb(20,28,40); border-color: rgb(29,29,29); border-radius: 3px; }
+QPushButton { border-color: rgb(29,29,29); border-radius: 3px; }
 
 QPushButton::disabled { background-color: #404040; color: #656565; }
 
