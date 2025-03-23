@@ -23,8 +23,6 @@ QMenu::item:selected { background-color: #4969ff; color: rgb(72,170,181);}
 
 QMenu::item:disabled { color: #262626; }
 
-QMenu::tearoff { border: 1px; }
-
 
 /*-----QMenuBar------------------------------------------------------------------------------------------------------------------------------------*/           
 QMenuBar { background-color: transparent; spacing:2px; padding-top: 2px; }
@@ -75,7 +73,7 @@ QSlider::add-page:horizontal:disabled { background: rgb(72,72,72); border-color:
 
 
 /*-----QCheckBox------------------------------------------------------------------------------------------------------------------------------------*/           
-QCheckBox { background-color: transparent; color: #e6e6e6; } 
+QCheckBox { background-color: transparent; color: #e6e6e6; height: 15px; } 
 
 QCheckBox::indicator { width: 13px; height: 13px; } 
 
@@ -95,7 +93,7 @@ QCheckBox::disabled { color: rgb(89,89,89); }
 
 
 /*-----QRadioButton------------------------------------------------------------------------------------------------------------------------------------*/           
-QRadioButton { color: #e6e6e6; }
+QRadioButton { color: #e6e6e6; height: 18px; }
 
 QRadioButton::disabled { color: #656565; }
 
@@ -111,9 +109,11 @@ QRadioButton::indicator:unchecked:hover { border: 0.5px inset black; border-radi
 
 
 /*-----QLineEdit------------------------------------------------------------------------------------------------------------------------------------*/           
-QLineEdit { color: #dcdcdc; background-color: #2c2c2c; border: 1px solid #404040; border-color: rgb(61,61,61); border-radius: 0.3em; padding: 0px; }
+QLineEdit { color: #dcdcdc; background-color: #2c2c2c; border: 1px solid; border-color: rgb(61,61,61); border-radius: 0.3em; padding: 0px; }
 
-QLineEdit:disabled { color: rgb(89,89,89);}
+QLineEdit:disabled { color: rgb(89,89,89); }
+
+QLineEdit:focus { border-color: rgb(86,128,194); }
 
 
 /*-----QLabel------------------------------------------------------------------------------------------------------------------------------------*/           
