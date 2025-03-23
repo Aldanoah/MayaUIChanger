@@ -73,7 +73,7 @@ QSlider::add-page:horizontal:disabled { background: rgb(40,40,40); border-color:
 
 
 /*-----QCheckBox------------------------------------------------------------------------------------------------------------------------------------*/           
-QCheckBox { background-color: transparent; color: #e6e6e6; } 
+QCheckBox { background-color: transparent; color: #e6e6e6; height: 15px; } 
 
 QCheckBox::indicator { width: 13px; height: 13px; } 
 
@@ -93,7 +93,7 @@ QCheckBox::disabled { color: rgb(89,89,89); font-weight: normal; }
 
 
 /*-----QRadioButton------------------------------------------------------------------------------------------------------------------------------------*/           
-QRadioButton { color: #e6e6e6; }
+QRadioButton { color: #e6e6e6; height: 18px; }
 
 QRadioButton::disabled { color: rgb(138,138,138); }
 
@@ -109,7 +109,9 @@ QRadioButton::indicator:unchecked:hover { border: 0.5px inset black; border-radi
 
 
 /*-----QLineEdit------------------------------------------------------------------------------------------------------------------------------------*/           
-QLineEdit { color: rgb(29,237,131); background-color: rgb(14,11,18); border-radius: 0.3em; padding: 0px; }
+QLineEdit { color: rgb(29,237,131); background-color: rgb(14,11,18); border: 0.5px solid; border-color: rgb(29,237,131); border-radius: 0.3em; padding: 0px; }
+
+QLineEdit:focus { border-color: rgb(247,80,70); }
 
 
 /*-----QLabel------------------------------------------------------------------------------------------------------------------------------------*/           
@@ -139,11 +141,13 @@ QPushButton:default { background-color: rgb(14,11,18); color: rgb(94,246,255); b
 
 QPushButton:disabled { background-color: rgb(123,39,39); color: rgb(94,246,255); } 
 
-QPushButton:hover { background-color: transparent; }   
-
 QPushButton:pressed { background-color: rgb(123,39,39); } 
 
-QPushButton:flat:checked { border-color: rgb(29, 237, 131); }
+QPushButton:flat { border: none; }
+
+QPushButton:flat:checked { border: 1px solid; border-color: rgb(29,237,131); background-color: rgb(14,11,18); }
+
+QPushButton:flat:checked:hover { background-color: rgb(123,39,39); border-color: rgb(94,246,255); }
 
 
 /*-----QGroupBox------------------------------------------------------------------------------------------------------------------------------------*/           
