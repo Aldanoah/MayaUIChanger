@@ -1,6 +1,6 @@
 /*-----QWidget------------------------------------------------------------------------------------------------------------------------------------*/ 
-QWidget { background-color: rgb(166,166,166); color: rgb(216,216,216); selection-color: rgb(254,254,254); selection-background-color: rgb(86,128,194); font-family: DejaVu Sans Condensed; font-size: 12px; font-weight: normal; }
-                    
+QWidget { background-color: rgb(166,166,166); AutoFillBackground: true; color: rgb(216,216,216); selection-color: rgb(254,254,254); selection-background-color: rgb(86,128,194); font-family: DejaVu Sans Condensed; font-size: 12px; font-weight: normal; }
+
 
 /*-----QComboBox------------------------------------------------------------------------------------------------------------------------------------*/                          
 QComboBox { background-color: rgb(59,59,59); color: rgb(216,216,216); border: 1px solid #404040; padding-left: 6px; border-radius: 0.2em; selection-background-color: rgb(192,192,192);  }
@@ -15,9 +15,7 @@ QComboBox QAbstractItemView { background-color: rgb(59,59,59); border-bottom-lef
 /*-----QMenu------------------------------------------------------------------------------------------------------------------------------------*/           
 QMenu { background-color: rgb(44,44,44); }
 
-QMenu::tearoff { background-color: rgb(44,44,44); }
-
-QMenu::item { background-color: transparent; spacing: 3px; padding: 3px 15px; }
+QMenu::item { background-color: rgb(44,44,44); spacing: 3px; padding: 3px 15px; }
 
 QMenu::separator { height:0px; margin-left:5px; margin-right:5px; }
 
@@ -71,7 +69,7 @@ QSlider::add-page:horizontal:disabled { background: rgb(178,178,178); border-col
 
 
 /*-----QCheckBox------------------------------------------------------------------------------------------------------------------------------------*/           
-QCheckBox { background-color: transparent; color: rgb(28,28,28); } 
+QCheckBox { background-color: transparent; color: rgb(28,28,28); height: 15px; } 
 
 QCheckBox::indicator { width: 13px; height: 13px; } 
 
@@ -91,7 +89,7 @@ QCheckBox::disabled { color: rgb(89,89,89); }
 
 
 /*-----QRadioButton------------------------------------------------------------------------------------------------------------------------------------*/           
-QRadioButton { color: rgb(28,28,28); }
+QRadioButton { color: rgb(28,28,28); height: 18px; }
 
 QRadioButton::disabled { color: #656565; }
 
@@ -107,9 +105,11 @@ QRadioButton::indicator:unchecked:hover { border: 0.5px inset gray; border-radiu
 
 
 /*-----QLineEdit------------------------------------------------------------------------------------------------------------------------------------*/           
-QLineEdit { color: #dcdcdc; background-color: #2c2c2c; border: 1px solid #404040; border-color: rgb(61,61,61); border-radius: 0.3em; padding: 0px; }
+QLineEdit { color: #dcdcdc; background-color: #2c2c2c; border: 1px solid; border-color: rgb(61,61,61); border-radius: 0.3em; padding: 0px; }
 
-QLineEdit:disabled { color: rgb(89,89,89);}
+QLineEdit:disabled { color: rgb(89,89,89); }
+
+QLineEdit:focus { border-color: rgb(86,128,194); }
 
 
 /*-----QLabel------------------------------------------------------------------------------------------------------------------------------------*/           
@@ -189,7 +189,7 @@ QSpinBox::up-button:hover { background:#6b6b6b; }
 
 
 /*-----QTableView------------------------------------------------------------------------------------------------------------------------------------*/           
-QTableView { color: rgb(153,153,153); background-color: rgb(153,153,153); border: 1px solid #3b3b3b; }
+QTableView { color: rgb(153,153,153); background-color: rgb(40,40,40); border: 1px solid #3b3b3b; }
 
 QTableView QTableCornerButton:section { background-color: #3b3b3b; border: 1px solid #3b3b3b; }
                     
@@ -224,3 +224,11 @@ QScrollBar::sub-line:horizontal { height: 0px; subcontrol-position: top; subcont
 
 /*-----QToolTip-----------------------------------------------------------------------------------------------------------------------------------*/
 QToolTip {background-color: rgb(29,29,29); color: #dcdcdc; padding: 3px; border: 0px; }      
+
+
+/*-----QStatusBar------------------------------------------------------------------------------------------------------------------------------------*/ 
+QStatusBar { color: rgb(28,28,28); }
+
+
+
+
