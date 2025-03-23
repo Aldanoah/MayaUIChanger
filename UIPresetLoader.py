@@ -62,11 +62,12 @@ def create_menu():
         # Add new menu items that call the theme change function through the helper function
         cmds.menuItem(label='Blender Dark', command=make_theme_changer('Blender Dark'))
         cmds.menuItem(label='Blender Light', command=make_theme_changer('Blender Light'))
+        cmds.menuItem(label='Unreal Engine', command=make_theme_changer('Unreal'))
+        cmds.menuItem(label='Zbrush Dark', command=make_theme_changer('Zbrush'))
         cmds.menuItem(label='Edgerunners', command=make_theme_changer('Edgerunners'))
+        cmds.menuItem(label='Umbra Dark', command=make_theme_changer('Umbra'))
         cmds.menuItem(label='Maya Light', command=make_theme_changer('Maya Light'))
         cmds.menuItem(label='Maya Default', command=make_theme_changer('Maya Default'))
-        cmds.menuItem(label='Umbra Dark', command=make_theme_changer('Umbra'))
-        cmds.menuItem(label='Zbrush Dark', command=make_theme_changer('Zbrush'))
     else:
         cmds.warning("Failed to find main Maya window.")
 
