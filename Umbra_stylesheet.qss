@@ -43,7 +43,7 @@ QPushButton::disabled { background-color: #404040; color: #656565; }
 
 QPushButton::hover { border-style: solid; border-width: 1px; border-radius: 3px; border-color: rgb(181,181,181); }
 
-QPushButton:flat:checked { background-color: rgb(20,28,40); }
+QPushButton:flat:checked { background-color: rgb(20,28,40); border: 1px solid; border-color: #ffffff; }
 
 
 /*-----QTextEdit------------------------------------------------------------------------------------------------------------------------------------*/
@@ -93,9 +93,11 @@ QTabBar::tab:left:last, QTabBar::tab:right:last, QTabBar::tab:left:only-one, QTa
 
 
 /*-----QLineEdit------------------------------------------------------------------------------------------------------------------------------------*/ 
-QLineEdit { background-color: rgb(20,28,40); color: #ffffff; border-width: 1px; border-radius: 3px; padding: 2px; }
+QLineEdit { background-color: rgb(20,28,40); color: #ffffff; border: 1px solid; border-width: 1px; border-radius: 3px; padding: 2px; }
 
 QLineEdit::disabled { background-color: #0d0d0d; color: rgb(41,41,41); border-width: 1px; border-radius: 3px; border-color: #051a39; padding: 2px; }
+
+QLineEdit:focus { border-color: #c8c8c8; }
 
 
 /*-----QProgressBar------------------------------------------------------------------------------------------------------------------------------------*/ 
@@ -121,7 +123,7 @@ QComboBox QAbstractItemView { background-color: #383838; color: #ffffff; border:
 
 
 /*-----QCheckBox------------------------------------------------------------------------------------------------------------------------------------*/           
-QCheckBox { background-color: transparent; } 
+QCheckBox { background-color: transparent; height: 15px; } 
 
 QCheckBox::indicator { width: 13px; height: 13px; } 
 
@@ -141,7 +143,7 @@ QCheckBox::disabled { color: rgb(89,89,89); }
 
 
 /*-----QRadioButton------------------------------------------------------------------------------------------------------------------------------------*/           
-QRadioButton { color: #e6e6e6; }
+QRadioButton { color: #e6e6e6; height: 18px; }
 
 QRadioButton::disabled { color: #656565; }
 
