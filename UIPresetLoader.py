@@ -1,9 +1,14 @@
 import os
 import maya.cmds as cmds
 import maya.OpenMayaUI as omui
-from shiboken2 import wrapInstance
-from PySide2 import QtWidgets
 import json
+
+try:
+    from shiboken2 import wrapInstance
+    from PySide2 import QtWidgets
+except:
+    from shiboken6 import wrapInstance
+    from PySide6 import QtWidgets
 
 # Save user preset session to JSON file
 settings_file_path = os.path.join(cmds.internalVar(userAppDir=True), "theme_settings.json")
