@@ -5,6 +5,13 @@ from shiboken2 import wrapInstance
 from PySide2 import QtWidgets
 import json
 
+try:
+    from shiboken2 import wrapInstance
+    from PySide2 import QtWidgets
+except:
+    from shiboken6 import wrapInstance
+    from PySide6 import QtWidgets
+
 # Save user preset session to JSON file
 settings_file_path = os.path.join(cmds.internalVar(userAppDir=True), "theme_settings.json")
 
@@ -64,6 +71,7 @@ def create_menu():
         cmds.menuItem(label='Blender Light', command=make_theme_changer('Blender Light'))
         cmds.menuItem(label='Unreal Engine', command=make_theme_changer('Unreal'))
         cmds.menuItem(label='Zbrush Dark', command=make_theme_changer('Zbrush'))
+        cmds.menuItem(label='Modo', command=make_theme_changer('Modo'))
         cmds.menuItem(label='Edgerunners', command=make_theme_changer('Edgerunners'))
         cmds.menuItem(label='Umbra Dark', command=make_theme_changer('Umbra'))
         cmds.menuItem(label='Maya Light', command=make_theme_changer('Maya Light'))
