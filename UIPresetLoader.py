@@ -1,8 +1,6 @@
 import os
 import maya.cmds as cmds
 import maya.OpenMayaUI as omui
-from shiboken2 import wrapInstance
-from PySide2 import QtWidgets
 import json
 
 try:

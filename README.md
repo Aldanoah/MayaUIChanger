@@ -3,7 +3,8 @@
 This is a suite of tools created in order to allow greater customization of Maya’s user environment. This project is currently a work in progress so some aspects may not function as intended.
 
 Adds a new “Themes” menu item to Maya’s menu bar. Navigate to it to cycle through the available theme presets. <br>
-![image](https://github.com/user-attachments/assets/3a0a2094-21f6-4232-a241-7b652e7d61a0)
+![preview](https://github.com/user-attachments/assets/a0d5f478-b0ad-43eb-8cfe-af58ed6960c1)
+
 
 
 Installation:
@@ -26,25 +27,31 @@ You may need to set your maya script directory as a new system variable. You can
 **The currently available features are as follows;**
 
 1) Blender Dark Preset
-![Blender Dark](https://github.com/user-attachments/assets/74c7df88-b5a2-415d-a8ac-0ff3b05c84fa)
+![Blender Dark](https://github.com/user-attachments/assets/0a87f7bc-f54a-4e8f-bdf5-85bb325b88ab)
 
 2) Blender Light Preset
-![Blender Light](https://github.com/user-attachments/assets/ddd28c16-443b-4da1-a694-0939c33ce883)
+![Blender Light](https://github.com/user-attachments/assets/1fa5800a-a6ad-4d83-addd-41a2aefceacb)
 
 3) Edgerunners Preset
-![Edgerunners](https://github.com/user-attachments/assets/bb8bb8cf-7292-48dd-8fc5-1271ed0279a3)
+![Edgerunners](https://github.com/user-attachments/assets/99360561-6247-4312-a093-06eb05f2bc1f)
 
-4) Umbra Dark Preset
-![umbra Dark theme](https://github.com/user-attachments/assets/f652ad9a-45ec-4cf6-a425-51ae8ec975db)
+4) ZBrush Preset
+![ZBrush](https://github.com/user-attachments/assets/d2827ec7-bf2d-48cc-aff8-197a0bf62dac)
 
-5) ZBrush Preset
- ![Zbrush Dark Theme](https://github.com/user-attachments/assets/66b166a8-08ae-40a8-bc13-a72c1fdde275)
+5) Unreal Engine Preset
+![UE5 Preset](https://github.com/user-attachments/assets/9d4c1af9-aa32-4dbe-b16d-ab35cab48bf8)
 
-6) Maya Splash Tool 
+6) Umbra Dark Preset
+![Umbra Theme](https://github.com/user-attachments/assets/26345e52-c3d6-4405-9858-531236a84282)
 
-https://github.com/user-attachments/assets/3e238764-535d-4338-a2d6-3f1aee11ef0d
+Extras:
+-
 
-The Splash Tool requires launching Maya as an adminstrator in order to function correctly. Currently only takes wav files and doesn't support resizing images so a target image size of 860x500px is recommended. Simply run the SplashLoader.py script to use. <br><br> Please unmute the video preview. 
+7) Maya Splash Tool 
+
+https://github.com/user-attachments/assets/a6a9fb27-69b7-4040-8812-99bc853d11a2
+
+A Script to customize Maya's Splash screen is also bundled with this project. It requires launching Maya as an adminstrator in order to function correctly. The script currently only takes .wav and .png files and doesn't support resizing images so a target image size of 860x500px is recommended. Simply run the SplashLoader.py script to use. <br><br> Please unmute the video preview. 
 
 
 Compatibility:
