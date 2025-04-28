@@ -223,7 +223,7 @@ QPlainTextEdit:!editable { background-color: rgb(15,15,15); }
 /*-----QTableView------------------------------------------------------------------------------------------------------------------------------------*/           
 QTableView { color: rgb(153,153,153); background-color: #151515; border: 1px solid #3b3b3b; }
 
-QTableView QTableCornerButton:section { background-color: #3b3b3b; border: 1px solid #3b3b3b; }
+QTableView QTableCornerButton:section { background-color: rgb(47,47,47); border: 1px solid; border-color: rgb(47,47,47); }
 
 
 /*-----QMessageBox------------------------------------------------------------------------------------------------------------------------------------*/           
