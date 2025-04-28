@@ -3,7 +3,7 @@
 This is a suite of tools created in order to allow greater customization of Maya’s user environment. This project is currently a work in progress so some aspects may not function as intended.
 
 Adds a new “Themes” menu item to Maya’s menu bar. Navigate to it to cycle through the available theme presets. <br>
-![preview](https://github.com/user-attachments/assets/a0d5f478-b0ad-43eb-8cfe-af58ed6960c1)
+![preview](https://github.com/user-attachments/assets/6e5908cb-0536-4a76-895c-499ab9d12019)
 
 
 
@@ -39,7 +39,7 @@ You may need to set your maya script directory as a new system variable. You can
 ![ZBrush](https://github.com/user-attachments/assets/d2827ec7-bf2d-48cc-aff8-197a0bf62dac)
 
 5) Unreal Engine Preset
-![UE5 Preset](https://github.com/user-attachments/assets/9d4c1af9-aa32-4dbe-b16d-ab35cab48bf8)
+![UE5](https://github.com/user-attachments/assets/d80dabb1-5afa-4f05-b3a6-5b1c70aeb3ba)
 
 6) Modo Preset
 ![Modo](https://github.com/user-attachments/assets/ffcaddf1-3691-42ff-9aa3-ebabfcff89fe)
