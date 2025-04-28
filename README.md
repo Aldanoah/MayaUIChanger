@@ -10,8 +10,8 @@ Adds a new “Themes” menu item to Maya’s menu bar. Navigate to it to cycle 
 Installation:
 -
 1) Go to <a href="https://github.com/Aldanoah/MayaUIChanger/releases">releases</a> to download the latest "MayaUIChanger.zip" version.
-2) Unzip the file into your Maya 2024 script directory e.g "..\Documents\maya\2024\scripts\MayaUIChanger".
-3) Copy the "userSetup.py" script to your maya script directory e.g "..\Documents\maya\2024\scripts.
+2) Place the "MayaUIChanger" folder in your Maya scripts directory e.g "..\Documents\maya\2024\scripts\MayaUIChanger".
+3) Copy the "userSetup.py" file in the folder to your Maya scripts directory e.g "..\Documents\maya\2024\scripts.
 5) Launch Maya.
 6) if the "Themes" menu item is missing, you may alternatively run the "UIPresetLoader.py" script through Maya's script editor.
 
@@ -41,8 +41,14 @@ You may need to set your maya script directory as a new system variable. You can
 5) Unreal Engine Preset
 ![UE5 Preset](https://github.com/user-attachments/assets/9d4c1af9-aa32-4dbe-b16d-ab35cab48bf8)
 
-6) Umbra Dark Preset
+6) Modo Preset
+![Modo](https://github.com/user-attachments/assets/ffcaddf1-3691-42ff-9aa3-ebabfcff89fe)
+
+7) Umbra Dark Preset
 ![Umbra Theme](https://github.com/user-attachments/assets/26345e52-c3d6-4405-9858-531236a84282)
+
+7) Maya Light 2010 (Scrapped)
+![Maya Light](https://github.com/user-attachments/assets/cd3c98b6-0872-4abc-a1c2-cf9e12eb0ba0)
 
 Extras:
 -
@@ -56,7 +62,7 @@ A Script to customize Maya's Splash screen is also bundled with this project. It
 
 Compatibility:
 -
-Intended for Maya 2024 but likely to work on other versions with some tweaking.
+Maya 2024 - 2026 but likely to work on earlier versions.
 
 Questions?
 -
