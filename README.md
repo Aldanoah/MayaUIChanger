@@ -42,12 +42,12 @@ You may need to set your maya script directory as a new system variable. You can
 ![UE5](https://github.com/user-attachments/assets/d80dabb1-5afa-4f05-b3a6-5b1c70aeb3ba)
 
 6) Modo Preset
-![Modo](https://github.com/user-attachments/assets/ffcaddf1-3691-42ff-9aa3-ebabfcff89fe)
+![Modo Preview](https://github.com/user-attachments/assets/c547cf0b-44ba-4375-a536-5ff351c8338b)
 
 7) Umbra Dark Preset
 ![Umbra Theme](https://github.com/user-attachments/assets/26345e52-c3d6-4405-9858-531236a84282)
 
-7) Maya Light 2010 (Scrapped)
+8) Maya Light 2010 (Scrapped)
 ![Maya Light](https://github.com/user-attachments/assets/cd3c98b6-0872-4abc-a1c2-cf9e12eb0ba0)
 
 Extras:
