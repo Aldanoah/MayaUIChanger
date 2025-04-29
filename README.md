@@ -53,7 +53,7 @@ You may need to set your maya script directory as a new system variable. You can
 Extras:
 -
 
-7) Maya Splash Tool 
+9) Maya Splash Tool 
 
 https://github.com/user-attachments/assets/a6a9fb27-69b7-4040-8812-99bc853d11a2
 
