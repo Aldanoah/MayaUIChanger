@@ -9,7 +9,7 @@ QLabel::disabled { background-color: transparent; color: rgb(136,136,136); }
 
 
 /*-----QMenuBar------------------------------------------------------------------------------------------------------------------------------------*/           
-QMenuBar { background-color: rgb(62,62,62); color: rgb(193,193,193); padding: 1.2px; border-bottom: 1px Solid; border-color: rgb(96,96,96); margin-bottom: 1px; }
+QMenuBar { background-color: rgb(62,62,62); color: rgb(193,193,193); padding: 1.2px; border-bottom: 1px Solid; border-color: rgb(96,96,96); margin-bottom: 1.4px; }
 
 QMenuBar::item { color: rgb(193,193,193); }
 
@@ -28,6 +28,8 @@ QMenu::separator { height: 1px; padding-left: 4px; margin-left: 10px; margin-rig
 QMenu::item { min-width : 150px; padding: 3px 20px 3px 20px; }
 
 QMenu::item:disabled { color: rgb(136,136,136); }
+
+QMenu::tearoff { height: 0px; margin: 2px; padding: 0px; border:none }
 
 
 /*-----QToolTip-----------------------------------------------------------------------------------------------------------------------------------*/
@@ -86,6 +88,8 @@ QToolBox {padding: 10px; }
 
 /*-----QProgressBar------------------------------------------------------------------------------------------------------------------------------------*/ 
 QProgressBar { border: 1px solid #222222; text-align: center; color: rgb(255,255,255); font-size: 12px; font-weight: bold; padding: 1px; border-radius: 3px; }
+
+QProgressBar::chunk { background-color: rgb(244,156,28); border: 1px solid #373737; }
 
 
 /*-----QMessageBox------------------------------------------------------------------------------------------------------------------------------------*/           

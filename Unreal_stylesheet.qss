@@ -27,6 +27,8 @@ QMenu::item { padding: 4px 5px; min-width: 180px; }
 
 QMenu::item:selected { background-color: #0664c3; }
 
+QMenu::tearoff { height: 0px; margin: 2px; padding: 0px; border:none }
+
 
 /*-----QLabel------------------------------------------------------------------------------------------------------------------------------------*/ 
 QLabel { color: #c0c0c0; background-color: transparent; }

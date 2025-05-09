@@ -2,20 +2,24 @@
 QWidget { background-color: rgb(30,30,50); color: rgb(94,246,255); selection-color: rgb(94,246,255); selection-background-color: rgb(247,80,70); font-family: rajdhani; font-size: 13px; font-weight: bold; }
 
 
+/*-----QLabel-------------------------------------------------------------------------------------------------------------------------------------*/
+QLabel { font-weight: bold; }
+
+
 /*-----QComboBox------------------------------------------------------------------------------------------------------------------------------------*/                          
 QComboBox { color: rgb(29,237,131); background-color: rgb(0,0,0); border: 1px solid rgb(29, 237, 131); padding-left: 6px; border-radius: 0.2em; }
 
-QComboBox:on { background-color: rgb(123,39,39); color: rgb(94,246,255); }
+QComboBox:on { background-color: rgba(123, 39, 39, 0.23); color: rgb(94,246,255); }
 
 QComboBox:disabled  { background-color: rgb(14,11,18); color: rgb(123,39,39); border: 1px solid rgb(123,39,39); }
 
 QComboBox:hover,QPushButton:hover { border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0W, y2: 1, stop: 0 #f75049, stop: 1 #f75049); }
 
-QComboBox QAbstractItemView { color: rgb(94,246,255); border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; selection-background-color: rgb(247,80,70); }
+QComboBox QAbstractItemView { background: red; color: #D5D5D5; selection-color: rgb(94,246,255); selection-background-color: rgb(247,80,70); border: 1px solid; border-color: rgb(29,237,131); }
                 
 
 /*-----QMenu------------------------------------------------------------------------------------------------------------------------------------*/    
-QMenu { border: 1px solid; color: #ffffff; }
+QMenu { border: 1px solid; border-color: rgb(29,237,131); color: #ffffff; background-color: rgb(14,11,18); }
 
 QMenu::separator { height: 2px; background-color: #6d8eff; color: rgb(247,80,70); padding-left: 4px; margin-left: 10px; margin-right: 5px; }
 
@@ -25,13 +29,17 @@ QMenu::item:disabled { color: #262626; }
 
 QMenu::tearoff { border: 1px; }
 
+QMenu::tearoff { height: 0px; margin: 2px; padding: 0px; border:none }
+
+QMenu QLabel, QMenu QWidget, QMenu QAbstractItemView { color: rgb(29,237,131); background-color: rgb(14,11,18);  }
+
 
 /*-----QMenuBar------------------------------------------------------------------------------------------------------------------------------------*/           
 QMenuBar { background-color: transparent; spacing:2px; padding-top: 2px; border: 1px; }
 
 QMenuBar::item { background-color: transparent;}
 
-QMenuBar::item:selected { color: rgb(29, 237, 131); background-color: rgb(0,0,0); border-style: outset; border-radius: 0.2em;  }
+QMenuBar::item:selected { color: rgb(29, 237, 131); background-color: rgb(0,0,0); border: 1px solid; border-color: rgb(29,237,131); border-style: outset; border-radius: 0.2em;  }
 
 
 /*-----QTabBar------------------------------------------------------------------------------------------------------------------------------------*/           
@@ -89,7 +97,7 @@ QCheckBox::indicator:unchecked:disabled { inset gray; background-color: rgb(14,1
 
 QCheckBox::indicator:disabled { background-color: rgb(123,39,39);  width: 9px; height: 9px; } 
 
-QCheckBox::disabled { color: rgb(89,89,89); font-weight: normal; }
+QCheckBox::disabled { color: rgb(89,89,89); }
 
 
 /*-----QRadioButton------------------------------------------------------------------------------------------------------------------------------------*/           

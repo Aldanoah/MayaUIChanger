@@ -12,12 +12,18 @@ QComboBox:disabled  { background-color: #323232; color: rgb(89,89,89); }
 QComboBox QAbstractItemView { background-color: rgb(59,59,59); border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; selection-background-color: rgb(5,5,5); }
 
 
-/*-----QMenu------------------------------------------------------------------------------------------------------------------------------------*/           
-QMenu { background-color: rgb(44,44,44); }
+/*-----QMenu------------------------------------------------------------------------------------------------------------------------------------*/    
+QMenu { border: 1px solid; color: #ffffff; background-color: rgb(24,24,24); }
 
-QMenu::item { background-color: rgb(44,44,44); spacing: 3px; padding: 3px 15px; }
+QMenu::separator { height: 10px; background-color: rgb(47,47,47); padding-left: 4px; margin-left: 10px; margin-right: 5px; }
 
-QMenu::separator { height:0px; margin-left:5px; margin-right:5px; }
+QMenu::item { min-width : 150px; padding: 3px 20px 3px 20px; }
+
+QMenu::item:disabled { color: #262626; }
+
+QMenu::tearoff { height: 0px; margin: 2px; padding: 0px; border:none }
+
+QMenu QLabel, QMenu QWidget, QMenu QAbstractItemView { color: #e6e6e6; background-color: rgb(24,24,24); }
 
 
 /*-----QMenuBar------------------------------------------------------------------------------------------------------------------------------------*/           
@@ -95,13 +101,13 @@ QRadioButton::disabled { color: #656565; }
 
 QRadioButton::indicator { border-radius: 0.2px; }
 
-QRadioButton::indicator:checked {  border-radius: 5px; border: 1px inset grey; background-color: rgb(85,127,193);  width: 9px; height: 9px; }
+QRadioButton::indicator:checked {  border-radius: 5px; border: 1px inset black; background-color: rgb(85,127,193);  width: 9px; height: 9px; }
 
-QRadioButton::indicator:checked:hover { border: 0.5px inset gray; border-radius: 5px; background-color: rgb(115,148,199);  width: 9px; height: 9px; }
+QRadioButton::indicator:checked:hover { border: 0.5px inset black; border-radius: 5px; background-color: rgb(115,148,199);  width: 9px; height: 9px; }
 
-QRadioButton::indicator:unchecked { border: 0.5px inset gray; border-radius: 5px; background-color: rgb(57,57,57);  width: 9px; height: 9px; }
+QRadioButton::indicator:unchecked { border: 0.5px inset black; border-radius: 5px; background-color: rgb(57,57,57);  width: 9px; height: 9px; }
 
-QRadioButton::indicator:unchecked:hover { border: 0.5px inset gray; border-radius: 5px; background-color: rgb(64,64,64); width: 9px; height: 9px }
+QRadioButton::indicator:unchecked:hover { border: 0.5px inset black; border-radius: 5px; background-color: rgb(64,64,64); width: 9px; height: 9px }
 
 
 /*-----QLineEdit------------------------------------------------------------------------------------------------------------------------------------*/           

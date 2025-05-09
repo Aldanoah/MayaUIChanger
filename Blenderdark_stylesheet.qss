@@ -13,15 +13,17 @@ QComboBox QAbstractItemView { border-bottom-left-radius: 4px; border-bottom-righ
 
 
 /*-----QMenu------------------------------------------------------------------------------------------------------------------------------------*/    
-QMenu { border: 1px solid; color: #ffffff; }
+QMenu { border: 1px solid; color: #ffffff; background-color: rgb(24,24,24); }
 
-QMenu::separator { height: 1px; background-color: #6d8eff; color: #ffffff; padding-left: 4px; margin-left: 10px; margin-right: 5px; }
+QMenu::separator { height: 10px; background-color: rgb(47,47,47); padding-left: 4px; margin-left: 10px; margin-right: 5px; }
 
 QMenu::item { min-width : 150px; padding: 3px 20px 3px 20px; }
 
-QMenu::item:selected { background-color: #4969ff; color: rgb(72,170,181);}
-
 QMenu::item:disabled { color: #262626; }
+
+QMenu::tearoff { height: 0px; margin: 2px; padding: 0px; border:none }
+
+QMenu QLabel, QMenu QWidget, QMenu QAbstractItemView { color: #e6e6e6; background-color: rgb(24,24,24); }
 
 
 /*-----QMenuBar------------------------------------------------------------------------------------------------------------------------------------*/           
