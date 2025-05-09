@@ -10,15 +10,15 @@ except:
     from shiboken6 import wrapInstance
     from PySide6 import QtWidgets
 
-# Save user preset session to JSON file
+# Defines path to settings JSON file
 settings_file_path = os.path.join(cmds.internalVar(userAppDir=True), "theme_settings.json")
 
-# Function to save user preset
+# Function to save user preset to a JSON file
 def save_settings(settings):
     with open(settings_file_path, 'w') as f:
         json.dump(settings, f)
 
-# Function to load user preset
+# Function to load user preset from a JSON file
 def load_settings():
     if os.path.exists(settings_file_path):
         with open(settings_file_path, 'r') as f:
@@ -65,14 +65,13 @@ def create_menu():
         cmds.menu('myMenu', label='Themes', parent='MayaWindow', tearOff=True)
         
         # Add new menu items that call the theme change function through the helper function
-        cmds.menuItem(label='Blender Dark', command=make_theme_changer('Blender Dark'))
-        cmds.menuItem(label='Blender Light', command=make_theme_changer('Blender Light'))
         cmds.menuItem(label='Unreal Engine', command=make_theme_changer('Unreal'))
+        cmds.menuItem(label='Blender Light', command=make_theme_changer('Blender Light'))
+        cmds.menuItem(label='Blender Dark', command=make_theme_changer('Blender Dark'))
         cmds.menuItem(label='Zbrush Dark', command=make_theme_changer('Zbrush'))
-        cmds.menuItem(label='Modo', command=make_theme_changer('Modo'))
-        cmds.menuItem(label='Edgerunners', command=make_theme_changer('Edgerunners'))
+        cmds.menuItem(label='Modo Dark', command=make_theme_changer('Modo'))
         cmds.menuItem(label='Umbra Dark', command=make_theme_changer('Umbra'))
-        cmds.menuItem(label='Maya Light', command=make_theme_changer('Maya Light'))
+        cmds.menuItem(label='Edgerunners', command=make_theme_changer('Edgerunners'))
         cmds.menuItem(label='Maya Default', command=make_theme_changer('Maya Default'))
     else:
         cmds.warning("Failed to find main Maya window.")
