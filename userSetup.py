@@ -1,13 +1,12 @@
-# Make sure that PYTHONPATH environment variable is set to your C:/user/userName/Documents/maya/scripts directory
+# Make sure that PYTHONPATH environment variable is set to your C:/user/userName/Documents/maya/year/scripts directory
 import maya.utils
-import maya.cmds as cmds
 
-# Load UI Preset Loader Script on startup
+# Function to Load UIPresetLoader script on startup
 def loadUIPresetLoader():
     import MayaUIChanger.UIPresetLoader as UIPresetLoader
     UIPresetLoader.run()  
 
-# Function to Load startup sound
+# Function to Load Splash script on startup
 def playStartupSound():
     try:
         import MayaUIChanger.SplashLoader as splashloader
