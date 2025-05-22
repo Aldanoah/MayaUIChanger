@@ -1,0 +1,110 @@
+/*-----QWidget------------------------------------------------------------------------------------------------------------------------------------*/ 
+QWidget { selection-background-color: rgb(45,127,182); font-family: DejaVu Sans Condensed; font-size: 12px; font-weight: normal; }
+                    
+
+/*-----QTabBar------------------------------------------------------------------------------------------------------------------------------------*/       
+QTabBar::tab { border-style: solid; border-width: 3px; border-top-color: #373737; border-right-color: #373737; border-left-color: #373737; border-bottom-color: #373737; padding: 4px 10px 4px 10px; border-top-left-radius: 0.5em; border-top-right-radius: 0.5em; border-bottom-style: solid; }
+
+QTabBar::tab:selected { color: rgb(35, 35, 35); background-color: rgb(68,164,228); border-style: solid; border-width: 3px; }
+
+QTabBar::tab:!selected { background-color: rgb(90, 90, 90); color: rgb(148,212,255); border-width: 3px; }
+
+QTabBar::tab:hover:!selected { background-color: rgb(144, 144, 144); color: rgb(254,254,254); border-width: 3px; }
+
+
+/*-----QSlider-------------------------------------------------------------------------------------------------------------------------------------*/           
+QSlider { background-color: rgb(14,11,18); border-radius: 0.3em; }
+
+QSlider:hover { background-color: rgb(14,11,18); }
+
+QSlider::handle { background-color: rgb(68,194,243); border: 1px; }
+
+QSlider::handle:horizontal:disabled { background: rgb(123,39,39); border: 0px solid #aaa; }
+
+QSlider::sub-page:horizontal { background: rgb(98, 98, 98); }
+
+QSlider::sub-page:horizontal:disabled { background: rgb(88, 31, 31); }
+
+QSlider::add-page:horizontal:disabled { background: rgb(40,40,40); border-color: #999; }
+
+
+/*-----QScrollBar-----------------------------------------------------------------------------------------------------------------------------------*/           
+QScrollBar:vertical { border: 0px; background-color: rgb(72, 72, 72); width:10px; margin: 0px 0px 0px 0px; }
+
+QScrollBar:horizontal { border: 0px; background-color: rgb(72, 72, 72); width:10px; margin: 0px 0px 0px 0px; }
+
+QScrollBar::handle:vertical { min-height: 0px; border: 0px; background-color: rgb(90, 90, 90); border-radius: 4px; border-radius: 0.3em;}
+
+QScrollBar::handle:horizontal { min-height: 0px; border: 0px; background-color: rgb(88, 88, 88); border-radius: 4px; border-radius: 0.3em;}
+
+QScrollBar::add-line:vertical { height: 0px; subcontrol-position: bottom; subcontrol-origin: margin; }
+
+QScrollBar::add-line:horizontal { height: 0px; subcontrol-position: bottom; subcontrol-origin: margin; }
+
+QScrollBar::sub-line:vertical { height: 0px; subcontrol-position: top; subcontrol-origin: margin; }
+
+QScrollBar::sub-line:horizontal { height: 0px; subcontrol-position: top; subcontrol-origin: margin; }   
+
+
+/*-----QMessageBox------------------------------------------------------------------------------------------------------------------------------------*/           
+QMessageBox { color: rgb(229,229,229); background-color: rgb(24,24,24); }
+
+QMessageBox QPushButton { min-width: 120px; min-height: 20px; background-color: rgb(34, 109, 159); border-radius: 0.2em; } 
+
+QMessageBox QPushButton:hover { color: rgb(234,240,248); background-color: rgb(176, 76, 53);} 
+
+QMessageBox QPushButton:default:hover { color: rgb(234,240,248); background-color: rgb(121,158,215); }   
+
+
+/*-----QHeaderView------------------------------------------------------------------------------------------------------------------------------------*/           
+QHeaderView { background-color: rgb(30,30,50); border: 0px transparent transparent; }
+
+QHeaderView:section { color: rgb(148, 212, 255); background-color: rgb(30,30,50); border: 0px transparent transparent; }    
+
+
+/*-----QCheckBox------------------------------------------------------------------------------------------------------------------------------------*/           
+QCheckBox { background-color: transparent; color:rgb(242, 242, 242); } 
+
+QCheckBox::disabled { color: rgb(66,87,120); }
+
+QCheckBox::indicator { width: 21px; height: 21px; } 
+
+QCheckBox::indicator:checked { border: 1px ridge black; background-color: rgb(50, 174, 223);  width: 16px; height: 16px; } 
+
+QCheckBox::indicator:checked:hover { border: 1px ridge black; background-color: rgb(130, 220, 255);  width: 16px; height: 16px; }  
+
+QCheckBox::indicator:unchecked { inset gray; background-color: rgb(31, 31, 31); width: 14px; height: 14px; border: 1px solid gray; }
+
+QCheckBox::indicator:unchecked:hover { background-color: rgb(80, 80, 80); width: 14px; height: 14px; border: 1px solid lightblue; }
+
+QCheckBox::indicator:disabled { background-color: rgb(66,87,120); border: 1px solid darkblue; }
+
+
+/*-----QRadioButton------------------------------------------------------------------------------------------------------------------------------------*/           
+QRadioButton { background-color: transparent; color: rgb(242, 242, 242); }
+
+QRadioButton::disabled { color: rgb(66,87,120); }
+
+QRadioButton::indicator { width: 21px; height: 21px; }
+
+QRadioButton::indicator:checked { border-radius: 5px; border: 1px ridge black; background-color: rgb(50, 174, 223);  width: 16px; height: 16px;  }
+
+QRadioButton::indicator:checked:hover { border: 1px ridge black; background-color: rgb(130, 220, 255);  width: 16px; height: 16px;  }
+
+QRadioButton::indicator:unchecked { border-radius: 5px; inset gray; background-color: rgb(31, 31, 31); width: 14px; height: 14px; border: 1px solid gray; }
+
+QRadioButton::indicator:unchecked:hover { border-radius: 5px; background-color: rgb(80, 80, 80); width: 14px; height: 14px; border: 1px solid lightblue; }
+
+
+/*-----QTableView------------------------------------------------------------------------------------------------------------------------------------*/           
+QTableView QTableCornerButton:section { background-color: rgb(30,30,50); }
+
+
+/*-----QLineEdit------------------------------------------------------------------------------------------------------------------------------------*/           
+QLineEdit { color: #dcdcdc; background-color: #2c2c2c; border: 1px solid; border-color: rgb(61,61,61); border-radius: 0.3em; padding: 0px; }
+
+QLineEdit:disabled { color: rgb(89,89,89); }
+
+QLineEdit:focus { border-color: rgb(68,164,228); }
+
+
