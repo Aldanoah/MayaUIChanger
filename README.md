@@ -3,7 +3,7 @@
 This is a suite of tools created in order to allow greater customization of Maya’s user environment. This project is currently a work in progress so some aspects may not function as intended.
 
 Adds a new “Themes” menu item to Maya’s menu bar. Navigate to it to cycle through the available presets. <br>
-![image](https://github.com/user-attachments/assets/18f5917f-27ff-4e99-8ebb-45e0d78022e5)
+![menu](https://github.com/user-attachments/assets/73f35de8-b935-41e9-bb7a-c19391136cce)
 
 
 
