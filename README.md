@@ -42,19 +42,23 @@ You may need to set your maya script directory as a new system variable. You can
 5) Unreal Engine Preset
 ![UE5](https://github.com/user-attachments/assets/d80dabb1-5afa-4f05-b3a6-5b1c70aeb3ba)
 
-6) Modo Dark Preset
+6) Easy Blue Preset by 3Dsmash
+![Easy Blue Preview](https://github.com/user-attachments/assets/90adef32-a333-4ea2-9314-d437b1de13fc)
+
+7) Modo Dark Preset
 ![Modo Preview](https://github.com/user-attachments/assets/4eb9049d-4f9d-4c2f-9b8c-83bd27f4e2df)
 
-7) Umbra Dark Preset
+8) Umbra Dark Preset
 ![Umbra Theme](https://github.com/user-attachments/assets/26345e52-c3d6-4405-9858-531236a84282)
 
-8) Maya Light 2010 (Depreciated)
+9) Maya Light 2010 (Depreciated)
 ![Maya Light](https://github.com/user-attachments/assets/cd3c98b6-0872-4abc-a1c2-cf9e12eb0ba0)
+
 
 Extras:
 -
 
-9) Maya Splash Tool 
+10) Maya Splash Tool 
 
 https://github.com/user-attachments/assets/a6a9fb27-69b7-4040-8812-99bc853d11a2
 
