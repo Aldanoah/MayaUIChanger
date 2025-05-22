@@ -2,8 +2,9 @@
 
 This is a suite of tools created in order to allow greater customization of Maya’s user environment. This project is currently a work in progress so some aspects may not function as intended.
 
-Adds a new “Themes” menu item to Maya’s menu bar. Navigate to it to cycle through the available theme presets. <br>
-![preview](https://github.com/user-attachments/assets/6e5908cb-0536-4a76-895c-499ab9d12019)
+Adds a new “Themes” menu item to Maya’s menu bar. Navigate to it to cycle through the available presets. <br>
+![image](https://github.com/user-attachments/assets/18f5917f-27ff-4e99-8ebb-45e0d78022e5)
+
 
 
 
@@ -41,13 +42,13 @@ You may need to set your maya script directory as a new system variable. You can
 5) Unreal Engine Preset
 ![UE5](https://github.com/user-attachments/assets/d80dabb1-5afa-4f05-b3a6-5b1c70aeb3ba)
 
-6) Modo Preset
-![Modo Preview](https://github.com/user-attachments/assets/c547cf0b-44ba-4375-a536-5ff351c8338b)
+6) Modo Dark Preset
+![Modo Preview](https://github.com/user-attachments/assets/4eb9049d-4f9d-4c2f-9b8c-83bd27f4e2df)
 
 7) Umbra Dark Preset
 ![Umbra Theme](https://github.com/user-attachments/assets/26345e52-c3d6-4405-9858-531236a84282)
 
-8) Maya Light 2010 (Scrapped)
+8) Maya Light 2010 (Depreciated)
 ![Maya Light](https://github.com/user-attachments/assets/cd3c98b6-0872-4abc-a1c2-cf9e12eb0ba0)
 
 Extras:
