@@ -69,6 +69,7 @@ def create_menu():
         cmds.menuItem(label='Blender Light', command=make_theme_changer('Blender Light'))
         cmds.menuItem(label='Blender Dark', command=make_theme_changer('Blender Dark'))
         cmds.menuItem(label='Zbrush Dark', command=make_theme_changer('Zbrush'))
+        cmds.menuItem(label='Easy Blue', command=make_theme_changer('easyBLUE'))
         cmds.menuItem(label='Modo Dark', command=make_theme_changer('Modo'))
         cmds.menuItem(label='Umbra Dark', command=make_theme_changer('Umbra'))
         cmds.menuItem(label='Edgerunners', command=make_theme_changer('Edgerunners'))
