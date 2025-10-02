@@ -1,6 +1,6 @@
 # What's New
 
-This forks add a few improvements to the Theme Loader script:
+This fork adds a few improvements to the Theme Loader script:
 -
 • Custom QSS Tokens: Introduced myQWidget and myQMenu tokens to isolate styling to application menus (QmayaMenuBar) while leaving marking menus opaque. This prevents unwanted transparency in marking menus and ensures consistent background styling.
 
