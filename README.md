@@ -1,3 +1,20 @@
+# What's New
+
+This fork adds a few improvements to the Theme Loader script:
+-
+• Custom QSS Tokens: Introduced myQWidget and myQMenu tokens to isolate styling to application menus (QmayaMenuBar) while leaving marking menus opaque. This prevents unwanted transparency in marking menus and ensures consistent background styling.
+
+• Targeted Repainting: Added automatic clearing and repainting of paint-driven widgets (e.g., color sliders, swatches) to maintain proper visual updates without overriding custom themes. This is still a bit in development - but generally it works. Attribute Editor color swatches render fairly automatically, panels like the Multi-lister editor, or the Color Preferences panel will correctly render after a value change - I'm looking for ways to spoof a value change on panel load to get the swatches to automaticaly refresh.
+
+• Event Filters: Applied filters to top-level windows and menus to dynamically enforce styling when widgets are shown, minimizing manual intervention. These event listeners are what make the above possible since they can dynamically inject theme data at run-time.
+
+• Added my own Apple Pro theme that is inspired by Motion and Final Cut Pro. This theme leverages the custom tokens and used a Qt element inspector to target some specific elements. <br>
+
+![Apple Pro Theme](https://raw.githubusercontent.com/jmaruska/MayaUIChanger/refs/heads/main/applepro_theme.png)
+
+
+---
+
 # Maya-UI-Changer
 
 This is a suite of tools created in order to allow greater customization of Maya’s user environment. This project is currently a work in progress so some aspects may not function as intended.
