@@ -9,7 +9,7 @@ QLabel::disabled { background-color: transparent; color: rgb(136,136,136); }
 
 
 /*-----QMenuBar------------------------------------------------------------------------------------------------------------------------------------*/           
-QMenuBar { background-color: rgb(62,62,62); color: rgb(193,193,193); padding: 1.2px; border-bottom: 1px Solid; border-color: rgb(96,96,96); margin-bottom: 1.4px; }
+QMenuBar { background-color: rgb(62,62,62); color: rgb(193,193,193); padding: 1.2px; border-bottom: 1px Solid; border-color: rgb(96,96,96); margin: 3px;  }
 
 QMenuBar::item { color: rgb(193,193,193); }
 
@@ -29,7 +29,9 @@ QMenu::item { min-width : 150px; padding: 3px 20px 3px 20px; }
 
 QMenu::item:disabled { color: rgb(136,136,136); }
 
-QMenu::tearoff { height: 0px; margin: 2px; padding: 0px; border:none }
+QMenu::tearoff { background-color: rgb(144,154,162); border: 4px solid; border-color: rgb(62,62,62); border-radius: 7px; }
+
+QMenu::tearoff:selected { background-color: rgb(244,156,28); border: 4px solid; border-color: rgb(62,62,62); border-radius: 7px; }
 
 
 /*-----QToolTip-----------------------------------------------------------------------------------------------------------------------------------*/
@@ -228,3 +230,4 @@ QListView:item:disabled { color: rgb(52,52,52); border: 0px transparent transpar
 QTableView { color: rgb(153,153,153); background-color: rgb(40,40,40); border: 1px solid #3b3b3b; }
 
 QTableView QTableCornerButton:section { background-color: #3b3b3b; border: 1px solid #3b3b3b; }
+
