@@ -1,6 +1,6 @@
 # What's New
 
-Added a few improvements to the Preset Loader courtesy of Joshua Maruska:
+Added a few improvements to the Preset Loader courtesy of jmaruska:
 -
 • Custom QSS Tokens: Introduced myQWidget and myQMenu tokens to isolate styling to application menus (QmayaMenuBar) while leaving marking menus opaque. This prevents unwanted transparency in marking menus and ensures consistent background styling.
 
@@ -20,7 +20,7 @@ Added a few improvements to the Preset Loader courtesy of Joshua Maruska:
 This is a suite of tools created in order to allow greater customization of Maya’s user environment. This project is currently a work in progress so some aspects may not function as intended.
 
 Adds a new “Themes” menu item to Maya’s menu bar. Navigate to it to cycle through the available presets. <br>
-![menu](https://github.com/user-attachments/assets/73f35de8-b935-41e9-bb7a-c19391136cce)
+<img width="448" height="268" alt="image" src="https://github.com/user-attachments/assets/1844a2a3-2628-44de-9030-6038796ac8cf" />
 
 
 
@@ -35,7 +35,7 @@ Installation:
 
 Note:
 -
-You may need to set your maya script directory as a new system variable. You can do so by searching for "environment variables" on windows then performing the following steps.
+You may need to set your Maya script directory as a new system variable. You can do so by searching for "environment variables" on windows then performing the following steps.
 <br>
 ![Steps](https://github.com/user-attachments/assets/c895be72-7c8e-4c20-97bd-ce2594bda4bf)
 
@@ -43,32 +43,34 @@ You may need to set your maya script directory as a new system variable. You can
 
 
 **The currently available features are as follows;**
-
-1) Blender Dark Preset
+1) Apple Pro Preset by jmaruska [NEW]
+![Apple Pro](https://github.com/user-attachments/assets/9364a490-6cd1-4edf-aa30-c0655be27499)
+   
+2) Blender Dark Preset
 ![Blender Dark](https://github.com/user-attachments/assets/0a87f7bc-f54a-4e8f-bdf5-85bb325b88ab)
 
-2) Blender Light Preset
+3) Blender Light Preset
 ![Blender Light](https://github.com/user-attachments/assets/1fa5800a-a6ad-4d83-addd-41a2aefceacb)
 
-3) Edgerunners Preset
+4) Edgerunners Preset
 ![Edgerunners](https://github.com/user-attachments/assets/99360561-6247-4312-a093-06eb05f2bc1f)
 
-4) ZBrush Preset
+5) ZBrush Preset
 ![ZBrush](https://github.com/user-attachments/assets/d2827ec7-bf2d-48cc-aff8-197a0bf62dac)
 
-5) Unreal Engine Preset
+6) Unreal Engine Preset
 ![UE5](https://github.com/user-attachments/assets/d80dabb1-5afa-4f05-b3a6-5b1c70aeb3ba)
 
-6) Easy Blue Preset by 3Dsmash
+7) Easy Blue Preset by 3Dsmash
 ![Easy Blue Preview](https://github.com/user-attachments/assets/90adef32-a333-4ea2-9314-d437b1de13fc)
 
-7) Modo Dark Preset
+8) Modo Dark Preset
 ![Modo Preview](https://github.com/user-attachments/assets/4eb9049d-4f9d-4c2f-9b8c-83bd27f4e2df)
 
-8) Umbra Dark Preset
+9) Umbra Dark Preset
 ![Umbra Theme](https://github.com/user-attachments/assets/26345e52-c3d6-4405-9858-531236a84282)
 
-9) Maya Light 2010 (Depreciated)
+10) Maya Light 2010 (Depreciated)
 ![Maya Light](https://github.com/user-attachments/assets/cd3c98b6-0872-4abc-a1c2-cf9e12eb0ba0)
 
 
