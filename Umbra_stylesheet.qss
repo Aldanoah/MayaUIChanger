@@ -29,7 +29,9 @@ QMenu::item:selected { background-color: #4969ff; color: rgb(72,170,181);}
 
 QMenu::item:disabled { color: #262626; }
 
-QMenu::tearoff { border: 1px; }
+QMenu::tearoff { background-color: rgb(20,28,40); border: 4px solid; border-color: #0d0d0d; border-radius: 7px; }
+
+QMenu::tearoff:selected { background-color: #c8c8c8; border: 4px solid; border-color: #0d0d0d; border-radius: 7px; }
 
 
 /*-----QToolTip-----------------------------------------------------------------------------------------------------------------------------------*/
@@ -93,9 +95,9 @@ QTabBar::tab:left:last, QTabBar::tab:right:last, QTabBar::tab:left:only-one, QTa
 
 
 /*-----QLineEdit------------------------------------------------------------------------------------------------------------------------------------*/ 
-QLineEdit { background-color: rgb(20,28,40); color: #ffffff; border: 1px solid; border-width: 1px; border-radius: 3px; padding: 2px; }
+QLineEdit { background-color: rgb(20,28,40); color: #ffffff; border: 1px solid; border-width: 1px; border-radius: 3px; padding: 0px; }
 
-QLineEdit::disabled { background-color: #0d0d0d; color: rgb(41,41,41); border-width: 1px; border-radius: 3px; border-color: #051a39; padding: 2px; }
+QLineEdit::disabled { background-color: #0d0d0d; color: rgb(41,41,41); border-width: 1px; border-radius: 3px; border-color: #051a39; padding: 0px; }
 
 QLineEdit:focus { border-color: #c8c8c8; }
 
@@ -229,9 +231,9 @@ QSpinBox::up-button:hover { background:#6b6b6b; }
 
 
 /*-----QHeaderView------------------------------------------------------------------------------------------------------------------------------------*/           
-QHeaderView { background-color: #3b3b3b; border: 0px transparent transparent; }
+QHeaderView { background-color: #0d0d0d; border: 0px transparent transparent; }
 
-QHeaderView:section { color: #f8f9f9; background-color: #3b3b3b; border: 0px transparent transparent; }
+QHeaderView:section { color: #f8f9f9; background-color: #0d0d0d; border: 0px transparent transparent; }
 
 
 /*-----QSlider------------------------------------------------------------------------------------------------------------------------------------*/  
