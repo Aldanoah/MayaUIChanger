@@ -27,9 +27,9 @@ QMenu::item { padding: 4px 5px; min-width: 180px; }
 
 QMenu::item:selected { background-color: #0664c3; }
 
-QMenu::tearoff { background-color: #383838; border: 4px solid; border-color: rgb(36,36,36); border-radius: 7px; }
+QMenu::tearoff { background-color: #383838; border: 4px solid; border-color: rgb(36,36,36); border-radius: 0px; }
 
-QMenu::tearoff:selected { background-color: #585858; border: 4px solid; border-color: rgb(36,36,36); border-radius: 7px; }
+QMenu::tearoff:selected { background-color: #0664c3; border: 4px solid; border-color: rgb(36,36,36); border-radius: 0px; }
 
 
 /*-----QLabel------------------------------------------------------------------------------------------------------------------------------------*/ 
