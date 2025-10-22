@@ -1,98 +1,212 @@
-import maya.cmds as cmds
 import os
+import sys
 import shutil
 import winsound
 import json
+import glob
+import maya.utils
+try:
+    from PySide6 import QtWidgets, QtCore
+    import shiboken6 as shiboken
+except ImportError:
+    from PySide2 import QtWidgets, QtCore
+    import shiboken2 as shiboken
+    
+import maya.OpenMayaUI as omui
 
-# Define the path for the settings file
+# ---------------- Settings ----------------
 settings_file_path = os.path.expanduser("~/.maya_splash_settings.json")
 
-# Function to save settings to a JSON file
-def save_settings(audio_file_path):
-    settings = {"audio_file": audio_file_path}
+def save_settings(audio_file_path=None):
+    if audio_file_path:
+        settings = {"audio_file": audio_file_path}
+    else:
+        settings = {}
     with open(settings_file_path, 'w') as f:
         json.dump(settings, f)
 
-# Function to load settings from a JSON file
 def load_settings():
     if os.path.isfile(settings_file_path):
         with open(settings_file_path, 'r') as f:
             return json.load(f)
     return {}
 
-# Function to copy and backup the custom splash image to the appropriate paths.
-def set_splash_screen(image_path, text_field):
-    # Verify the image path exists
+# ---------------- Maya Install Path Detection ----------------
+def get_maya_install_path():
+    if "maya" in os.path.basename(sys.executable).lower():
+        return os.path.dirname(os.path.dirname(sys.executable))
+    maya_env = os.environ.get("MAYA_LOCATION")
+    if maya_env and os.path.exists(maya_env):
+        return maya_env
+    maya_root = r"C:\Program Files\Autodesk"
+    maya_dirs = glob.glob(os.path.join(maya_root, "Maya*"))
+    if maya_dirs:
+        return sorted(maya_dirs)[-1]
+    raise RuntimeError("Unable to locate Maya installation.")
+
+def find_splash_image_path(maya_install_path):
+    splash_dir = os.path.join(maya_install_path, "icons")
+    possible_names = [
+        "MayaStartupImage.png",
+        "MayaStartupHD.png",
+        "MayaStartupImageHD.png",
+        "StartupImage.png",
+        "splash.png",
+    ]
+    for name in possible_names:
+        path = os.path.join(splash_dir, name)
+        if os.path.isfile(path):
+            return path
+    return os.path.join(splash_dir, possible_names[0])
+
+# ---------------- Splash Handling ----------------
+def set_splash_screen(image_path, text_field=None):
     if not os.path.isfile(image_path):
-        cmds.error("Selected file does not exist.")
+        QtWidgets.QMessageBox.warning(None, "Error", "Selected file does not exist.")
         return
-    
-    # Update the window text field with the selected file name
-    cmds.textFieldButtonGrp(text_field, e=True, text=os.path.basename(image_path))
-    
-    # Define the target path for the splash screen, Adjust Maya version as needed.
-    maya_install_path = r"C:\Program Files\Autodesk\Maya2024"  
-    splash_screen_dir = os.path.join(maya_install_path, "icons")
-    splash_screen_path = os.path.join(splash_screen_dir, "MayaStartupImage.png")
-    
-    # Backup the original splash screen if it hasn't been backed up yet
-    original_splash_screen_backup = os.path.join(splash_screen_dir, "MayaStartupImage_backup.png")
-    if not os.path.isfile(original_splash_screen_backup) and os.path.isfile(splash_screen_path):
-        shutil.copyfile(splash_screen_path, original_splash_screen_backup)
-    
-    # Copy the selected image to the new splash screen path
+    if text_field:
+        text_field.setText(os.path.basename(image_path))
+    maya_install_path = get_maya_install_path()
+    splash_screen_path = find_splash_image_path(maya_install_path)
+    splash_screen_dir = os.path.dirname(splash_screen_path)
+    backup_path = os.path.join(splash_screen_dir, os.path.basename(splash_screen_path).replace(".png", "_backup.png"))
+    if not os.path.isfile(backup_path) and os.path.isfile(splash_screen_path):
+        shutil.copyfile(splash_screen_path, backup_path)
     shutil.copyfile(image_path, splash_screen_path)
-    cmds.confirmDialog(title="Success", message="Splash set successfully. Please restart Maya to effect changes.", button=["OK"])
+    QtWidgets.QMessageBox.information(None, "Success", "Splash set successfully. Please restart Maya to see the changes.")
 
-# Function to open a file dialog to select a custom splash image
-def select_image_and_set_splash_screen(text_field, *args):
-    # Open a file dialog to select an image
-    image_path = cmds.fileDialog2(fileFilter="*.png", dialogStyle=2, fm=1)
-    if image_path:
-        set_splash_screen(image_path[0], text_field)
+# ---------------- Audio Handling ----------------
+startup_sound_played = False
 
-# Function to open a file dialog to select a custom audio file
-def select_audio(text_field, *args):
-    # Open a file dialog to select an audio file
-    audio_path = cmds.fileDialog2(fileFilter="*.wav", dialogStyle=2, fm=1)
-    if audio_path:
-        cmds.textFieldButtonGrp(text_field, e=True, text=os.path.basename(audio_path[0]))
-        save_settings(audio_path[0])
-        cmds.confirmDialog(title="Success", message="File set successfully. Please restart Maya to effect changes.", button=["OK"])
+def load_audio_file():
+    """Load the audio file path safely from settings."""
+    settings = load_settings()
+    audio_file = settings.get("audio_file")
+    # Ensure we only return a string path
+    if isinstance(audio_file, str) and os.path.isfile(audio_file):
+        return audio_file
+    return None
 
-# Function to play the selected custom sound
-def play_custom_sound(sound_file):
-    try:
-        winsound.PlaySound(sound_file, winsound.SND_FILENAME | winsound.SND_ASYNC)
-    except Exception as e:
-        print(f"Error playing sound: {e}")
+def save_audio_file(audio_file_path=None):
+    """Save audio file path to settings safely."""
+    settings = {}
+    if isinstance(audio_file_path, str):
+        settings["audio_file"] = audio_file_path
+    with open(settings_file_path, 'w') as f:
+        json.dump(settings, f)
 
-# Callback to show/hide audio file selection based on the checkbox state
-def toggle_audio_file_field(checkbox, text_field):
-    is_checked = cmds.checkBox(checkbox, q=True, value=True)
-    cmds.textFieldButtonGrp(text_field, e=True, visible=is_checked)
+audio_file = load_audio_file()
 
-# Load settings and play the saved custom sound if available
-settings = load_settings()
-if 'audio_file' in settings:
-    play_custom_sound(settings['audio_file'])
+if audio_file:
+    def play_startup_sound_once():
+        global startup_sound_played
+        if not startup_sound_played:
+            startup_sound_played = True
+            try:
+                winsound.PlaySound(audio_file, winsound.SND_FILENAME | winsound.SND_ASYNC)
+            except Exception as e:
+                print(f"Error playing startup sound: {e}")
 
-# This function encapsulates the UI code and is only called when needed
-def show_splash_tool_window():
-    if cmds.window("setSplashScreenWin", exists=True):
-        cmds.deleteUI("setSplashScreenWin", window=True)
-    window = cmds.window("setSplashScreenWin", title="Splash Tool", sizeable=False)
-    cmds.columnLayout(adjustableColumn=True, columnAttach=['both', 10], rowSpacing=10)
-    cmds.separator(height=10)
-    audio_checkbox = cmds.checkBox(label="Enable Startup Sound?", changeCommand=lambda *args: toggle_audio_file_field(audio_checkbox, audio_text_field))
-    cmds.text(label="Please use the button below to select your desired file:")
-    image_text_field = cmds.textFieldButtonGrp(bl="Select Image File", bc=lambda *args: select_image_and_set_splash_screen(image_text_field, *args), adjustableColumn=True)
-    audio_text_field = cmds.textFieldButtonGrp(bl="Select Audio File", bc=lambda *args: select_audio(audio_text_field, *args), adjustableColumn=True, visible=False)
-    cmds.button(label="Close", command=('cmds.deleteUI(\"' + window + '\", window=True)'))
-    cmds.separator(height=10)
-    cmds.setParent('..')
-    cmds.showWindow(window)
+    # Deferred to run after Maya loads
+    maya.utils.executeDeferred(play_startup_sound_once)
+    
+# ---------------- Build Splash UI ----------------
+def maya_main_window():
+    ptr = omui.MQtUtil.mainWindow()
+    return shiboken.wrapInstance(int(ptr), QtWidgets.QWidget)
 
-# Ensuring that the window only opens when this script is run directly
+class SplashToolWindow(QtWidgets.QDialog):
+    def __init__(self, parent=None):
+        super(SplashToolWindow, self).__init__(parent)
+        self.setWindowTitle("Splash Tool")
+        self.setWindowFlags(self.windowFlags() & ~QtCore.Qt.WindowContextHelpButtonHint)
+        self.setMinimumWidth(350)
+        self.setModal(False)
+        self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
+
+        self.ui_initialized = False
+        self.settings = load_settings()
+
+        self.build_ui()
+        self.ui_initialized = True
+
+    def build_ui(self):
+        layout = QtWidgets.QVBoxLayout(self)
+        layout.setAlignment(QtCore.Qt.AlignCenter)
+        layout.setSpacing(10)
+
+        # --- Enable/Disable Audio ---
+        layout.addWidget(QtWidgets.QLabel("Do you want to enable sound on startup?"), alignment=QtCore.Qt.AlignCenter)
+        self.enable_radio = QtWidgets.QRadioButton("Yes")
+        self.disable_radio = QtWidgets.QRadioButton("No")
+        self.enable_radio.setChecked(True)
+
+        radio_layout = QtWidgets.QHBoxLayout()
+        radio_layout.addStretch()
+        radio_layout.addWidget(self.enable_radio)
+        radio_layout.addWidget(self.disable_radio)
+        radio_layout.addStretch()
+        layout.addLayout(radio_layout)
+
+        self.enable_radio.toggled.connect(self.toggle_audio_fields)
+
+        # --- Image Selection ---
+        label_img = QtWidgets.QLabel("Select your custom splash image:")
+        label_img.setAlignment(QtCore.Qt.AlignCenter)
+        layout.addWidget(label_img)
+        self.image_text = QtWidgets.QLineEdit()
+        self.image_btn = QtWidgets.QPushButton("Select Image File")
+        layout.addWidget(self.image_text)
+        layout.addWidget(self.image_btn)
+        self.image_btn.clicked.connect(self.select_image_file)
+
+        # --- Audio Selection ---
+        self.audio_label = QtWidgets.QLabel("Select your custom startup sound:")
+        self.audio_label.setAlignment(QtCore.Qt.AlignCenter)
+        layout.addWidget(self.audio_label)
+
+        self.audio_text = QtWidgets.QLineEdit()
+        self.audio_btn = QtWidgets.QPushButton("Select Audio File")
+        layout.addWidget(self.audio_text)
+        layout.addWidget(self.audio_btn)
+
+        # Hide audio widgets by default
+        self.audio_label.setVisible(True)
+        self.audio_text.setVisible(True)
+        self.audio_btn.setVisible(True)
+        self.audio_btn.clicked.connect(self.select_audio_file)
+
+        # --- Close Button ---
+        self.close_btn = QtWidgets.QPushButton("Close")
+        layout.addWidget(self.close_btn)
+        self.close_btn.clicked.connect(self.close)
+
+    # ---------------- UI Callbacks ----------------
+    def toggle_audio_fields(self):
+        if not self.ui_initialized:
+            return
+        visible = self.enable_radio.isChecked()
+        self.audio_label.setVisible(visible)
+        self.audio_text.setVisible(visible)
+        self.audio_btn.setVisible(visible)
+        if not visible:
+            save_settings(None)
+            QtWidgets.QMessageBox.information(self, "Audio Disabled", "Startup sound has been deactivated.")
+
+    def select_image_file(self):
+        path, _ = QtWidgets.QFileDialog.getOpenFileName(self, "Select PNG Image", "", "PNG Files (*.png)")
+        if path:
+            self.image_text.setText(os.path.basename(path))
+            set_splash_screen(path, None)
+
+    def select_audio_file(self):
+        path, _ = QtWidgets.QFileDialog.getOpenFileName(self, "Select WAV Audio", "", "WAV Files (*.wav)")
+        if path:
+            self.audio_text.setText(os.path.basename(path))
+            save_settings(path)
+            QtWidgets.QMessageBox.information(self, "Success", "Audio file set successfully. Please restart Maya to hear the change.")
+
+# ---------------- Run Loader ----------------
 if __name__ == "__main__":
-    show_splash_tool_window()
+    dlg = SplashToolWindow(parent=maya_main_window())
+    dlg.show()
