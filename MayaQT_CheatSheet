@@ -1,0 +1,849 @@
+
+# List of all stylable widgets in Maya's UI that can be accessed through the Qt framework.
+# An example of the syntax is as follows. the widget type is derived from the class of the widget 
+while the object name is derived from the objectName() method of the widget. 
+
+e.g
+QPushButton [objectName="iconTextButton1"],
+<class 'PySide6.QtWidgets.QPushButton'> iconTextButton1
+
+
+
+inspect_ui()
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> iconTextButton1
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> selectBtnComponent
+<class 'PySide6.QtWidgets.QComboBox'> OptionMenu
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> workspaceLbl
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> rowLayout15
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> snapIcons
+<class 'PySide6.QtWidgets.QWidget'> rowLayout9
+<class 'PySide6.QtWidgets.QLabel'> numericalInputXLabel
+<class 'PySide6.QtWidgets.QWidget'> frameLayout6
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPlainTextEdit'> cmdScrollFieldExecuter5
+<class 'PySide6.QtWidgets.QWidget'> formLayout22
+<class 'PySide6.QtWidgets.QWidget'> Shelf
+<class 'PySide6.QtWidgets.QFrame'> mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QFrame'> separator23
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QTabWidget'> mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QComboBox'> modelEditorTransformSelOptionMenu
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> ToggledOutlinerLayout
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> frameLayout3
+<class 'PySide6.QtWidgets.QWidget'> IPM_Button_Placeholder
+<class 'PySide6.QtWidgets.QPushButton'> iconTextButton2
+<class 'PySide6.QtWidgets.QMenuBar'> scriptEditorPanel1
+<class 'PySide6.QtWidgets.QWidget'> MainStatusLineLayout
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> frameLayout2
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QSplitterHandle'> qt_splithandle_mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QScrollBar'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QComboBox'> menuMode
+<class 'PySide6.QtWidgets.QWidget'> RangeSlider
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> objSelRenderBtn
+<class 'PySide6.QtWidgets.QSplitterHandle'> qt_splithandle_mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton109
+<class 'PySide6.QtWidgets.QPushButton'> symbolButton11
+<class 'PySide6.QtWidgets.QPushButton'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QSplitter'> mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> toolSettingsButton
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> formLayout47
+<class 'PySide6.QtWidgets.QWidget'> MainCommandLineLayout
+<class 'PySide6.QtWidgets.QPushButton'> symbolButton18
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> FilterStatusControl
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QFrame'> separator6
+<class 'PySide6.QtWidgets.QPushButton'> renderButton
+<class 'PySide6.QtWidgets.QSplitter'> mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> selectMasksCollapse
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QSplitter'> mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QSplitter'> mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QPushButton'> vp2PauseButton
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton83
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> objSelDeformBtn
+<class 'PySide6.QtWidgets.QFrame'> separator21
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton76
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> avp_debug_modelPanel4
+<class 'PySide6.QtWidgets.QWidget'> rowLayout10
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> iconTextButton6
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> avp_toggle_modelPanel4
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton91
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> outlinerPanel1
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton104
+<class 'PySide6.QtWidgets.QWidget'> qt_scrollarea_vcontainer
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton98
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> flowStudioCollapse
+<class 'maya.app.general.creaseSetEditor.CreaseSetTreeWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QSplitter'> commandLine1
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> MSAABtn
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton103
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> selectionSetCollapse
+<class 'PySide6.QtWidgets.QFrame'> separator1
+<class 'PySide6.QtWidgets.QPushButton'> characterSelectionIcon
+<class 'PySide6.QtWidgets.QPushButton'> symbolButton14
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> formLayout103
+<class 'PySide6.QtWidgets.QFrame'> separator3
+<class 'PySide6.QtWidgets.QWidget'> outlinerPanel1
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> renderGlobalsButton
+<class 'PySide6.QtWidgets.QTabWidget'> mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton77
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QFrame'> separator16
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> makeLiveButton
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> iconTextButton3
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> helpLineFrame
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLineEdit'> timeField1
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> CommandLine
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> selectModeCollapse
+<class 'PySide6.QtWidgets.QSplitter'> mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QPushButton'> iconTextButton34
+<class 'PySide6.QtWidgets.QWidget'> flowLayout6
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> makeLiveMenuButton
+<class 'PySide6.QtWidgets.QPushButton'> CameraBtn
+<class 'PySide6.QtWidgets.QStackedWidget'> qt_tabwidget_stackedwidget
+<class 'PySide6.QtWidgets.QHeaderView'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QFrame'> separator9
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> symbolButton9
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton81
+<class 'PySide6.QtWidgets.QSplitter'> mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> renderSetupButton
+<class 'PySide6.QtWidgets.QFrame'> mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QWidget'> frameLayout36
+<class 'PySide6.QtWidgets.QPushButton'> BookmarkBtn
+<class 'PySide6.QtWidgets.QStackedWidget'> qt_tabwidget_stackedwidget
+<class 'PySide6.QtWidgets.QPushButton'> symbolCheckBox1
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> snapCollapse
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QMenuBar'> modelPanel4
+<class 'PySide6.QtWidgets.QFrame'> mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QPushButton'> 
+<class 'PySide6.QtWidgets.QFrame'> separator127
+<class 'PySide6.QtWidgets.QWidget'> MainPane
+<class 'PySide6.QtWidgets.QPushButton'> snapGridButton
+<class 'PySide6.QtWidgets.QWidget'> formLayout52
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton79
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> modelPanelViewTransformGroup
+<class 'PySide6.QtWidgets.QPushButton'> 
+<class 'PySide6.QtWidgets.QWidget'> timeControl1
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton78
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton93
+<class 'PySide6.QtWidgets.QSplitterHandle'> qt_splithandle_mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QPushButton'> ImageplaneBtn
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> clearHistoryButton
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> SSAOBtn
+<class 'PySide6.QtWidgets.QPushButton'> LockCameraBtn
+<class 'PySide6.QtWidgets.QPushButton'> arnold_vp_sep_modelPanel4
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> selectMaskForm
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> TimeSlider
+<class 'PySide6.QtWidgets.QFrame'> separator129
+<class 'PySide6.QtWidgets.QPushButton'> symbolButton13
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> renderViewButton
+<class 'PySide6.QtWidgets.QFrame'> mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QSplitterHandle'> qt_splithandle_mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QToolButton'> moveTool
+<class 'PySide6.QtWidgets.QPushButton'> modelingToolkitButton
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> flowLayout2
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> formLayout8
+<class 'PySide6.QtWidgets.QPushButton'> openScriptButton
+<class 'PySide6.QtWidgets.QPushButton'> mayaSearchToolBoxIcon
+<class 'PySide6.QtWidgets.QPushButton'> scriptEditorToolbarSearchDownUp
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> statusFieldButton
+<class 'PySide6.QtWidgets.QPushButton'> objSelDynamicBtn
+<class 'PySide6.QtWidgets.QWidget'> qt_scrollarea_viewport
+<class 'PySide6.QtWidgets.QPushButton'> executeButton
+<class 'PySide6.QtWidgets.QLineEdit'> modelEditorExposureField
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLineEdit'> numericalInputZField
+<class 'PySide6.QtWidgets.QTabWidget'> mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QStackedWidget'> qt_tabwidget_stackedwidget
+<class 'PySide6.QtWidgets.QWidget'> MainTimeSliderLayout
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QTabBar'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton82
+<class 'PySide6.QtWidgets.QTabWidget'> mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> rowLayout11
+<class 'PySide6.QtWidgets.QPushButton'> SafeTitleBtn
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> quickLayout0
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> iconTextButton10
+<class 'PySide6.QtWidgets.QWidget'> formLayout4
+<class 'PySide6.QtWidgets.QSplitter'> mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QPushButton'> iconTextButton7
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> iconTextButton35
+<class 'PySide6.QtWidgets.QFrame'> mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QScrollBar'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QAbstractButton'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> objPickMenuLayout
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QFrame'> mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QWidget'> ShelfLayout
+<class 'PySide6.QtWidgets.QMenuBar'> 
+<class 'PySide6.QtWidgets.QLabel'> AddNewTabButton
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QFrame'> separator4
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QTabBar'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QToolButton'> lassoTool
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> showBothButton
+<class 'PySide6.QtWidgets.QWidget'> mayaHomeToolboxButton
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> MBBtn
+<class 'PySide6.QtWidgets.QFrame'> separator27
+<class 'PySide6.QtWidgets.QPushButton'> meshCenterSnapButton
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> IPMButtonCollapse
+<class 'PySide6.QtWidgets.QToolButton'> rotateTool
+<class 'PySide6.QtWidgets.QFrame'> separator124
+<class 'PySide6.QtWidgets.QPushButton'> iconTextButton39
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton101
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> MainHelpLineLayout
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QSplitterHandle'> qt_splithandle_mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QPushButton'> saveSceneButton
+<class 'PySide6.QtWidgets.QFrame'> separator11
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QToolButton'> lastNonSacredTool
+<class 'PySide6.QtWidgets.QWidget'> outlinerPanel1
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> undoButton
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QFrame'> separator22
+<class 'PySide6.QtWidgets.QPushButton'> hypershadeButton
+<class 'PySide6.QtWidgets.QPushButton'> objSelSurfaceBtn
+<class 'PySide6.QtWidgets.QWidget'> rowLayout3
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QTabWidget'> mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> rowLayout7
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton99
+<class 'PySide6.QtWidgets.QPushButton'> channelLayerBoxButton
+<class 'PySide6.QtWidgets.QTabWidget'> mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QTabWidget'> mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QWidget'> scriptEditorPanel1
+<class 'PySide6.QtWidgets.QPushButton'> sourceScriptButton
+<class 'PySide6.QtWidgets.QTabWidget'> mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QPushButton'> animLayerSelectionIcon
+<class 'PySide6.QtWidgets.QWidget'> modelPanelExposureGroup
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> symbolButton6
+<class 'PySide6.QtWidgets.QWidget'> formLayout51
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> iconTextStaticLabel1
+<class 'PySide6.QtWidgets.QFrame'> separator12
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> ToolBox
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton106
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton88
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton95
+<class 'PySide6.QtWidgets.QPushButton'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> formLayout13
+<class 'PySide6.QtWidgets.QWidget'> MainPlaybackRangeLayout
+<class 'PySide6.QtWidgets.QWidget'> MainToolboxLayout
+<class 'PySide6.QtWidgets.QTabWidget'> mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> rangeControl1
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton80
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QStackedWidget'> qt_tabwidget_stackedwidget
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> saveScriptToShelfButton
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> newSceneButton
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton75
+<class 'PySide6.QtWidgets.QWidget'> modelPanelGammaGroup
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QFrame'> separator13
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> arnold_vp_ctls_modelPanel4
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> WireframeOnShadedBtn
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> XRayJointsBtn
+<class 'PySide6.QtWidgets.QWidget'> paneLayout3
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QAbstractButton'> 
+<class 'PySide6.QtWidgets.QPushButton'> symbolButton12
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QFrame'> separator126
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QComboBox'> workspaceSelectorMenu
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> iconTextButton37
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> snapCurveButton
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton96
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> modelEditorExposureIcon
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> WireframeBtn
+<class 'PySide6.QtWidgets.QPushButton'> scriptEditorToolbarGotoLineButton
+<class 'PySide6.QtWidgets.QPushButton'> symbolCheckBox2
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLineEdit'> makeLiveObjectText
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QFrame'> separator14
+<class 'PySide6.QtWidgets.QWidget'> flowLayout7
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> echoAllCommandsButton
+<class 'PySide6.QtWidgets.QScrollArea'> mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QPushButton'> ResolutionGateBtn
+<class 'PySide6.QtWidgets.QWidget'> optionMenuForm
+<class 'PySide6.QtWidgets.QPushButton'> historyCollapse
+<class 'PySide6.QtWidgets.QPushButton'> saveScriptButton
+<class 'PySide6.QtWidgets.QPushButton'> avp_aov_modelPanel4
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QTabBar'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> showInputButton
+<class 'PySide6.QtWidgets.QPushButton'> BluePencilBtn
+<class 'PySide6.QtWidgets.QScrollBar'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLineEdit'> scriptEditorToolbarSearchField
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QFrame'> separator128
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> snapViewPlaneButton
+<class 'PySide6.QtWidgets.QWidget'> FilterField
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton87
+<class 'PySide6.QtWidgets.QWidget'> qt_scrollarea_viewport
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'maya.app.general.creaseSetEditor.CreaseSetEditor'> CreaseSetEditor
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> DOFBtn
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> avp_resolution_modelPanel4
+<class 'PySide6.QtWidgets.QWidget'> objectMaskIcons
+<class 'PySide6.QtWidgets.QPushButton'> selectBtnHierComb
+<class 'PySide6.QtWidgets.QStackedWidget'> qt_tabwidget_stackedwidget
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QFrame'> separator15
+<class 'PySide6.QtWidgets.QPushButton'> XRayBtn
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QFrame'> fileSeperator
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> numericalInputYLabel
+<class 'PySide6.QtWidgets.QWidget'> flowLayout1
+<class 'PySide6.QtWidgets.QFrame'> separator20
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QTabWidget'> mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QStackedWidget'> qt_tabwidget_stackedwidget
+<class 'PySide6.QtWidgets.QPushButton'> lockDockingButton
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton107
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> modelPanel4
+<class 'PySide6.QtWidgets.QWidget'> workspaceSelectorLayout
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> snapPointButton
+<class 'PySide6.QtWidgets.QLineEdit'> characterField
+<class 'PySide6.QtWidgets.QPushButton'> PanZoomBtn
+<class 'PySide6.QtWidgets.QStatusBar'> helpLine1
+<class 'PySide6.QtWidgets.QWidget'> formLayout9
+<class 'PySide6.QtWidgets.QFrame'> searchSeperator
+<class 'PySide6.QtWidgets.QWidget'> masksForm
+<class 'PySide6.QtWidgets.QFrame'> separator8
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QToolButton'> scaleTool
+<class 'PySide6.QtWidgets.QFrame'> mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QFrame'> separator26
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> UseDefaultMaterialBtn
+<class 'PySide6.QtWidgets.QWidget'> modelPanel4
+<class 'PySide6.QtWidgets.QSplitterHandle'> qt_splithandle_outlinerPanel1Secondary
+<class 'PySide6.QtWidgets.QPushButton'> objSelHandleBtn
+<class 'PySide6.QtWidgets.QLineEdit'> 
+<class 'PySide6.QtWidgets.QWidget'> viewPanes
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QFrame'> separator2
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton92
+<class 'PySide6.QtWidgets.QPushButton'> showLineNumbersButton
+<class 'PySide6.QtWidgets.QPushButton'> iconTextButton4
+<class 'PySide6.QtWidgets.QPushButton'> lockSelectionIcon
+<class 'PySide6.QtWidgets.QLineEdit'> animLayerField
+<class 'PySide6.QtWidgets.QFrame'> separator17
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton97
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton84
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> formLayout25
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> qt_scrollarea_viewport
+<class 'PySide6.QtWidgets.QLineEdit'> modelEditorGammaField
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton100
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> symbolButton8
+<class 'PySide6.QtWidgets.QWidget'> formLayout102
+<class 'PySide6.QtWidgets.QWidget'> formLayout49
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QStackedWidget'> modelPanel4
+<class 'PySide6.QtWidgets.QPushButton'> CameraAEBtn
+<class 'PySide6.QtWidgets.QPushButton'> clearAllButton
+<class 'PySide6.QtWidgets.QStackedWidget'> qt_tabwidget_stackedwidget
+<class 'PySide6.QtWidgets.QWidget'> HelpLine
+<class 'PySide6.QtWidgets.QWidget'> rowLayout8
+<class 'PySide6.QtWidgets.QWidget'> symmetryIcons
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> selectBtnObject
+<class 'PySide6.QtWidgets.QPushButton'> GateMaskBtn
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> FilmGateBtn
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> formLayout14
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> objSelCurveBtn
+<class 'PySide6.QtWidgets.QWidget'> Polygons
+<class 'PySide6.QtWidgets.QPlainTextEdit'> cmdScrollFieldReporter1
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QSplitterHandle'> qt_splithandle_
+<class 'PySide6.QtWidgets.QPushButton'> ShadowsBtn
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLineEdit'> timeField5
+<class 'PySide6.QtWidgets.QWidget'> MayaWindow
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> ShadedBtn
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QScrollBar'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> symModelingBtn
+<class 'PySide6.QtWidgets.QFrame'> separator5
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QStackedWidget'> qt_tabwidget_stackedwidget
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> clearInputButton
+<class 'PySide6.QtWidgets.QStackedWidget'> qt_tabwidget_stackedwidget
+<class 'PySide6.QtWidgets.QWidget'> rowLayout12
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton94
+<class 'PySide6.QtWidgets.QScrollBar'> 
+<class 'PySide6.QtWidgets.QFrame'> separator18
+<class 'PySide6.QtWidgets.QFrame'> clearSeperator
+<class 'PySide6.QtWidgets.QPushButton'> redoButton
+<class 'PySide6.QtWidgets.QSplitterHandle'> qt_splithandle_mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton111
+<class 'PySide6.QtWidgets.QLineEdit'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> formLayout15
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> iprRenderButton
+<class 'PySide6.QtWidgets.QPushButton'> iconTextCheckBox1
+<class 'PySide6.QtWidgets.QPushButton'> iconTextButton9
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> objSelJointBtn
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> showHistoryButton
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton74
+<class 'PySide6.QtWidgets.QPushButton'> quickLayout1
+<class 'PySide6.QtWidgets.QStackedWidget'> qt_tabwidget_stackedwidget
+<class 'PySide6.QtWidgets.QPushButton'> symbolButton7
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton102
+<class 'PySide6.QtWidgets.QLabel'> numericalInputZLabel
+<class 'PySide6.QtWidgets.QSplitterHandle'> qt_splithandle_mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QSplitterHandle'> qt_splithandle_
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QFrame'> separator123
+<class 'PySide6.QtWidgets.QWidget'> formLayout12
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> formLayout50
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> autodeskAssistantButton
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> rowLayout1
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> modelEditorGammaIcon
+<class 'PySide6.QtWidgets.QPushButton'> iconTextButton5
+<class 'PySide6.QtWidgets.QWidget'> outlinerPanel1
+<class 'PySide6.QtWidgets.QWidget'> Outliner
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> tabLayout2
+<class 'PySide6.QtWidgets.QStackedWidget'> qt_tabwidget_stackedwidget
+<class 'PySide6.QtWidgets.QWidget'> rowLayout2
+<class 'PySide6.QtWidgets.QWidget'> qt_scrollarea_viewport
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> objSelMiscBtn
+<class 'PySide6.QtWidgets.QWidget'> mayaHomeButton
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> inputFieldCollapse
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> workspacePanel1
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> formLayout104
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QToolButton'> selectTool
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> iconTextButton8
+<class 'PySide6.QtWidgets.QPushButton'> characterControlsButton
+<class 'PySide6.QtWidgets.QFrame'> separator10
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> quickLayout2
+<class 'PySide6.QtWidgets.QPushButton'> iconTextButton38
+<class 'PySide6.QtWidgets.QPushButton'> attributeEditorButton
+<class 'PySide6.QtWidgets.QTabWidget'> mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QFrame'> executeSeperator
+<class 'PySide6.QtWidgets.QPushButton'> iconTextButton11
+<class 'PySide6.QtWidgets.QFrame'> optionsSeperator
+<class 'PySide6.QtWidgets.QWidget'> formLayout200
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QMenuBar'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton105
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> modelEditorIconBar
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QSplitterHandle'> qt_splithandle_mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton110
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> XRayActiveComponentsBtn
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> executeAllButton
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> outlinerPanel1Secondary
+<class 'PySide6.QtWidgets.QPushButton'> 
+<class 'PySide6.QtWidgets.QLineEdit'> symModelingText
+<class 'PySide6.QtWidgets.QStackedWidget'> qt_tabwidget_stackedwidget
+<class 'PySide6.QtWidgets.QWidget'> rowLayout6
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QSplitterHandle'> qt_splithandle_mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton89
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> scriptEditorPanel1Window
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> formLayout53
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton108
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLineEdit'> scriptEditorToolbarGotoField
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> frameLayout5
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> formLayout24
+<class 'PySide6.QtWidgets.QPushButton'> GridBtn
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QTabWidget'> mayaLayoutInternalWidget
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> paneLayout2
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> formLayout23
+<class 'PySide6.QtWidgets.QPushButton'> symbolButton10
+<class 'PySide6.QtWidgets.QMenuBar'> outlinerPanel1
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> formLayout7
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> LightBtn
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> formLayout48
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton85
+<class 'PySide6.QtWidgets.QFrame'> separator19
+<class 'PySide6.QtWidgets.QPushButton'> renderCollapse
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QFrame'> showSeperator
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> IsolateSelectedBtn
+<class 'PySide6.QtWidgets.QPushButton'> modelEditorEnableButton
+<class 'PySide6.QtWidgets.QToolButton'> paintSelectTool
+<class 'PySide6.QtWidgets.QPushButton'> lightEditorButton
+<class 'PySide6.QtWidgets.QLineEdit'> numericalInputYField
+<class 'PySide6.QtWidgets.QWidget'> optionMenuGrp1
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> formLayout10
+<class 'PySide6.QtWidgets.QWidget'> formLayout11
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> qt_scrollarea_viewport
+<class 'PySide6.QtWidgets.QAbstractButton'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QAbstractButton'> 
+<class 'PySide6.QtWidgets.QPushButton'> iconTextButton12
+<class 'PySide6.QtWidgets.QWidget'> objPickMenuIcon
+<class 'PySide6.QtWidgets.QPushButton'> iconTextButton36
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton90
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> 
+<class 'PySide6.QtWidgets.QPushButton'> highlightSelectIcon
+<class 'PySide6.QtWidgets.QFrame'> separator125
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> SafeActionBtn
+<class 'PySide6.QtWidgets.QFrame'> separator7
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> MainShelfLayout
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> avp_crop_modelPanel4
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QPushButton'> shelfButton86
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QWidget'> StatusLine
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLineEdit'> timeField2
+<class 'PySide6.QtWidgets.QPushButton'> symmetryCollapse
+<class 'PySide6.QtWidgets.QLineEdit'> 
+<class 'PySide6.QtWidgets.QPushButton'> iconTextButton40
+<class 'PySide6.QtWidgets.QLineEdit'> numericalInputXField
+<class 'PySide6.QtWidgets.QPushButton'> fileCollapse
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QLabel'> 
+<class 'PySide6.QtWidgets.QPushButton'> openSceneButton
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> 
+<class 'PySide6.QtWidgets.QWidget'> formLayout21
+<class 'PySide6.QtWidgets.QPushButton'> FieldChartBtn
+<class 'PySide6.QtWidgets.QTabBar'> 
+<class 'PySide6.QtWidgets.QPushButton'> AdlSdkFixedCtrl
+<class 'PySide6.QtWidgets.QPushButton'> scriptEditorToolbarSearchDownButton
+<class 'PySide6.QtWidgets.QPushButton'> TexturedBtn
+editMenuUpdate MayaWindow|mainEditMenu;
