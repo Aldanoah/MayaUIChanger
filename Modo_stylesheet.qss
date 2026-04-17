@@ -1,5 +1,5 @@
 /*-----QWidget------------------------------------------------------------------------------------------------------------------------------------*/ 
-QWidget { color: rgb(192,192,192); selection-border-radius: 3px; selection-color: rgb(0,0,0); selection-background-color: rgb(80,88,95); font-family: DejaVu Sans Condensed; font-size: 12px; font-weight: normal; }
+QWidget { color: rgb(192,192,192); background-color: rgb(62,62,62); selection-border-radius: 3px; selection-color: rgb(0,0,0); selection-background-color: rgb(80,88,95); font-family: DejaVu Sans Condensed; font-size: 12px; font-weight: normal; }
 
 
 /*-----QLabel-------------------------------------------------------------------------------------------------------------------------------------*/
@@ -235,9 +235,9 @@ QTableView QTableCornerButton:section { background-color: #3b3b3b; border: 1px s
 
 
 /*-----DuctTape------------------------------------------------------------------------------------------------------------------------------------*/ 
-QWidget[objectName*="maya"],
-QWidget[objectName*="Layout"],
-QWidget[objectName*="Form"],
+/*QWidget[objectName*="maya"],
+/*QWidget[objectName*="Layout"],
+/*QWidget[objectName*="Form"],
 QWidget [objectName="flowLayout1"],
 QWidget [objectName="formLayout1"],
 QWidget [objectName="formLayout2"],

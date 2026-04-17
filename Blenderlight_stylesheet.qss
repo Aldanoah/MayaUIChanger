@@ -1,5 +1,5 @@
 /*-----QWidget------------------------------------------------------------------------------------------------------------------------------------*/ 
-QWidget { color: rgb(216,216,216); border-color: rgb(28,28,28); selection-color: rgb(254,254,254); selection-background-color: rgb(86,128,194); font-family: DejaVu Sans Condensed; font-size: 12px; font-weight: normal; }
+QWidget { color: rgb(216,216,216); background-color: rgb(166,166,166); border-color: rgb(28,28,28); selection-color: rgb(254,254,254); selection-background-color: rgb(86,128,194); font-family: DejaVu Sans Condensed; font-size: 12px; font-weight: normal; }
 
 
 /*-----QComboBox------------------------------------------------------------------------------------------------------------------------------------*/                          
@@ -145,7 +145,7 @@ QMessageBox QPushButton:default:hover { color: rgb(234,240,248); background-colo
 
 
 /*-----QGroupBox------------------------------------------------------------------------------------------------------------------------------------*/           
-QGroupBox { border: 0px solid #373737; padding-top: 12px; }
+QGroupBox { border: 0px solid #373737; background-color: #373737; padding-top: 12px; }
 
 QGroupBox::title { background-color: transparent; margin-top: 4px; padding-left: 8px; }
 
@@ -243,9 +243,9 @@ QStatusBar { color: rgb(28,28,28); background: transparent; }
 
 
 /*-----DuctTape------------------------------------------------------------------------------------------------------------------------------------*/ 
-QWidget[objectName*="maya"],
-QWidget[objectName*="Layout"],
-QWidget[objectName*="Form"],
+/*QWidget[objectName*="maya"],
+/*QWidget[objectName*="Layout"],
+/*QWidget[objectName*="Form"],
 QWidget [objectName="flowLayout1"],
 QWidget [objectName="formLayout1"],
 QWidget [objectName="formLayout2"],
@@ -320,6 +320,7 @@ QmayaSeparator { background-color: rgb(166,166,166); }
 
 /*-----QFileDialog------------------------------------------------------------------------------------------------------------------------------------*/ 
 QFileDialog { background: rgb(166,166,166); } 
+
 
 
 

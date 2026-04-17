@@ -1,5 +1,5 @@
 /*-----QWidget------------------------------------------------------------------------------------------------------------------------------------*/ 
-QWidget { color: white; border-color: rgb(15,15,15); selection-background-color: #0664c3; font-family: "Roboto"; }
+QWidget { color: white; background-color: rgb(36,36,36); border-color: rgb(15,15,15); selection-background-color: #0664c3; font-family: "Roboto"; }
 
 
 /*-----QGroupBox------------------------------------------------------------------------------------------------------------------------------------*/ 
@@ -116,6 +116,8 @@ QRadioButton::indicator:unchecked:hover { border: 0.5px inset black; border-radi
 
 /*-----QListView------------------------------------------------------------------------------------------------------------------------------------*/           
 QListView:item { background-color: #151515; }
+
+QListView:item:disabled { color: rgb(123,123,123); border: 0px transparent transparent; }
 
 
 /*-----QTableView------------------------------------------------------------------------------------------------------------------------------------*/           
@@ -246,10 +248,10 @@ QMessageBox QPushButton:hover { color: rgb(234,240,248); background-color: #0664
 QMessageBox QPushButton:default:hover { color: rgb(234,240,248); background-color: #0664c3; }        
 
 
-/*-----DuctTape------------------------------------------------------------------------------------------------------------------------------------*/ 
-QWidget[objectName*="maya"],
-QWidget[objectName*="Layout"],
-QWidget[objectName*="Form"],
+/*-----DuctTape------------------------------------------------------------------------------------------------------------------------------------*/
+/*QWidget[objectName*="maya"],
+/*QWidget[objectName*="Layout"],
+/*QWidget[objectName*="Form"], 
 QWidget [objectName="flowLayout1"],
 QWidget [objectName="formLayout1"],
 QWidget [objectName="formLayout2"],

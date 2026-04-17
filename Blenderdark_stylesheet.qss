@@ -1,5 +1,5 @@
 /*-----QWidget------------------------------------------------------------------------------------------------------------------------------------*/ 
-QWidget { color: #e6e6e6; border-color: rgb(28,28,28); selection-color: rgb(254,254,254); selection-background-color: rgb(86,128,194); font-family: DejaVu Sans Condensed; font-size: 12px; font-weight: normal; }
+QWidget { color: #e6e6e6; background-color: #404040; border-color: rgb(28,28,28); selection-color: rgb(254,254,254); selection-background-color: rgb(86,128,194); font-family: DejaVu Sans Condensed; font-size: 12px; font-weight: normal; }
 
 
 /*-----QComboBox------------------------------------------------------------------------------------------------------------------------------------*/                          
@@ -159,9 +159,9 @@ QPushButton:flat:checked {background-color: rgb(86,128,194);}
 
 
 /*-----QGroupBox------------------------------------------------------------------------------------------------------------------------------------*/           
-QGroupBox { border: 0px solid #373737; background-color: #404040; padding-top: 12px; }
+QGroupBox { border: 0px solid #373737; background-color: rgb(44,44,44); padding-top: 12px; }
 
-QGroupBox::title { background-color: transparent; margin-top: 4px; padding-left: 8px; }
+QGroupBox::title { background-color: rgb(44,44,44); margin-top: 4px; padding-left: 8px; }
 
 
 /*-----QHeaderView------------------------------------------------------------------------------------------------------------------------------------*/           
@@ -236,10 +236,10 @@ QScrollBar::sub-line:horizontal { height: 0px; subcontrol-position: top; subcont
 QToolTip {background-color: rgb(29,29,29); color: #dcdcdc; padding: 3px; border: 0px; }
 
 
-/*-----DuctTape------------------------------------------------------------------------------------------------------------------------------------*/ 
-QWidget[objectName*="maya"],
-QWidget[objectName*="Layout"],
-QWidget[objectName*="Form"],
+/*-----DuctTape------------------------------------------------------------------------------------------------------------------------------------*/
+/*QWidget[objectName*="maya"],
+/*QWidget[objectName*="Layout"],
+/*QWidget[objectName*="Form"], 
 QWidget [objectName="flowLayout1"],
 QWidget [objectName="formLayout1"],
 QWidget [objectName="formLayout2"],

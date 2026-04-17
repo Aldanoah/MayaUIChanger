@@ -1,5 +1,5 @@
 /*-----QWidget------------------------------------------------------------------------------------------------------------------------------------*/ 
-QWidget { color: rgb(191,191,191); border-color: rgb(7,7,7); selection-border-radius: 3px; selection-color: rgb(0,0,0); selection-background-color: rgb(255,144,38); font-family: DejaVu Sans Condensed; font-size: 12px; font-weight: normal; }
+QWidget { color: rgb(191,191,191); background-color: rgb(41,41,41); border-color: rgb(7,7,7); selection-border-radius: 3px; selection-color: rgb(0,0,0); selection-background-color: rgb(255,144,38); font-family: DejaVu Sans Condensed; font-size: 12px; font-weight: normal; }
 
 
 /*-----QLabel-------------------------------------------------------------------------------------------------------------------------------------*/
@@ -183,7 +183,7 @@ QHeaderView:section { color: #f8f9f9; background-color: #3b3b3b; border: 0px tra
 /*-----QGroupBox------------------------------------------------------------------------------------------------------------------------------------*/ 
 QGroupBox { margin-top: 22px; background-color:rgb(41,41,41); }
 
-QGroupBox::title { background-color: #404040; color: #ffffff; subcontrol-origin: margin; subcontrol-position: top left; padding: 3px; border-top-left-radius: 3px; border-top-right-radius: 3px; }
+QGroupBox::title { background-color: rgb(41,41,41); color: #ffffff; subcontrol-origin: margin; subcontrol-position: top left; padding: 3px; border-top-left-radius: 3px; border-top-right-radius: 3px; }
 
 QGroupBox::title::disabled { background-color: #404040; color: #656565; subcontrol-origin: margin; subcontrol-position: top left; padding: 5px; border-top-left-radius: 3px; border-top-right-radius: 3px; }
 
@@ -213,7 +213,7 @@ QListView:item:hover { color: rgb(8,8,8); background-color: rgb(255,144,37); bor
 
 QListView:item:selected { color: #ffffff;}
 
-QListView:item:disabled { color: #0d0d0d; border: 0px transparent transparent; }
+QListView:item:disabled { color: rgb(123,123,123); border: 0px transparent transparent; }
 
 
 /*-----QTableView------------------------------------------------------------------------------------------------------------------------------------*/           
@@ -223,9 +223,9 @@ QTableView QTableCornerButton:section { background-color: #3b3b3b; border: 1px s
 
 
 /*-----DuctTape------------------------------------------------------------------------------------------------------------------------------------*/ 
-QWidget[objectName*="maya"],
-QWidget[objectName*="Layout"],
-QWidget[objectName*="Form"],
+/*QWidget[objectName*="maya"],
+/*QWidget[objectName*="Layout"],
+/*QWidget[objectName*="Form"],
 QWidget [objectName="flowLayout1"],
 QWidget [objectName="formLayout1"],
 QWidget [objectName="formLayout2"],

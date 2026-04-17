@@ -1,5 +1,5 @@
 /*-----QWidget------------------------------------------------------------------------------------------------------------------------------------*/ 
-QWidget { color: rgb(94,246,255); border-color: rgb(14,11,18); selection-color: rgb(94,246,255); selection-background-color: rgb(247,80,70); font-family: rajdhani; font-size: 13px; font-weight: bold; }
+QWidget { color: rgb(94,246,255); background-color: rgb(30,30,50); border-color: rgb(14,11,18); selection-color: rgb(94,246,255); selection-background-color: rgb(247,80,70); font-family: rajdhani; font-size: 13px; font-weight: bold; }
 
 
 /*-----QLabel-------------------------------------------------------------------------------------------------------------------------------------*/
@@ -248,9 +248,9 @@ QToolTip {background-color: rgb(29,29,29); color: rgb(29,237,131); padding: 3px;
 
 
 /*-----DuctTape------------------------------------------------------------------------------------------------------------------------------------*/ 
-QWidget[objectName*="maya"],
-QWidget[objectName*="Layout"],
-QWidget[objectName*="Form"],
+/*QWidget[objectName*="maya"],
+/*QWidget[objectName*="Layout"],
+/*QWidget[objectName*="Form"],
 QWidget [objectName="flowLayout1"],
 QWidget [objectName="formLayout1"],
 QWidget [objectName="formLayout2"],
