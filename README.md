@@ -1,16 +1,17 @@
 # What's New
 
-Added a few improvements to the Preset Loader courtesy of jmaruska:
+Updated Splash Loader 
 -
-• Custom QSS Tokens: Introduced myQWidget and myQMenu tokens to isolate styling to application menus (QmayaMenuBar) while leaving marking menus opaque. This prevents unwanted transparency in marking menus and ensures consistent background styling.
+• Overhauled the User Interface of the splash loader tool.
 
-• Targeted Repainting: Added automatic clearing and repainting of paint-driven widgets (e.g., color sliders, swatches) to maintain proper visual updates without overriding custom themes. This is still a bit in development - but generally it works. Attribute Editor color swatches render fairly automatically, panels like the Multi-lister editor, or the Color Preferences panel will correctly render after a value change - I'm looking for ways to spoof a value change on panel load to get the swatches to automaticaly refresh.
+• Added a toggle that disables any prior start up sounds.
 
-• Event Filters: Applied filters to top-level windows and menus to dynamically enforce styling when widgets are shown, minimizing manual intervention. These event listeners are what make the above possible since they can dynamically inject theme data at run-time.
+• Added automatic detection of Maya's splash image path. Though this assumes a default Maya root Installation path of "C:\Program Files\Autodesk". You will have to adjust the path in line 41 of the splashloader script if your Maya installation is in a non-standard install path. <br>
 
-• Added jmaruska's Apple Pro theme inspired by Motion and Final Cut Pro. This theme leverages the custom tokens and used a Qt element inspector to target some specific elements. <br>
+Please unmute the video preview. 
 
-![Apple Pro Theme](https://raw.githubusercontent.com/jmaruska/MayaUIChanger/refs/heads/main/applepro_theme.png)
+https://github.com/user-attachments/assets/da9aca25-9b0a-4e3e-b386-c3b604acc122
+
 
 
 ---
@@ -20,7 +21,7 @@ Added a few improvements to the Preset Loader courtesy of jmaruska:
 This is a suite of tools created in order to allow greater customization of Maya’s user environment. This project is currently a work in progress so some aspects may not function as intended.
 
 Adds a new “Themes” menu item to Maya’s menu bar. Navigate to it to cycle through the available presets. <br>
-<img width="448" height="268" alt="image" src="https://github.com/user-attachments/assets/1844a2a3-2628-44de-9030-6038796ac8cf" />
+<img width="424" height="277" alt="image" src="https://github.com/user-attachments/assets/7aac6bab-58fd-45b5-803b-f8de55cb2745" />
 
 
 
@@ -35,7 +36,7 @@ Installation:
 
 Note:
 -
-You may need to set your Maya script directory as a new system variable. You can do so by searching for "environment variables" on windows then performing the following steps.
+You may need to set your Maya script directory as a new system variable. You can do so by searching for "environment variables" on windows then performing the following steps. This change is mainly required by the Splashloader script, the UI preset loader will work regardless.  
 <br>
 ![Steps](https://github.com/user-attachments/assets/c895be72-7c8e-4c20-97bd-ce2594bda4bf)
 
@@ -43,7 +44,7 @@ You may need to set your Maya script directory as a new system variable. You can
 
 
 **The currently available features are as follows;**
-1) Apple Pro Preset by jmaruska [NEW]
+1) Apple Pro Preset by jmaruska
 ![Apple Pro](https://github.com/user-attachments/assets/9364a490-6cd1-4edf-aa30-c0655be27499)
    
 2) Blender Dark Preset
@@ -79,9 +80,9 @@ Extras:
 
 10) Maya Splash Tool 
 
-https://github.com/user-attachments/assets/a6a9fb27-69b7-4040-8812-99bc853d11a2
+[https://github.com/user-attachments/assets/a6a9fb27-69b7-4040-8812-99bc853d11a2](https://github.com/user-attachments/assets/da9aca25-9b0a-4e3e-b386-c3b604acc122)
 
-A Script to customize Maya's Splash screen is also bundled with this project. It requires launching Maya as an adminstrator in order to function correctly. The script currently only takes .wav and .png files and doesn't support resizing images so a target image size of 860x500px is recommended. Simply run the SplashLoader.py script to use. <br><br> Please unmute the video preview. 
+A Script to customize Maya's Splash screen is also bundled with this project. It requires launching Maya with adminstrator access in order to function correctly. <br><br> The script currently only takes .wav and .png files and doesn't support resizing images so a target image size of 860x500px is recommended. Simply run the SplashLoader.py script to use. You can also save the script to your shelf for easy access. <br><br> Please unmute the video preview. 
 
 
 Compatibility:
