@@ -1,5 +1,5 @@
 /*-----QWidget------------------------------------------------------------------------------------------------------------------------------------*/ 
-QWidget { background-color: rgb(166,166,166); color: rgb(216,216,216); selection-color: rgb(254,254,254); selection-background-color: rgb(86,128,194); font-family: DejaVu Sans Condensed; font-size: 12px; font-weight: normal; }
+QWidget { color: rgb(216,216,216); border-color: rgb(28,28,28); selection-color: rgb(254,254,254); selection-background-color: rgb(86,128,194); font-family: DejaVu Sans Condensed; font-size: 12px; font-weight: normal; }
 
 
 /*-----QComboBox------------------------------------------------------------------------------------------------------------------------------------*/                          
@@ -21,9 +21,9 @@ QMenu::item { min-width : 150px; padding: 3px 20px 3px 20px; }
 
 QMenu::item:disabled { color: #262626; }
 
-QMenu::tearoff { background-color: #2c2c2c; border: 4px solid; border-color: rgb(24,24,24); border-radius: 0px; }
+QMenu::tearoff { background-color: #2c2c2c; border: 5px solid; border-color: rgb(24,24,24); border-radius: 7px; }
 
-QMenu::tearoff:selected { background-color: rgb(86,128,194); border: 4px solid; border-color: rgb(24,24,24); border-radius: 0px; }
+QMenu::tearoff:selected { background-color: rgb(86,128,194); border: 5px solid; border-color: rgb(24,24,24); border-radius: 7px; }
 
 QMenu QLabel, QMenu QWidget, QMenu QAbstractItemView { color: #e6e6e6; background-color: rgb(24,24,24); }
 
@@ -49,6 +49,8 @@ QTabBar::tab:last { border-top-right-radius: 0.3em; margin-right: 0; }
 
 
 /*-----QTabWidget------------------------------------------------------------------------------------------------------------------------------------*/           
+QTabWidget { border: none; }
+
 QTabWidget::pane { background-color: rgb(139,139,139); }
  
 
@@ -142,6 +144,12 @@ QMessageBox QPushButton:hover { color: rgb(40,40,40); background-color: rgb(241,
 QMessageBox QPushButton:default:hover { color: rgb(234,240,248); background-color: rgb(121,158,215); } 
 
 
+/*-----QGroupBox------------------------------------------------------------------------------------------------------------------------------------*/           
+QGroupBox { border: 0px solid #373737; padding-top: 12px; }
+
+QGroupBox::title { background-color: transparent; margin-top: 4px; padding-left: 8px; }
+
+
 /*-----QPushButton------------------------------------------------------------------------------------------------------------------------------------*/           
 QPushButton { color: rgb(31,31,31); background-color: rgb(219,219,219); border: 1px solid #404040; border-radius: 0.3em; }
 
@@ -156,12 +164,6 @@ QPushButton:pressed { background-color: #5680c2; color: rgb(254,254,254); }
 QPushButton:flat:checked {background-color: rgb(86,128,194); }
 
 
-/*-----QGroupBox------------------------------------------------------------------------------------------------------------------------------------*/           
-QGroupBox { border: 0px solid #373737; background-color: #373737; padding-top: 12px; }
-
-QGroupBox::title { background-color: transparent; margin-top: 4px; padding-left: 8px; }
-
-
 /*-----QHeaderView------------------------------------------------------------------------------------------------------------------------------------*/           
 QHeaderView { background-color: #3b3b3b; border: 0px transparent transparent; }
 
@@ -173,7 +175,7 @@ QListView { background-color: rgb(59,59,59); color: rgb(216,216,216); border: 0p
 
 QListView:disabled { background-color: #19232D; color: #787878; }
 
-QListView:item { background-color: transparent; }
+QListView:item { background-color: rgb(59,59,59); }
 
 QListView:item:hover { background-color: rgb(176,176,176); color: rgb(59,59,59); border: 0px transparent transparent; }
 
@@ -207,7 +209,7 @@ QTableView QTableCornerButton:section { background-color: #3b3b3b; border: 1px s
 /*-----QTreeView-----------------------------------------------------------------------------------------------------------------------------------*/           
 QTreeView { color: rgb(216,216,216); background-color: rgb(59,59,59); border: 0px transparent transparent; }
 
-QTreeView:disabled { background-color: red;  color: #787878; }
+QTreeView:disabled { background-color: transparent;  color: #787878; }
 
 QTreeView:item:hover { background-color: rgb(176,176,176); border: 0px transparent transparent; color: #000000; }
 
@@ -233,11 +235,98 @@ QScrollBar::sub-line:horizontal { height: 0px; subcontrol-position: top; subcont
 
 
 /*-----QToolTip-----------------------------------------------------------------------------------------------------------------------------------*/
-QToolTip {background-color: rgb(29,29,29); color: #dcdcdc; padding: 3px; border: 0px; }      
+QToolTip {background-color: transparent; color: #dcdcdc; padding: 3px; border: 0px; }      
 
 
 /*-----QStatusBar------------------------------------------------------------------------------------------------------------------------------------*/ 
-QStatusBar { color: rgb(28,28,28); }
+QStatusBar { color: rgb(28,28,28); background: transparent; }
+
+
+/*-----DuctTape------------------------------------------------------------------------------------------------------------------------------------*/ 
+QWidget[objectName*="maya"],
+QWidget[objectName*="Layout"],
+QWidget[objectName*="Form"],
+QWidget [objectName="flowLayout1"],
+QWidget [objectName="formLayout1"],
+QWidget [objectName="formLayout2"],
+QWidget [objectName="formLayout3"],
+QWidget [objectName="formLayout4"],
+QWidget [objectName="formLayout5"],
+QWidget [objectName="formLayout6"],
+QWidget [objectName="formLayout7"],
+QWidget [objectName="formLayout8"],
+QWidget [objectName="formLayout9"],
+QWidget [objectName="formLayout10"],
+QWidget [objectName="formLayout11"],
+QWidget [objectName="formLayout12"],
+QWidget [objectName="formLayout13"],
+QWidget [objectName="formLayout14"],
+QWidget [objectName="formLayout15"],
+QWidget [objectName="formLayout21"],
+QWidget [objectName="formLayout22"],
+QWidget [objectName="formLayout23"],
+QWidget [objectName="formLayout24"],
+QWidget [objectName="formLayout25"],
+QWidget [objectName="formLayout47"],
+QWidget [objectName="formLayout48"],
+QWidget [objectName="formLayout49"],
+QWidget [objectName="formLayout50"],
+QWidget [objectName="formLayout51"],
+QWidget [objectName="formLayout52"],
+QWidget [objectName="formLayout53"],
+QWidget [objectName="formLayout102"],
+QWidget [objectName="formLayout103"],
+QWidget [objectName="formLayout104"],
+QWidget [objectName="formLayout200"],
+QWidget [objectName="rowLayout1"],
+QWidget [objectName="rowLayout2"],
+QWidget [objectName="rowLayout3"],
+QWidget [objectName="rowLayout6"],
+QWidget [objectName="rowLayout7"],
+QWidget [objectName="rowLayout8"],
+QWidget [objectName="rowLayout9"],
+QWidget [objectName="rowLayout10"],
+QWidget [objectName="rowLayout11"],
+QWidget [objectName="rowLayout12"],
+QWidget [objectName="rowLayout16"],
+QWidget [objectName="frameLayout2"],
+QWidget [objectName="frameLayout3"],
+QWidget [objectName="frameLayout5"],
+QWidget [objectName="frameLayout6"],
+QWidget [objectName="frameLayout36"],
+QWidget [objectName="mayaHomeButton"],
+QWidget [objectName="masksForm"],
+QWidget [objectName="presetForm"],
+QWidget [objectName="selectMaskForm"],
+QWidget [objectName="objPickMenuLayout"],
+QWidget [objectName="objectMaskIcons"],
+QWidget [objectName="compPickMenuLayout"],
+QWidget [objectName="snapIcons"],
+QWidget [objectName="symmetryIcons"],
+QWidget [objectName="historyLayout"],
+QWidget [objectName="componentMaskIcons"],
+QWidget [objectName="MainStatusLineLayout"]
+QWidget [objectName="modelPanel4"] 
+QWidget [objectName="mayaLayoutInternalWidget"]
+QWidget [objectName="MainShelfLayout"]  
+{
+  background-color: rgb(166,166,166);
+}
+
+
+/*-----QmayaSeparator------------------------------------------------------------------------------------------------------------------------------------*/       
+QmayaSeparator { background-color: rgb(166,166,166); }
+
+
+/*-----QFileDialog------------------------------------------------------------------------------------------------------------------------------------*/ 
+QFileDialog { background: rgb(166,166,166); } 
+
+
+
+
+
+
+
 
 
 

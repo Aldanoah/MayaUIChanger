@@ -99,7 +99,7 @@ myQMenu::separator {
 QMenu::tearoff,
 myQMenu::tearoff {
     background-color: #383838;
-    border: 4px solid;
+    border: 5px solid;
     border-color: #272727;
     border-radius: 7px;
 }
@@ -107,7 +107,7 @@ myQMenu::tearoff {
 QMenu::tearoff:selected,
 myQMenu::tearoff:selected {
     background-color: #585858;
-    border: 4px solid;
+    border: 5px solid;
     border-color: #272727;
     border-radius: 7px;
 }
@@ -258,6 +258,9 @@ QToolButton:disabled {
     background-color: #151515 !important;
     border-style: None !important;
 }
+
+/*-----QListView------------------------------------------------------------------------------------------------------------------------------------*/
+QListView:item { background-color: rgb(043,043,043); }
 
 /*-----QTableView------------------------------------------------------------------------------------------------------------------------------------*/
  QTableView, QTreeView, QListView {
@@ -546,7 +549,7 @@ QFileDialog { background: #272727; }
 
 QFileDialog QListView, 
 QFileDialog QTreeView {
-    background: rgb(50,50,50);
+    background: rgb(043,043,043);
     color: #000;
     border: 1px solid black;
 }
