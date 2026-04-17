@@ -111,7 +111,8 @@ def create_menu():
         cmds.menu('myMenu', label='Themes', parent='MayaWindow', tearOff=True)
 
         for theme in [
-            'Maya Default', 'Blender Light', 'Blender Dark', 'Edgerunners', 'easyBLUE', 'Apple Pro', 'Zbrush', 'Unreal', 'Umbra', 'Modo'
+            'Maya Default', 'Blender Light', 'Blender Dark', 'Edgerunners', 
+            'easyBLUE', 'Apple Pro', 'Zbrush', 'Unreal', 'Umbra', 'Modo' 
         ]:
             cmds.menuItem(label=theme, command=make_theme_changer(theme))
     else:
