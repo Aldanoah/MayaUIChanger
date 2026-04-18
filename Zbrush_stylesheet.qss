@@ -69,7 +69,7 @@ QTabWidget::pane { background-color: rgb(41,41,41); }
 
 
 /*-----QLineEdit------------------------------------------------------------------------------------------------------------------------------------*/ 
-QLineEdit { background-color: rgb(78,78,78); color: rgb(188,188,188); border: 1px solid; border-color: rgb(61,61,61); border-width: 1px; border-radius: 3px; padding: 2px; }
+QLineEdit { background-color: rgb(78,78,78); color: rgb(188,188,188); border: 1px solid; border-color: rgb(61,61,61); border-width: 1px; border-radius: 3px; padding: 0px; }
 
 QLineEdit:focus { border-color: rgb(255,144,38); }
 
