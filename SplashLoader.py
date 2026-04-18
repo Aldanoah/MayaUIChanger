@@ -79,12 +79,12 @@ def resize_image_to_match(source_path, target_path):
         return source_path
 
     target_img = QtGui.QImage(target_path)
-    source_img = QtGui.QImage(source_path)
+    source_img = QtGui.QImage(source_path).convertToFormat(QtGui.QImage.Format_ARGB32)
 
     if target_img.isNull() or source_img.isNull():
         return source_path
 
-    target_size = target_img.size()
+    target_size = QtCore.QSize(860, 500)
 
     scaled = source_img.scaled(
         target_size,
@@ -103,7 +103,9 @@ def resize_image_to_match(source_path, target_path):
     )
 
     temp_dir = tempfile.gettempdir()
-    temp_path = os.path.join(temp_dir, "maya_resized_splash.png")
+    temp_path = os.path.join(
+    tempfile.gettempdir(),
+    f"maya_resized_{os.getpid()}.png")
 
     cropped.save(temp_path, "PNG")
 
