@@ -8,7 +8,7 @@ Updated Splash Loader
 
 • Removed system variable dependency.
 
-• Added Shelf button Intaller for ease of access.
+• Added Shelf button Installer for ease of access.
 
 • Added automatic resizing of user selected images. 
 
