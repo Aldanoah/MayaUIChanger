@@ -31,7 +31,7 @@ https://github.com/user-attachments/assets/bb9b1ad7-3caf-404f-9c78-86201a8dfe1a
 This is a suite of tools created in order to allow greater customization of Maya’s user environment. This project is currently a work in progress so some aspects may not function as intended.
 
 Adds a new “Themes” menu item to Maya’s menu bar. Navigate to it to cycle through the available presets. <br>
-<img width="318" height="261" alt="image" src="https://github.com/user-attachments/assets/9ff384fe-9e3d-4522-91bd-a18113a6ce93" />
+<img width="426" height="263" alt="image" src="https://github.com/user-attachments/assets/4760933c-6973-43a2-a368-5dedf659f993" />
 
 
 
@@ -42,8 +42,9 @@ Installation:
 1) Go to <a href="https://github.com/Aldanoah/MayaUIChanger/releases">releases</a> to download the latest "MayaUIChanger.zip" version.
 2) Place the "MayaUIChanger" folder in your Maya scripts directory e.g "..\Documents\maya\2027\scripts\MayaUIChanger".
 3) Copy the "userSetup.py" file in the folder to your top level Maya scripts directory e.g "..\Documents\maya\2027\scripts.
-4) From the Script editor run the "SplashLoader_installer" in the MayaUIChanger folder to add the Splash tool to your shelf for easy access. 
-5) Launch Maya.
+4) Launch Maya.
+5) Optionally you can run the "SplashLoader_installer.py" script in the MayaUIChanger folder to add the SplashLoader tool to your shelf.
+
 
 <p align="center"><img width="645" height="216" alt="image" src="https://github.com/user-attachments/assets/5de6e67d-2fd0-44e3-9ca2-5ded0ea55519" /></p>
 
