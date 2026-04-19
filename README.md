@@ -2,15 +2,25 @@
 
 Updated Splash Loader 
 -
-• Overhauled the User Interface of the splash loader tool.
+• Updated splash loader UI.
 
-• Added a toggle that disables any prior start up sounds.
+• Added support for Jpeg images. 
 
-• Added automatic detection of Maya's splash image path. Though this assumes a default Maya root Installation path of "C:\Program Files\Autodesk". You will have to adjust the path in line 41 of the splashloader script if your Maya installation is in a non-standard install path. <br>
+• Removed system variable dependency.
+
+• Added Shelf button Intaller for ease of access.
+
+• Added automatic resizing of user selected images. 
+
 
 Please unmute the video preview. 
 
-https://github.com/user-attachments/assets/da9aca25-9b0a-4e3e-b386-c3b604acc122
+
+
+
+https://github.com/user-attachments/assets/bb9b1ad7-3caf-404f-9c78-86201a8dfe1a
+
+
 
 
 
@@ -29,17 +39,16 @@ Adds a new “Themes” menu item to Maya’s menu bar. Navigate to it to cycle 
 Installation:
 -
 1) Go to <a href="https://github.com/Aldanoah/MayaUIChanger/releases">releases</a> to download the latest "MayaUIChanger.zip" version.
-2) Place the "MayaUIChanger" folder in your Maya scripts directory e.g "..\Documents\maya\2024\scripts\MayaUIChanger".
-3) Copy the "userSetup.py" file in the folder to your Maya scripts directory e.g "..\Documents\maya\2024\scripts.
+2) Place the "MayaUIChanger" folder in your Maya scripts directory e.g "..\Documents\maya\2027\scripts\MayaUIChanger".
+3) Copy the "userSetup.py" file in the folder to your Maya scripts directory e.g "..\Documents\maya\2027\scripts.
 5) Launch Maya.
 6) if the "Themes" menu item is missing, you may alternatively run the "UIPresetLoader.py" script through Maya's script editor.
+<p align="center"><img width="645" height="216" alt="image" src="https://github.com/user-attachments/assets/5de6e67d-2fd0-44e3-9ca2-5ded0ea55519" /></p>
+
 
 Note:
 -
-You may need to set your Maya script directory as a new system variable. You can do so by searching for "environment variables" on windows then performing the following steps. This change is mainly required by the Splashloader script, the UI preset loader will work regardless.  
-<br>
-![Steps](https://github.com/user-attachments/assets/c895be72-7c8e-4c20-97bd-ce2594bda4bf)
-
+- The Splash loader requires running Maya as an administrator due to it's need to write to the user folder where Maya's Splash image lives. This is not ideal, so im open to ways to bypass this completely.  
 - Navigate to the fonts folder in the script directory to install the optional “dejavu-sans” and “Rajdhani” font packs. These fonts enhance the look of the theme presets but are not required for their functioning.
 
 
@@ -80,14 +89,14 @@ Extras:
 
 10) Maya Splash Tool 
 
-[https://github.com/user-attachments/assets/a6a9fb27-69b7-4040-8812-99bc853d11a2](https://github.com/user-attachments/assets/da9aca25-9b0a-4e3e-b386-c3b604acc122)
+https://github.com/user-attachments/assets/bb9b1ad7-3caf-404f-9c78-86201a8dfe1a
 
-A Script to customize Maya's Splash screen is also bundled with this project. It requires launching Maya with adminstrator access in order to function correctly. <br><br> The script currently only takes .wav and .png files and doesn't support resizing images so a target image size of 860x500px is recommended. Simply run the SplashLoader.py script to use. You can also save the script to your shelf for easy access. <br><br> Please unmute the video preview. 
+A tool to customize Maya's splash screen is also bundled with this project. Though It requires launching Maya with adminstrator access in order to function correctly. <br><br> The script accepts png and jpeg image formats but currently only allows .wav files for audio. Simply run the SplashLoader.py script to use or alternatively run the "SplashLoader_installer" to save the script to your shelf for easy access. <br><br> Please unmute the video preview. 
 
 
 Compatibility:
 -
-Maya 2024 - 2026 but likely to work on earlier versions.
+Maya 2024 - 2027 but likely to work on earlier versions.
 
 Questions?
 -
