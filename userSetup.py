@@ -1,4 +1,3 @@
-# Make sure that PYTHONPATH environment variable is set to your C:/user/userName/Documents/maya/year/scripts directory
 import maya.utils
 
 # Function to Load UIPresetLoader script on startup
@@ -9,12 +8,12 @@ def loadUIPresetLoader():
 # Function to Load Splash script on startup
 def playStartupSound():
     try:
-        import MayaUIChanger.SplashLoader as splashloader
-        settings = splashloader.load_settings()
-        
+        import MayaUIChanger.SplashLoader as Splashloader
+        settings = Splashloader.load_settings()
+
         # Check if an audio file is set in the settings and play it
         if 'audio_file' in settings:
-            splashloader.play_custom_sound(settings['audio_file'])
+            Splashloader.play_startup_sound_once()
         else:
             print("No audio file found in settings.")
     except Exception as e:
