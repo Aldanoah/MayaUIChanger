@@ -165,8 +165,6 @@ if audio_enabled and audio_file and os.path.isfile(audio_file):
             except Exception as e:
                 print("Audio error:", e)
 
-    maya.utils.executeDeferred(play_startup_sound_once)
-
 # ---------------- UI ----------------
 def maya_main_window():
     ptr = omui.MQtUtil.mainWindow()
